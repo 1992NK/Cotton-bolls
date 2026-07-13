@@ -1,0 +1,114 @@
+/* Main Section */
+
+.promoSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin: 60px auto;
+}
+
+/* Left Side */
+
+.left {
+  width: 100%;
+}
+
+/* Right Side */
+
+.right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Card */
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f8f8f8;
+  padding: 40px;
+}
+
+/* Large Card */
+
+.large {
+  height: 650px;
+}
+
+/* Small Card */
+
+.small {
+  height: 313px;
+}
+
+/* Content */
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 320px;
+}
+
+/* Tag */
+
+.tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Heading */
+
+.content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+
+.content p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Button */
+
+.content button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Image */
+
+.image {
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .promoSection {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    grid-template-rows: auto;
+  }
+
+  .large,
+  .small {
+    height: 400px;
+  }
+
+  .content h2 {
+    font-size: 30px;
+  }
+}
