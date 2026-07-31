@@ -16,7 +16,7 @@ return (
 
       <div className={styles.grid}>
 
-        {featuredProducts.map((product) => (
+        {featuredProducts.slice(0, 8).map((product) => (
           <ProductCard
             key={product.id}
             product={product}

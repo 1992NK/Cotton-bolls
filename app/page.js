@@ -4,6 +4,7 @@ import Homeslider from "@/component/homeslider/Homeslider";
 import PromotionBanner from "@/component/promotionBanner/PromotionBanner";
 import FeaturedProducts from "@/component/featuredProducts/FeaturedProduct";
 import DealWeek from "@/component/dealoftheweek/DealWeek";
+import Newsletter from "@/component/Newsletter";
 
 export default function Home() {
   return (
@@ -16,15 +17,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className={styles.new_season}>
         <div className={styles.container}>
           <PromotionBanner />
         </div>
       </section>
 
-     <section>
+     <section className={styles.deal_week}>
         <div className={styles.container}>
           <DealWeek />
+        </div>
+      </section>
+
+       <section className={styles.newsletter}>
+        <div className={styles.container}>
+          <Newsletter />
         </div>
       </section>
 

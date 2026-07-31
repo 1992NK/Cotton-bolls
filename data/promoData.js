@@ -1,29 +1,35 @@
-import { tshirt } from "@/assets/images";
+import womenImage from "@/assets/images/promo/women.webp";
+import menImage from "@/assets/images/promo/men.webp";
+import sliperImage from "@/assets/images/promo/sliper.jpg";
+
 const promoData = [
   {
     id: 1,
+    size: "large",
     title: "Big patterns are back in fashion",
-    subtitle: "Lorem ipsum dolor sit amet.",
-    image: tshirt,
-    link: "/shop",
-    size: "large"
+    subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+    image: womenImage,
+    bgColor: "#ede9e6",
   },
+
   {
     id: 2,
-    title: "The latest men's trends this season",
+    size: "small",
+    title: "Show your fashion style",
     subtitle: "Don't miss the opportunity.",
-    image: tshirt,
-    link: "/shop",
-    size: "small"
+    image: menImage,
+    bgColor: "#f5f5f5",
   },
+
   {
     id: 3,
-    title: "Show your fashion with summer shoes",
-    subtitle: "Don't miss the opportunity.",
-    image: tshirt,
-    link: "/shop",
-    size: "small"
-  }
+    size: "small",
+    title: "Show your fashion style",
+    subtitle: "New arrivals available now.",
+    image: sliperImage,
+    bgColor: "#f7dedd",
+  },
 ];
 
 export default promoData;

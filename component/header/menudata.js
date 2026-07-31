@@ -1,0 +1,19 @@
+const menuData = [
+ 
+  {
+    id: 1,
+    title: "Men",
+  },
+  {
+    id: 2,
+    title: "Women",
+  },
+  {
+    id: 3,
+    title: "Kids",
+  },
+  
+  
+];
+
+export default menuData;

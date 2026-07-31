@@ -1,25 +1,88 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import styles from "./featuredProduct.module.css";
 
-const ProductCard =({product})=>{
-  console.log(product);
-console.log(product.image);
- return (
-    <div className={styles.card}>
-      <div className={styles.imageBox}>
+const ProductCard = ({ product }) => {
+  const [activeImage, setActiveImage] = useState(0);
+  const [hover, setHover] = useState(false);
+  const [fade, setFade] = useState(false);
 
+  const changeImage = (index) => {
+    if (index === activeImage) return;
+
+    setFade(true);
+
+    setTimeout(() => {
+      setActiveImage(index);
+      setFade(false);
+    }, 150);
+  };
+
+  return (
+    <div
+      className={styles.card}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => {
+        setHover(false);
+        setActiveImage(0);
+      }}
+    >
+      <div className={styles.imageBox}>
         {product.discount && (
-          <span className={styles.badge}>
-            {product.discount}
-          </span>
+          <span className={styles.badge}>{product.discount}</span>
         )}
 
-        <Image
-          src={product.image}
-          alt={product.title}
-          width={250}
-          height={300}
-        />
+        <div
+          className={`${styles.actions} ${
+            hover ? styles.showActions : ""
+          }`}
+        >
+          <button className={styles.iconBtn}>
+            <FaHeart />
+          </button>
+
+          <button className={styles.iconBtn}>
+            <FaShoppingCart />
+          </button>
+        </div>
+
+        <div
+          className={`${styles.imageWrapper} ${
+            fade ? styles.fade : ""
+          }`}
+        >
+          <Image
+            src={
+              product.images
+                ? product.images[activeImage]
+                : product.image
+            }
+            alt={product.title}
+            fill
+            className={styles.productImage}
+          />
+        </div>
+
+        {hover &&
+          product.images &&
+          product.images.length > 1 && (
+            <div className={styles.sliderDots}>
+              {product.images.map((img, index) => (
+                <span
+                  key={index}
+                  className={
+                    activeImage === index
+                      ? styles.activeDot
+                      : ""
+                  }
+                  onMouseEnter={() => changeImage(index)}
+                />
+              ))}
+            </div>
+          )}
       </div>
 
       <div className={styles.content}>
@@ -43,7 +106,6 @@ console.log(product.image);
       </div>
     </div>
   );
-}
+};
 
 export default ProductCard;
-

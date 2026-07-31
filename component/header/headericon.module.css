@@ -1,0 +1,22 @@
+.headerIcons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  color: #fff;
+}
+
+.headerIcons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.headerIcons div:first-child {
+  font-size: 24px;
+}
+
+.headerIcons span {
+  font-size: 14px;
+}
