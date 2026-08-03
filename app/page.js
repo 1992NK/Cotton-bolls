@@ -12,13 +12,13 @@ export default function Home() {
       <Homeslider />
 
       <section>
-        <div className={styles.container}>
+        <div className="container">
           <FeaturedProducts />
         </div>
       </section>
 
       <section className={styles.new_season}>
-        <div className={styles.container}>
+        <div className="container">
           <PromotionBanner />
         </div>
       </section>
@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
        <section className={styles.newsletter}>
-        <div className={styles.container}>
+        <div className="container">
           <Newsletter />
         </div>
       </section>

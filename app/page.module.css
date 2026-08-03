@@ -1,10 +1,5 @@
 /* --foreground: #fff; */
 
-.container{    margin-right: auto;
-    margin-left: auto;
-max-width: 1320px;
-width: 100%;
-}
 
 .newsletter{background-color: #233a95; min-height: 300px; display: flex; align-items: center;}
 .new_season, .deal_week{padding: 30px 0;}
