@@ -1,167 +1,608 @@
-import { tshirt_front, tshirt_back, tshirt_side } from "@/assets/images";
+import {
+  tshirt_front,
+  tshirt_back,
+  tshirt_side,
+} from "@/assets/images";
 
 const featuredProducts = [
   {
     id: 1,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
     category: "BACK IN STOCK",
     title: "The Woven Sweet Dreams P.J. Top",
+
     price: 60,
     oldPrice: null,
     discount: null,
-  },
 
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+          tshirt_front,
+          tshirt_back,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
+  },
 
   {
     id: 2,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
-    category: "BEST SELLERS",
-    title: "The ReNew Merino Long Liner",
-    price: 79,
-    oldPrice: 158,
-    discount: "-50%",
-  },
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
 
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
+  },
 
   {
     id: 3,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
-    category: "BEST SELLERS",
-    title: "The Brushed Flannel Caro Shirt",
-    price: 48,
-    oldPrice: 80,
-    discount: "-40%",
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
   },
 
-
-  {
+{
     id: 4,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
-    category: "CARDIGAN",
-    title: "The Felted Merino Half-Zip Sweater",
-    price:145,
-    oldPrice:null,
-    discount:null
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 5,
+    slug: "woven-sweet-dreams-pj-top",
+
+    images: [
+      tshirt_front,
+      tshirt_back,
+      tshirt_side,
+    ],
+
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 6,
+    slug: "woven-sweet-dreams-pj-top",
+
+    images: [
+      tshirt_front,
+      tshirt_back,
+      tshirt_side,
+    ],
+
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
   },
 
 
   {
-    id:5,
+    id: 7,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
-    category:"CARDIGAN",
-    title:"The Oversized Alpaca Crew",
-    price:100,
-    oldPrice:null,
-    discount:null
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
   },
 
+
   {
-    id:6,
+    id: 8,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
-    category:"CARDIGAN",
-    title:"The Oversized Alpaca Crew",
-    price:100,
-    oldPrice:null,
-    discount:null
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
   },
+
+
   {
-    id:7,
+    id: 9,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
-    category:"CARDIGAN",
-    title:"The Oversized Alpaca Crew",
-    price:100,
-    oldPrice:null,
-    discount:null
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
   },
+
+
   {
-    id:8,
+    id: 10,
+    slug: "woven-sweet-dreams-pj-top",
 
     images: [
       tshirt_front,
       tshirt_back,
-      tshirt_side
+      tshirt_side,
     ],
 
-    category:"CARDIGAN",
-    title:"The Oversized Alpaca Crew",
-    price:100,
-    oldPrice:null,
-    discount:null
+    category: "BACK IN STOCK",
+    title: "The Woven Sweet Dreams P.J. Top",
+
+    price: 60,
+    oldPrice: null,
+    discount: null,
+
+    colors: [
+      {
+        id: 1,
+        name: "FIRED BRICK",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 2,
+        name: "SKY BLUE",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+
+      {
+        id: 3,
+        name: "GREEN",
+
+        thumbnail: tshirt_front,
+
+        images: [
+          tshirt_front,
+          tshirt_back,
+          tshirt_side,
+        ],
+      },
+    ],
   },
-  {
-    id:9,
 
-    images: [
-      tshirt_front,
-      tshirt_back,
-      tshirt_side
-    ],
 
-    category:"CARDIGAN",
-    title:"The Oversized Alpaca Crew",
-    price:100,
-    oldPrice:null,
-    discount:null
-  },
-  {
-    id:10,
-
-    images: [
-      tshirt_front,
-      tshirt_back,
-      tshirt_side
-    ],
-
-    category:"CARDIGAN",
-    title:"The Oversized Alpaca Crew",
-    price:100,
-    oldPrice:null,
-    discount:null
-  }
 
 ];
-
 
 export default featuredProducts;

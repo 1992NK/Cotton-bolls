@@ -1,0 +1,15 @@
+.productWrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    width:100%;
+}
+
+.left{
+    width:65%;
+}
+
+.right{
+    width:35%;
+    padding-left:30px;
+}
