@@ -1,0 +1,48 @@
+.wrapper{
+    margin-top:20px;
+}
+
+.heading{
+    font-size:14px;
+    font-weight:400;
+    margin-bottom:18px;
+    font-family: var(--lato-message);
+    color:#141414
+}
+
+.list{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.sizeLabel{
+    cursor:pointer;
+}
+
+.sizeLabel input{
+    display:none;
+}
+
+.size{
+    width:48px;
+    height:48px;
+    border:1px solid #d6d6d6;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:16px;
+    color:#333;
+    transition:.3s;
+}
+
+.sizeLabel input:checked + .size{
+    border:2px solid #111;
+    font-weight:600;
+    background:#fff;
+}
+
+.size:hover{
+    border-color:#111;
+}

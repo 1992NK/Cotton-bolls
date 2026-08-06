@@ -1,0 +1,30 @@
+.wrapper{
+margin-top:50px;
+border:1px solid #eee;
+border-radius:8px;
+background:#fff;
+overflow:hidden;
+}
+
+.info{
+padding:25px;
+}
+
+.recommend{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:15px;
+margin-bottom:30px;
+}
+
+.recommend span{
+font-weight:600;
+color:#0a8a1f;
+}
+
+.content{
+display:flex;
+gap:60px;
+align-items:flex-start;
+}

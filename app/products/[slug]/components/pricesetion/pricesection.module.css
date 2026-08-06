@@ -1,0 +1,27 @@
+.price{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin:10px 0;
+}
+
+.sale{
+    font-size:24px;
+    font-weight:600;
+    font-family: var(--lato-message);
+    color:#141414
+}
+
+.old{
+    font-size:18px;
+    color:#999;
+    text-decoration:line-through;
+    font-family: var(--lato-message);
+}
+
+.off{
+    color:green;
+    font-size:18px;
+    font-weight:600;
+    font-family: var(--lato-message);
+}

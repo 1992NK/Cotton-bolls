@@ -1,15 +1,17 @@
-.productWrapper{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    width:100%;
+.productWrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 64%) minmax(0, 34%);
+    gap: 2%;
+    align-items: start;
 }
 
-.left{
-    width:65%;
+.left {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    display: block;
 }
 
-.right{
-    width:35%;
-    padding-left:30px;
+.right {
+    min-width: 0;
 }

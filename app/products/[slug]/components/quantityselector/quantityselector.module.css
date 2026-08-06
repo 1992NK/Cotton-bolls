@@ -1,0 +1,23 @@
+.quantitynumber label{
+
+display:block;
+
+margin-bottom:12px;
+
+font-size:18px;
+}
+
+.quantitynumber select{
+
+width:140px;
+
+height:52px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+padding-left:15px;
+
+font-size:18px;
+}

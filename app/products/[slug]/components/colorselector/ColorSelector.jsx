@@ -1,58 +1,50 @@
-import Image from "next/image";
-const ColorSelector =({
+"use client";
 
+import Image from "next/image";
+import styles from './colorselector.module.css'
+
+export default function ColorSelector({
   colors,
   selectedColor,
   setSelectedColor,
-
-})=>{
-   return (
-
-    <>
-
-      <h3>
-
-        Colour:
-
+}) {
+  return (
+    <div className={styles.multiplecolor}>
+      <h3 style={{ marginBottom: "12px" }}>
+        Colour :
         <strong> {selectedColor.name}</strong>
-
       </h3>
 
-      <div style={{display:"flex",gap:"15px"}}>
-
-        {colors.map((color)=>(
-
+      <div
+        style={{
+          display: "flex",
+          gap: "12px",
+          marginBottom: "20px",
+        }}
+      >
+        {colors.map((color) => (
           <div
             key={color.id}
-            onClick={()=>setSelectedColor(color)}
+            onClick={() => setSelectedColor(color)}
             style={{
               border:
-                selectedColor.id===color.id
-                ? "3px solid black"
-                : "1px solid #ddd",
-
-              padding:"3px",
-              borderRadius:"8px",
-              cursor:"pointer",
+                selectedColor.id === color.id
+                  ? "2px solid #000"
+                  : "1px solid #ddd",
+              borderRadius: "8px",
+              padding: "3px",
+              cursor: "pointer",
             }}
           >
-
             <Image
               src={color.thumbnail}
+              alt={color.name}
               width={60}
               height={80}
-              alt={color.name}
             />
-
           </div>
-
         ))}
-
       </div>
-
-    </>
-
+    </div>
   );
 }
-
-export default ColorSelector

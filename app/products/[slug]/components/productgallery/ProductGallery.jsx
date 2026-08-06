@@ -11,19 +11,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-const ProductGallery = ({ images = [] }) => {
+export default function ProductGallery({ images = [] }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  // Active Image State (New Code)
-  const [activeImage, setActiveImage] = useState(images[0] || "");
-
   useEffect(() => {
-    if (images.length > 0) {
-      setActiveImage(images[0]);
+    if (thumbsSwiper && !thumbsSwiper.destroyed) {
+      thumbsSwiper.slideTo(0);
     }
-  }, [images]);
+  }, [images, thumbsSwiper]);
 
-  // Zoom State (Old Code)
   const [zoomStyle, setZoomStyle] = useState({
     transformOrigin: "center center",
     transform: "scale(1)",
@@ -51,7 +47,7 @@ const ProductGallery = ({ images = [] }) => {
 
   return (
     <div className={styles.gallery}>
-      {/* Thumbnail Slider */}
+      {/* Thumbnails */}
 
       <Swiper
         direction="vertical"
@@ -67,7 +63,7 @@ const ProductGallery = ({ images = [] }) => {
             <div className={styles.thumb}>
               <Image
                 src={image}
-                alt=""
+                alt={`thumb-${index}`}
                 fill
                 className={styles.thumbImage}
               />
@@ -82,7 +78,10 @@ const ProductGallery = ({ images = [] }) => {
         modules={[Navigation, Thumbs]}
         navigation
         thumbs={{
-          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+          swiper:
+            thumbsSwiper && !thumbsSwiper.destroyed
+              ? thumbsSwiper
+              : null,
         }}
         className={styles.mainSwiper}
       >
@@ -95,7 +94,7 @@ const ProductGallery = ({ images = [] }) => {
             >
               <Image
                 src={image}
-                alt=""
+                alt={`image-${index}`}
                 fill
                 className={styles.image}
                 style={zoomStyle}
@@ -106,6 +105,4 @@ const ProductGallery = ({ images = [] }) => {
       </Swiper>
     </div>
   );
-};
-
-export default ProductGallery;
+}

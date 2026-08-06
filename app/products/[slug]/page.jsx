@@ -6,11 +6,13 @@ import { useParams } from "next/navigation";
 import featuredProducts from "@/data/featuredProductData";
 
 import ProductGallery from "./components/productgallery/ProductGallery";
-import ColorSelector from "./components/colorselector/ColorSelector";
+import ProductInfo from "./components/productinfo/ProductInfo";
 
 import styles from "./productdetail.module.css";
+import Breadcrumbs from "../component/common/breadcrumbs/Breadcrumbs";
+import SimilarProducts from "./components/similarProduct/SimilarProducts";
 
-const ProductDetail = () => {
+export default function ProductDetail() {
   const { slug } = useParams();
 
   const product = featuredProducts.find(
@@ -25,24 +27,48 @@ const ProductDetail = () => {
     product.colors[0]
   );
 
+  const breadcrumb = [
+    {
+      label: "Home",
+      href: "/",
+    },
+    {
+      label: "Clothing",
+      href: "/products?category=clothing",
+    },
+    {
+      label: "Men T-Shirts",
+    },
+  ];
+
   return (
-    <div className={`container ${styles.productWrapper}`}>
-  <div className={styles.left}>
-    <ProductGallery images={selectedColor.images} />
-  </div>
+    <>
 
-  <div className={styles.right}>
-    <h2>{product.name}</h2>
-    <h3>₹{product.price}</h3>
+      <div className={`container`}>
+        <Breadcrumbs items={breadcrumb} />
+      </div>
+      <div className={`container ${styles.productWrapper}`}>
 
-    <ColorSelector
-      colors={product.colors}
-      selectedColor={selectedColor}
-      setSelectedColor={setSelectedColor}
-    />
-  </div>
-</div>
+
+
+        <div className={styles.left}>
+          <ProductGallery
+            images={selectedColor.images}
+          />
+        </div>
+
+        <div className={styles.right}>
+          <ProductInfo
+            product={product}
+            selectedColor={selectedColor}
+            setSelectedColor={setSelectedColor}
+          />
+        </div>
+      </div>
+
+      <SimilarProducts currentProduct={product} />
+
+    </>
+
   );
-};
-
-export default ProductDetail;
+}

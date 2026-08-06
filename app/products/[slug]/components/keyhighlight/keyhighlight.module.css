@@ -1,0 +1,58 @@
+.wrapper {
+  width: 100%;
+  margin-top:30px;
+}
+
+.heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #141414;
+  margin-bottom: 0;
+   font-family: var(--lato-message);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.card {
+  padding: 18px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+/* Last 2 cards */
+.card:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 14px;
+  color: #8b8b8b;
+  margin-bottom: 10px;
+   font-family: var(--lato-message);
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #141414;
+  line-height: 1.3;
+   font-family: var(--lato-message);
+}
+
+@media (max-width:768px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.heading{
+font-size:24px;
+}
+
+.value{
+font-size:20px;
+}
+}
