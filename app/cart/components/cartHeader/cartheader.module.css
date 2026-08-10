@@ -1,0 +1,23 @@
+.header{
+    z-index: 100;
+    background: #000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    display: flex;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px #00000014;
+}
+
+
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    display:block;
+    object-fit:contain;
+}

@@ -1,0 +1,140 @@
+.heading {
+  font-size: 21px;
+  font-weight: 500;
+  color: #141414;
+  margin-bottom: 30px;
+  font-family: var(--heading-font);
+}
+
+.heading span {
+  font-weight: 600;
+}
+
+.savingBar {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f5ffe8;
+  border: 1px solid #abd68b;
+  border-radius: 10px;
+  padding: 16px 22px;
+}
+
+.savingBar svg {
+  font-size: 22px;
+  color: #1d7a15;
+}
+
+.savingBar span {
+  color: #127a16;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--lato-message);
+}
+
+.applicable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offerBox {
+  background: #f4f7fb;
+  border: 1px solid #e3e7ee;
+  border-radius: 10px;
+  padding: 16px 22px;
+  margin-bottom: 20px;
+}
+
+.offerLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.offerLeft svg {
+  font-size: 20px;
+  color: #2d3748;
+}
+
+.offerLeft span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #141414;
+  font-family: var(--lato-message);
+}
+
+.addItems {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color: #0072ce;
+  transition: 0.3s;
+  font-family: var(--lato-message);
+}
+
+.addItems:hover {
+  color: #0056a3;
+}
+
+.emptyCart {
+  width: 100%;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.emptyCartImage {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.emptyCartImage img {
+  object-fit: contain;
+}
+
+.emptyCartTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #282c3f;
+}
+
+.emptyCartText {
+  margin: 0 0 24px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #535766;
+}
+
+.startShopping {
+  width: 100%;
+  max-width: 420px;
+  height: 48px;
+  border: none;
+  border-radius: 6px;
+  background: #ffcf33;
+  color: #282c3f;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.startShopping:hover {
+  opacity: 0.9;
+}

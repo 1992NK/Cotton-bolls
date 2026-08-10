@@ -1,0 +1,17 @@
+.proceedButton {
+  width: calc(100% - 34px);
+  height: 40px;
+  margin: 16px 17px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcf33;
+  color: #282c3f;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.proceedButton:hover {
+  background: #f5c52d;
+}

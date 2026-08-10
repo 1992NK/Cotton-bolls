@@ -1,0 +1,38 @@
+.deliveryCard {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  box-sizing: border-box;
+  background: #fff9e8;
+  border: 1px solid #eadcae;
+  border-radius: 8px;
+  color: #282c3f;
+}
+
+.locationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+  font-size: 18px;
+}
+
+.deliveryText {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-family: var(--lato-message);
+}
+
+.deliveryText strong {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.arrow {
+  margin-left: 7px;
+  font-size: 17px;
+}

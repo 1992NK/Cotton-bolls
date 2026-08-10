@@ -1,0 +1,14 @@
+.listingWrapper {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.products {
+    flex: 1;
+}

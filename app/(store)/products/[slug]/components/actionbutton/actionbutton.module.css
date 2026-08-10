@@ -1,0 +1,44 @@
+.btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.cart {
+  width: 370px;
+  height: 58px;
+  border: 2px solid #ffd232;
+  background: #ffd232;
+  color: #141414;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 8px;
+  cursor: pointer;
+   font-family: var(--heading-font);
+}
+
+.wishlist {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wishlist svg {
+  font-size: 24px;
+  color: #555;
+}
+
+.wishlist:hover {
+  border-color: #e11d48;
+}
+
+.wishlist:hover svg {
+  color: #e11d48;
+}

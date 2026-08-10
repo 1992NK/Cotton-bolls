@@ -1,0 +1,342 @@
+.card {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  padding: 20px;
+  margin-top: 20px;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.left {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.imageWrapper {
+  width: 150px;
+  height: 185px;
+
+  position: relative;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+  background: #f5f5f5;
+}
+
+.image {
+  object-fit: cover;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info {
+  flex: 1;
+
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #141414;
+
+  font-family: var(--lato-message);
+
+  margin: 0 0 10px 0;
+
+  font-weight: 400;
+}
+
+
+/* =========================
+   OFFER
+========================= */
+
+.offer {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 12px;
+
+  color: #16853d;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  font-family: var(--lato-message);
+}
+
+.offer svg {
+  color: #16853d;
+  font-size: 13px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   DELIVERY
+========================= */
+
+.delivery {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+
+  color: #141414;
+
+  font-size: 13px;
+
+  font-family: var(--lato-message);
+}
+
+.delivery svg {
+  color: #444;
+  font-size: 13px;
+
+  flex-shrink: 0;
+}
+
+.delivery strong {
+  color: #111;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.optionRow {
+  display: flex;
+  gap: 18px;
+}
+
+.optionBox {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.optionBox label {
+  font-size: 13px;
+  color: #777;
+}
+
+.optionBox select {
+  width: 120px;
+  height: 42px;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+
+  padding: 0 12px;
+
+  font-size: 15px;
+
+  background: #fff;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+.optionBox select:focus {
+  border-color: #000;
+}
+
+
+/* =========================
+   PRICE BOX
+========================= */
+
+.priceBox {
+  width: 119px;
+  min-height: 187px;
+
+  background: #fff;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  padding-top: 136px;
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.closeBtn {
+  position: absolute;
+
+  top: 7px;
+  right: 13px;
+
+  width: 24px;
+  height: 24px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #718096;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s;
+}
+
+.closeBtn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.closeBtn:hover {
+  color: #000;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.priceRow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  white-space: nowrap;
+}
+
+.currentPrice {
+  color: #111827;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.oldPrice {
+  color: #9ca3af;
+
+  font-size: 12px;
+
+  text-decoration: line-through;
+
+  font-weight: 400;
+}
+
+.savedText {
+  margin-top: 5px;
+
+  color: #4caf00;
+
+  font-size: 12px;
+
+  font-weight: 400;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .card {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .priceBox {
+    width: 100%;
+
+    min-height: auto;
+
+    padding-top: 10px;
+
+    text-align: left;
+  }
+
+  .closeBtn {
+    top: 0;
+    right: 0;
+  }
+
+  .priceRow {
+    justify-content: flex-start;
+  }
+
+  .optionRow {
+    flex-wrap: wrap;
+  }
+
+  .imageWrapper {
+    width: 120px;
+    height: 150px;
+  }
+}

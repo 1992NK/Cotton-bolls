@@ -1,0 +1,20 @@
+.filter{
+display:flex;
+gap:12px;
+margin-bottom:25px;
+}
+
+.filter button{
+padding:12px 22px;
+background:white;
+border:1px solid #ddd;
+border-radius:8px;
+cursor:pointer;
+font-size:15px;
+}
+
+.active{
+border:1px solid #f5b400 !important;
+background:#fff8df !important;
+font-weight:600;
+}
