@@ -1,0 +1,228 @@
+.loginPage {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.loginSection {
+  width: 100%;
+  min-height: 460px;
+  background-color: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+
+.loginCard {
+  width: 388px;
+  background-color: #ffffff;
+  padding: 24px 35px 34px;
+  box-sizing: border-box;
+}
+
+.loginTitle {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.tabs {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+.tab {
+  width: 50%;
+  height: 100%;
+  border: none;
+  background-color: #ffffff;
+  color: #555555;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tab:hover {
+  background-color: #f7f7f7;
+}
+
+.activeTab {
+  background-color: #168886;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.activeTab:hover {
+  background-color: #168886;
+}
+
+.loginFormBox {
+  position: relative;
+  width: 100%;
+  margin-top: 14px;
+  padding: 26px 25px 28px;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.loginFormBox::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #999999;
+}
+
+.loginFormBox::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #f4f4f4;
+}
+
+.googleButton {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.googleIcon {
+  width: 38px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #dddddd;
+  font-size: 19px;
+}
+
+.googleText {
+  flex: 1;
+  margin-right: 38px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+}
+
+.orText {
+  margin-top: 22px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555555;
+}
+
+.phoneInput {
+  width: 100%;
+  height: 34px;
+  font-size: 14px;
+  display: block;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  outline: none;
+  font-family: inherit;
+  color: #141414;
+}
+
+.phoneInput::placeholder {
+  color: #c0c6cc;
+}
+
+.phoneInput:focus {
+  border-color: #999999;
+}
+
+.proceedButton {
+  width: 100%;
+  height: 34px;
+  margin-top: 14px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #f45156;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.proceedButton:hover {
+  background-color: #e94248;
+}
+
+.newUser {
+  margin-top: 27px;
+  text-align: center;
+  font-size: 11px;
+  line-height: 18px;
+  color: #666666;
+}
+
+.createAccountButton {
+  margin-left: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #f45156;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.createAccountButton:hover {
+  color: #d9363e;
+}
+
+@media (max-width: 600px) {
+  .loginSection {
+    min-height: auto;
+    padding: 20px 15px 30px;
+  }
+
+  .loginCard {
+    width: 100%;
+    max-width: 388px;
+    padding: 22px 20px 30px;
+  }
+
+  .loginFormBox {
+    padding: 24px 18px 26px;
+  }
+}

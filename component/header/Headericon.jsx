@@ -1,22 +1,20 @@
 import styles from './headericon.module.css'
+import { FaRegUser, FaRegHeart, FaShoppingBag } from 'react-icons/fa';
 
 export default function HeaderIcons() {
   return (
     <div className={styles.headerIcons}>
 
       <div>
-        👤
-        <span>Profile</span>
+        <FaRegUser />
       </div>
 
       <div>
-        ❤
-        <span>Wishlist</span>
+        <FaRegHeart />
       </div>
 
       <div>
-        🛍
-        <span>Bag</span>
+        <FaShoppingBag />
       </div>
 
     </div>

@@ -1,15 +1,13 @@
 "use client";
 
 import styles from "./proceedbutton.module.css";
+import Link from "next/link";
 
 const ProceedButton = () => {
   return (
-    <button
-      type="button"
-      className={styles.proceedButton}
-    >
-      PROCEED
-    </button>
+    <Link href="/login" className={styles.proceedButton}>
+      Proceed
+    </Link>
   );
 };
 

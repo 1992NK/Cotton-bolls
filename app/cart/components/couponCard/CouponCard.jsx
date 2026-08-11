@@ -5,7 +5,7 @@ import { FiChevronRight } from "react-icons/fi";
 
 const CouponCard = () => {
   return (
-    <div>
+    <div className={styles.offerouter}>
       <div className={styles.offerLabel}>Best offer for you</div>
 
       <div className={styles.offerContent}>

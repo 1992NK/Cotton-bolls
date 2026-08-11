@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "./pricesummary.module.css";
 import { IoChevronUpOutline } from "react-icons/io5";
+import ProceedButton from "../proceedButton/ProceedButton";
 
 const PriceSummary = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -65,9 +66,7 @@ const PriceSummary = () => {
     </div>
 
     <div className={styles.proceedArea}>
-      <button type="button" className={styles.proceedButton}>
-        PROCEED
-      </button>
+      <ProceedButton />
     </div>
   </div>
 );
