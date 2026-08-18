@@ -1,0 +1,764 @@
+.profileContent {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.pageHeading {
+  margin-bottom: 22px;
+
+  color: #8b8b8b;
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* =========================================
+   LOGIN SECTION
+========================================= */
+
+.loginSection {
+  min-height: 145px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+
+  padding: 34px 30px 30px;
+
+  border: 1px solid #e4e4e4;
+  border-bottom: 0;
+
+  box-sizing: border-box;
+}
+
+.fieldGroup,
+.passwordGroup,
+.formField {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldGroup label,
+.passwordGroup label,
+.formField > label,
+.genderField > label {
+  margin-bottom: 10px;
+
+  color: #3e5064;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.fieldGroup input,
+.passwordGroup input,
+.formField input {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d7d7d7;
+  border-radius: 11px;
+
+  outline: none;
+
+  color: #465463;
+  background: #fff;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+
+  transition: border-color 0.2s ease;
+}
+
+.fieldGroup input:focus,
+.passwordGroup input:focus,
+.formField input:focus {
+  border-color: #15918d;
+}
+
+/* =========================================
+   CHANGE PASSWORD LINK
+========================================= */
+
+.passwordHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.changePassword {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #008b91;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.changePassword:hover {
+  color: #006c70;
+}
+
+/* =========================================
+   PASSWORD INPUT
+========================================= */
+
+.passwordInputWrapper {
+  position: relative;
+}
+
+.passwordInputWrapper input {
+  padding-right: 55px;
+}
+
+.eyeButton {
+  position: absolute;
+
+  right: 10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #777;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   GENERAL INFORMATION
+========================================= */
+
+.generalSection {
+  border: 1px solid #e4e4e4;
+}
+
+.sectionTitle {
+  height: 79px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 30px;
+
+  border-bottom: 1px solid #ededed;
+
+  color: #3e5064;
+
+  font-size: 14px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  padding: 25px 30px 38px;
+
+  box-sizing: border-box;
+}
+
+.leftColumn {
+  padding-right: 73px;
+
+  border-right: 1px solid #eeeeee;
+}
+
+.rightColumn {
+  padding-left: 73px;
+}
+
+/* =========================================
+   FORM FIELD
+========================================= */
+
+.formField {
+  margin-bottom: 28px;
+}
+
+.formField:last-child {
+  margin-bottom: 0;
+}
+
+.formField input[type="date"] {
+  color: #4a5663;
+}
+
+/* =========================================
+   GENDER
+========================================= */
+
+.genderField {
+  margin-top: 27px;
+}
+
+.genderOptions {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0 !important;
+
+  color: #3e5064;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.radioLabel input {
+  width: 16px;
+  height: 16px;
+
+  margin: 0;
+
+  accent-color: #ff4938;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   DATE OF BIRTH INFO ICON
+========================================= */
+
+.infoIcon {
+  width: 16px;
+  height: 16px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 6px;
+  padding: 0;
+
+  border: 1px solid #008e98;
+  border-radius: 50%;
+
+  background: #fff;
+
+  color: #008e98;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  vertical-align: middle;
+
+  box-sizing: border-box;
+}
+
+.infoIcon:hover {
+  background: #008e98;
+
+  color: #fff;
+}
+
+/* =========================================
+   SAVE SECTION
+========================================= */
+
+.saveSection {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e4e4e4;
+  border-top: 0;
+
+  box-sizing: border-box;
+}
+
+.saveButton {
+  width: 135px;
+  height: 36px;
+
+  border: 0;
+  border-radius: 2px;
+
+  background: #118b88;
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.saveButton:hover {
+  background: #0c7775;
+}
+
+/* =========================================================
+   CHANGE PASSWORD MODAL
+========================================================= */
+
+.modalOverlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PASSWORD MODAL BOX
+========================================= */
+
+.passwordModal {
+  position: relative;
+
+  width: 100%;
+  max-width: 430px;
+
+  padding: 10px 20px 20px;
+
+  background: #ffffff;
+
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   PASSWORD MODAL CLOSE
+========================================= */
+
+.modalClose {
+  position: absolute;
+
+  top: 7px;
+  right: 17px;
+
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #777;
+
+  font-size: 19px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.modalClose:hover {
+  color: #222;
+}
+
+/* =========================================
+   PASSWORD FORM
+========================================= */
+
+.passwordForm {
+  width: 100%;
+}
+
+/* =========================================
+   PASSWORD MODAL INPUT
+========================================= */
+
+.passwordModalInput {
+  width: 100%;
+  height: 43px;
+
+  margin-bottom: 10px;
+
+  padding: 0 11px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+
+  outline: none;
+
+  background: #fff;
+
+  color: #555;
+
+  font-size: 13px;
+
+  box-sizing: border-box;
+}
+
+.passwordModalInput::placeholder {
+  color: #777;
+
+  opacity: 1;
+}
+
+.passwordModalInput:focus {
+  border-color: #999;
+}
+
+/* =========================================
+   PASSWORD MODAL DIVIDER
+========================================= */
+
+.modalDivider {
+  width: 100%;
+  height: 1px;
+
+  margin-top: 5px;
+  margin-bottom: 15px;
+
+  background: #eeeeee;
+}
+
+/* =========================================
+   PASSWORD MODAL ACTIONS
+========================================= */
+
+.modalActions {
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 10px;
+}
+
+/* CANCEL */
+
+.cancelButton {
+  min-width: 62px;
+  height: 48px;
+
+  padding: 0 9px;
+
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+
+  background: #ffffff;
+
+  color: #222;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.cancelButton:hover {
+  background: #f7f7f7;
+}
+
+/* SUBMIT */
+
+.submitButton {
+  min-width: 66px;
+  height: 48px;
+
+  padding: 0 10px;
+
+  border: 0;
+  border-radius: 3px;
+
+  background: #118b88;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background: #0d7775;
+}
+
+/* =========================================================
+   DATE OF BIRTH POPUP
+========================================================= */
+
+.dobOverlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  background: rgba(0, 0, 0, 0.78);
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   DOB MODAL
+========================================= */
+
+.dobModal {
+  width: 100%;
+  max-width: 400px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border-radius: 7px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.3);
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   DOB CONTENT
+========================================= */
+
+.dobContent {
+  margin: 7px 8px 0;
+
+  padding: 14px 20px 12px;
+
+  border: 1px solid #ff4438;
+  border-radius: 4px;
+
+  box-sizing: border-box;
+}
+
+.dobContent h3 {
+  margin: 0 0 11px;
+
+  color: #3f5060;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  line-height: 20px;
+
+  text-align: center;
+}
+
+.dobContent p {
+  margin: 0;
+
+  color: #3f5060;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 21px;
+
+  text-align: left;
+}
+
+/* =========================================
+   DOB FOOTER
+========================================= */
+
+.dobFooter {
+  min-height: 59px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 0 21px;
+
+  border-top: 1px solid #d9d9d9;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   GOT IT BUTTON
+========================================= */
+
+.gotItButton {
+  min-width: 80px;
+  height: 30px;
+
+  padding: 0 18px;
+
+  border: 1px solid #ff4438;
+  border-radius: 4px;
+
+  background: #ffffff;
+
+  color: #ff4438;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.gotItButton:hover {
+  background: #fff4f3;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .loginSection {
+    gap: 30px;
+  }
+
+  .leftColumn {
+    padding-right: 35px;
+  }
+
+  .rightColumn {
+    padding-left: 35px;
+  }
+}
+
+@media (max-width: 700px) {
+  .loginSection {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding: 25px 20px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+
+    padding: 25px 20px;
+  }
+
+  .leftColumn {
+    padding-right: 0;
+
+    padding-bottom: 30px;
+
+    border-right: 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .rightColumn {
+    padding-left: 0;
+
+    padding-top: 30px;
+  }
+
+  .sectionTitle {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .passwordModal {
+    max-width: 100%;
+
+    padding: 10px 15px 15px;
+  }
+
+  .passwordModalInput {
+    height: 42px;
+
+    margin-bottom: 20px;
+  }
+
+  .dobModal {
+    max-width: 100%;
+  }
+
+  .dobContent {
+    padding: 14px 15px 12px;
+  }
+
+  .dobContent h3 {
+    font-size: 13px;
+  }
+
+  .dobContent p {
+    font-size: 13px;
+
+    line-height: 20px;
+  }
+
+  .dobFooter {
+    padding: 0 15px;
+  }
+
+  .genderOptions {
+    gap: 12px;
+
+    flex-wrap: wrap;
+  }
+}
+
+.titlepop{margin-bottom: 15px;}

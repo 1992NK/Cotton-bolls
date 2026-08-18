@@ -1,0 +1,590 @@
+.invoicePage {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+.invoice {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 45px;
+  background: #fff;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid #222;
+}
+
+.brand h1 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  color: #111;
+}
+
+.brand p {
+  margin: 7px 0 0;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+.invoiceTitle {
+  text-align: right;
+}
+
+.invoiceTitle h2 {
+  margin: 0 0 12px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #111;
+}
+
+.invoiceMeta p {
+  margin: 5px 0;
+
+  font-size: 11px;
+
+  color: #777;
+}
+
+.invoiceMeta strong {
+  margin-left: 5px;
+
+  color: #222;
+
+  font-weight: 600;
+}
+
+
+/* =====================================
+   PARTIES
+===================================== */
+
+.parties {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    1.2fr
+    1fr;
+
+  gap: 40px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  color: #888;
+}
+
+.party h3 {
+  margin: 0 0 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #222;
+}
+
+.party p {
+  margin: 4px 0;
+
+  font-size: 11px;
+
+  line-height: 1.45;
+
+  color: #666;
+}
+
+.paymentRow {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+}
+
+.paymentRow span {
+  color: #777;
+}
+
+.paymentRow strong {
+  color: #222;
+
+  font-weight: 600;
+
+  text-align: right;
+}
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+.taxTableSection {
+  width: 100%;
+
+  margin-top: 28px;
+}
+
+.tableScroll {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.taxTable {
+  width: 100%;
+
+  min-width: 1100px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.taxTable th,
+.taxTable td {
+  border: 1px solid #222;
+
+  padding: 7px 5px;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  font-size: 9px;
+
+  color: #222;
+}
+
+.taxTable th {
+  background: #f7f7f7;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.taxTable thead tr:first-child th {
+  height: 38px;
+}
+
+.taxTable thead tr:nth-child(2) th {
+  height: 25px;
+
+  font-size: 8px;
+}
+
+.taxTable td {
+  height: 65px;
+}
+
+
+/* =====================================
+   PRODUCT
+===================================== */
+
+.descriptionCell {
+  width: 230px;
+
+  text-align: left !important;
+}
+
+.productDetails {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 4px;
+
+  text-align: left;
+}
+
+.productDetails strong {
+  font-size: 10px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  color: #111;
+}
+
+.productDetails span {
+  font-size: 8px;
+
+  color: #777;
+}
+
+
+/* =====================================
+   PAYABLE
+===================================== */
+
+.payableCell {
+  font-weight: 700 !important;
+
+  color: #111 !important;
+}
+
+
+/* =====================================
+   TOTAL
+===================================== */
+
+.totalRow td {
+  height: 38px;
+
+  background: #fafafa;
+
+  font-weight: 600;
+}
+
+.totalLabel {
+  text-align: right !important;
+
+  font-size: 10px !important;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =====================================
+   BOTTOM SECTION
+===================================== */
+
+.bottomSection {
+  display: grid;
+
+  grid-template-columns: 1fr 330px;
+
+  gap: 60px;
+
+  padding-top: 30px;
+}
+
+.amountWords {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 7px;
+}
+
+.amountWords span {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  color: #888;
+}
+
+.amountWords strong {
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.amountWords p {
+  max-width: 400px;
+
+  margin: 15px 0 0;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  color: #999;
+}
+
+
+/* =====================================
+   SUMMARY
+===================================== */
+
+.summary {
+  width: 100%;
+}
+
+.summaryRow {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 7px 0;
+
+  font-size: 12px;
+}
+
+.summaryRow span {
+  color: #777;
+}
+
+.summaryRow strong {
+  color: #222;
+
+  font-weight: 500;
+}
+
+.grandTotal {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 10px;
+
+  padding: 13px 0 0;
+
+  border-top: 1px solid #222;
+}
+
+.grandTotal span {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #111;
+}
+
+.grandTotal strong {
+  font-size: 19px;
+
+  font-weight: 700;
+
+  color: #111;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 35px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #ddd;
+}
+
+.footer h3 {
+  margin: 0 0 6px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.footer p {
+  margin: 0;
+
+  font-size: 10px;
+
+  color: #999;
+}
+
+.printButton {
+  padding: 10px 22px;
+
+  border: none;
+
+  background: #111;
+
+  color: #fff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.printButton:hover {
+  background: #333;
+}
+
+
+/* =====================================
+   NOT FOUND
+===================================== */
+
+.notFound {
+  min-height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #f5f5f5;
+}
+
+.notFound h2 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+
+  color: #111;
+}
+
+.notFound p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #777;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .invoicePage {
+    padding: 15px 10px;
+  }
+
+  .invoice {
+    padding: 25px 18px;
+  }
+
+  .header {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .invoiceTitle {
+    text-align: left;
+  }
+
+  .parties {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .bottomSection {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .printButton {
+    width: 100%;
+  }
+}
+
+
+/* =====================================
+   PRINT
+===================================== */
+
+@media print {
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  .invoicePage {
+    padding: 0;
+
+    background: #fff;
+  }
+
+  .invoice {
+    max-width: none;
+
+    padding: 0;
+  }
+
+  .printButton {
+    display: none;
+  }
+
+  .taxTable {
+    min-width: 0;
+  }
+
+  .invoicePage,
+  .invoice {
+    background: #fff;
+  }
+}

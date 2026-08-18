@@ -1,0 +1,61 @@
+.profilePage {
+  width: 100%;
+  padding: 18px 15px 40px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.profileRow {
+    display: grid;
+  grid-template-columns: 262px minmax(0, 1fr);
+  gap: 40px;
+
+  align-items: start;
+}
+
+.profileSidebar {
+  width: 262px;
+}
+
+.profileContent {
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .profileRow {
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .profileSidebar {
+    width: 230px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .profilePage {
+    padding: 15px;
+  }
+
+  .profileRow {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .profileSidebar {
+    width: 100%;
+  }
+
+  .profileContent {
+    width: 100%;
+  }
+}
