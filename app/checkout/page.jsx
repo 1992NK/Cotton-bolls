@@ -54,10 +54,14 @@ export default function CheckoutPage() {
                 <div className="container">
                     <div className={styles.checkoutrow}>
 
-                        {/* LEFT SECTION */}
+                        {/* =========================
+                            LEFT SECTION
+                        ========================== */}
                         <section className={styles.leftSection}>
 
-                            {/* ADDRESS */}
+                            {/* =========================
+                                ADDRESS
+                            ========================== */}
                             <div className={styles.addressWrapper}>
                                 <button
                                     type="button"
@@ -69,43 +73,63 @@ export default function CheckoutPage() {
                                 </button>
                             </div>
 
-                            {/* PAYMENT SECTION */}
+                            {/* =========================
+                                PAYMENT SECTION
+                            ========================== */}
                             <div className={styles.paymentSection}>
+
                                 <h3 className={styles.paymentHeading}>
                                     Payment Options
                                 </h3>
 
                                 <div className={styles.paymentBox}>
 
-                                    {/* TSS MONEY */}
+                                    {/* =========================
+                                        TSS MONEY
+                                    ========================== */}
                                     <div className={styles.tssRow}>
+
                                         <div className={styles.paymentName}>
+
                                             <div className={styles.paymentIcon}>
                                                 <FiCreditCard />
                                             </div>
 
-                                            <span>TSS Money</span>
+                                            <span>
+                                                TSS Money
+                                            </span>
+
                                         </div>
 
                                         <div className={styles.tssRight}>
+
                                             <span className={styles.usedText}>
                                                 Used ₹ 0.00 (Balance Left: ₹ 0.00)
                                             </span>
 
                                             <span className={styles.radio} />
+
                                         </div>
+
                                     </div>
 
-                                    {/* UPI */}
+
+                                    {/* =========================
+                                        UPI
+                                    ========================== */}
                                     <div
                                         className={`${styles.paymentRow} ${
                                             selectedPayment === "upi"
                                                 ? styles.selectedPayment
                                                 : ""
                                         }`}
-                                        onClick={() => selectPayment("upi")}
+                                        onClick={() =>
+                                            selectPayment("upi")
+                                        }
                                     >
+
                                         <div className={styles.paymentName}>
+
                                             <div className={styles.paymentIcon}>
                                                 <FiSmartphone />
                                             </div>
@@ -113,6 +137,7 @@ export default function CheckoutPage() {
                                             <span>
                                                 Pay with any UPI App
                                             </span>
+
                                         </div>
 
                                         <Radio
@@ -120,150 +145,398 @@ export default function CheckoutPage() {
                                                 selectedPayment === "upi"
                                             }
                                         />
+
                                     </div>
 
-                                    {/* WALLETS */}
+
+                                    {/* =========================
+                                        WALLETS
+                                    ========================== */}
                                     <div
                                         className={styles.accordionHeader}
                                         onClick={() =>
                                             toggleMethod("wallet")
                                         }
                                     >
+
                                         <div className={styles.paymentName}>
+
                                             <div className={styles.paymentIcon}>
                                                 <FiShoppingBag />
                                             </div>
 
-                                            <span>Wallets</span>
+                                            <span>
+                                                Wallets
+                                            </span>
+
                                         </div>
 
                                         <div className={styles.arrowIcon}>
+
                                             {openMethod === "wallet" ? (
                                                 <FiChevronUp />
                                             ) : (
                                                 <FiChevronDown />
                                             )}
+
                                         </div>
+
                                     </div>
+
 
                                     {openMethod === "wallet" && (
                                         <div className={styles.accordionBody}>
-                                            <div className={styles.walletOption}>
-                                                <span>Paytm</span>
-                                                <span
-                                                    className={
-                                                        styles.smallRadio
+
+                                            {/* PAYTM */}
+                                            <div
+                                                className={styles.walletOption}
+                                                onClick={() =>
+                                                    setSelectedPayment("paytm")
+                                                }
+                                            >
+
+                                                <div className={styles.walletLeft}>
+
+                                                    <div className={styles.walletLogo}>
+                                                        <img
+                                                            src="/images/payment/paytm.png"
+                                                            alt="Paytm"
+                                                        />
+                                                    </div>
+
+                                                    <span>
+                                                        Paytm
+                                                    </span>
+
+                                                </div>
+
+                                                <Radio
+                                                    active={
+                                                        selectedPayment ===
+                                                        "paytm"
                                                     }
                                                 />
+
                                             </div>
 
-                                            <div className={styles.walletOption}>
-                                                <span>PhonePe</span>
-                                                <span
-                                                    className={
-                                                        styles.smallRadio
+
+                                            {/* PHONEPE */}
+                                            <div
+                                                className={styles.walletOption}
+                                                onClick={() =>
+                                                    setSelectedPayment("phonepe")
+                                                }
+                                            >
+
+                                                <div className={styles.walletLeft}>
+
+                                                    <div className={styles.walletLogo}>
+                                                        <img
+                                                            src="/images/payment/phonepe.png"
+                                                            alt="PhonePe"
+                                                        />
+                                                    </div>
+
+                                                    <span>
+                                                        PhonePe
+                                                    </span>
+
+                                                </div>
+
+                                                <Radio
+                                                    active={
+                                                        selectedPayment ===
+                                                        "phonepe"
                                                     }
                                                 />
+
                                             </div>
 
-                                            <div className={styles.walletOption}>
-                                                <span>Amazon Pay</span>
-                                                <span
-                                                    className={
-                                                        styles.smallRadio
+
+                                            {/* AMAZON PAY */}
+                                            <div
+                                                className={styles.walletOption}
+                                                onClick={() =>
+                                                    setSelectedPayment(
+                                                        "amazonpay"
+                                                    )
+                                                }
+                                            >
+
+                                                <div className={styles.walletLeft}>
+
+                                                    <div className={styles.walletLogo}>
+                                                        <img
+                                                            src="/images/payment/amazon-pay.png"
+                                                            alt="Amazon Pay"
+                                                        />
+                                                    </div>
+
+                                                    <span>
+                                                        Amazon Pay
+                                                    </span>
+
+                                                </div>
+
+                                                <Radio
+                                                    active={
+                                                        selectedPayment ===
+                                                        "amazonpay"
                                                     }
                                                 />
+
                                             </div>
+
                                         </div>
                                     )}
 
-                                    {/* CARDS */}
+
+                                    {/* =========================
+                                        CREDIT & DEBIT CARDS
+                                    ========================== */}
+
                                     <div
-                                        className={styles.accordionHeader}
-                                        onClick={() =>
-                                            toggleMethod("card")
-                                        }
+                                        className={`${styles.cardAccordion} ${
+                                            openMethod === "card"
+                                                ? styles.cardAccordionOpen
+                                                : ""
+                                        }`}
                                     >
-                                        <div className={styles.paymentName}>
-                                            <div className={styles.paymentIcon}>
-                                                <FiCreditCard />
-                                            </div>
 
-                                            <span>
-                                                Credit &amp; Debit Cards
-                                            </span>
-                                        </div>
+                                        {/* CARD HEADER */}
 
-                                        <div className={styles.arrowIcon}>
-                                            {openMethod === "card" ? (
-                                                <FiChevronUp />
-                                            ) : (
-                                                <FiChevronDown />
-                                            )}
-                                        </div>
-                                    </div>
+                                        <div
+                                            className={styles.accordionHeader}
+                                            onClick={() =>
+                                                toggleMethod("card")
+                                            }
+                                        >
 
-                                    {openMethod === "card" && (
-                                        <div className={styles.accordionBody}>
-                                            <div className={styles.cardForm}>
-
-                                                <input
-                                                    type="text"
-                                                    placeholder="Card Number"
-                                                />
-
-                                                <input
-                                                    type="text"
-                                                    placeholder="Name on Card"
-                                                />
+                                            <div className={styles.paymentName}>
 
                                                 <div
                                                     className={
-                                                        styles.cardRow
+                                                        styles.paymentIcon
                                                     }
                                                 >
-                                                    <input
-                                                        type="text"
-                                                        placeholder="MM / YY"
-                                                    />
+                                                    <FiCreditCard />
+                                                </div>
 
-                                                    <input
-                                                        type="password"
-                                                        placeholder="CVV"
-                                                    />
+                                                <span>
+                                                    Credit &amp; Debit Cards
+                                                </span>
+
+                                            </div>
+
+                                            <div className={styles.arrowIcon}>
+
+                                                {openMethod === "card" ? (
+                                                    <FiChevronUp />
+                                                ) : (
+                                                    <FiChevronDown />
+                                                )}
+
+                                            </div>
+
+                                        </div>
+
+
+                                        {/* CARD BODY */}
+
+                                        {openMethod === "card" && (
+                                            <div
+                                                className={
+                                                    styles.cardAccordionBody
+                                                }
+                                            >
+
+                                                <div
+                                                    className={
+                                                        styles.cardForm
+                                                    }
+                                                >
+
+                                                    {/* CARD NUMBER */}
+
+                                                    <div
+                                                        className={
+                                                            styles.cardInputGroup
+                                                        }
+                                                    >
+
+                                                        <label>
+                                                            Card number
+                                                        </label>
+
+                                                        <input
+                                                            type="text"
+                                                            placeholder="XXXX XXXX XXXX XXXX"
+                                                        />
+
+                                                    </div>
+
+
+                                                    {/* MONTH / YEAR / CVV */}
+
+                                                    <div
+                                                        className={
+                                                            styles.cardDetailsRow
+                                                        }
+                                                    >
+
+                                                        {/* MONTH */}
+
+                                                        <div
+                                                            className={
+                                                                styles.smallCardInput
+                                                            }
+                                                        >
+
+                                                            <label>
+                                                                Month
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                placeholder="00"
+                                                                maxLength={2}
+                                                            />
+
+                                                        </div>
+
+
+                                                        {/* YEAR */}
+
+                                                        <div
+                                                            className={
+                                                                styles.smallCardInput
+                                                            }
+                                                        >
+
+                                                            <label>
+                                                                Year
+                                                            </label>
+
+                                                            <input
+                                                                type="text"
+                                                                placeholder="00"
+                                                                maxLength={2}
+                                                            />
+
+                                                        </div>
+
+
+                                                        {/* CVV */}
+
+                                                        <div
+                                                            className={
+                                                                styles.cvvInput
+                                                            }
+                                                        >
+
+                                                            <label>
+                                                                CVV
+                                                            </label>
+
+                                                            <input
+                                                                type="password"
+                                                                placeholder="XXX"
+                                                                maxLength={3}
+                                                            />
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    {/* NAME ON CARD */}
+
+                                                    <div
+                                                        className={
+                                                            styles.cardInputGroup
+                                                        }
+                                                    >
+
+                                                        <label>
+                                                            Name on card
+                                                        </label>
+
+                                                        <input
+                                                            type="text"
+                                                            placeholder="Your Name"
+                                                        />
+
+                                                    </div>
+
+
+                                                    {/* CARD ICON */}
+
+                                                    <div
+                                                        className={
+                                                            styles.cardVisualIcon
+                                                        }
+                                                    >
+
+                                                        <FiCreditCard />
+
+                                                    </div>
+
                                                 </div>
 
                                             </div>
-                                        </div>
-                                    )}
+                                        )}
 
-                                    {/* NET BANKING */}
+                                    </div>
+
+
+                                    {/* =========================
+                                        NET BANKING
+                                    ========================== */}
+
                                     <div
                                         className={styles.accordionHeader}
                                         onClick={() =>
                                             toggleMethod("netbanking")
                                         }
                                     >
+
                                         <div className={styles.paymentName}>
+
                                             <div className={styles.paymentIcon}>
                                                 <FiBriefcase />
                                             </div>
 
-                                            <span>Netbanking</span>
+                                            <span>
+                                                Netbanking
+                                            </span>
+
                                         </div>
 
                                         <div className={styles.arrowIcon}>
+
                                             {openMethod === "netbanking" ? (
                                                 <FiChevronUp />
                                             ) : (
                                                 <FiChevronDown />
                                             )}
+
                                         </div>
+
                                     </div>
 
+
                                     {openMethod === "netbanking" && (
-                                        <div className={styles.accordionBody}>
-                                            <div className={styles.bankGrid}>
+                                        <div
+                                            className={
+                                                styles.accordionBody
+                                            }
+                                        >
+
+                                            <div
+                                                className={
+                                                    styles.bankGrid
+                                                }
+                                            >
 
                                                 <button type="button">
                                                     HDFC Bank
@@ -282,10 +555,15 @@ export default function CheckoutPage() {
                                                 </button>
 
                                             </div>
+
                                         </div>
                                     )}
 
-                                    {/* COD */}
+
+                                    {/* =========================
+                                        COD
+                                    ========================== */}
+
                                     <div
                                         className={`${styles.codRow} ${
                                             selectedPayment === "cod"
@@ -296,7 +574,9 @@ export default function CheckoutPage() {
                                             selectPayment("cod")
                                         }
                                     >
+
                                         <div className={styles.codContent}>
+
                                             <div className={styles.codTitle}>
                                                 COD
                                             </div>
@@ -306,6 +586,7 @@ export default function CheckoutPage() {
                                                 payments to ensure your
                                                 deliveries are contactless.
                                             </p>
+
                                         </div>
 
                                         <Radio
@@ -313,9 +594,14 @@ export default function CheckoutPage() {
                                                 selectedPayment === "cod"
                                             }
                                         />
+
                                     </div>
 
-                                    {/* REWARDS */}
+
+                                    {/* =========================
+                                        REWARDS
+                                    ========================== */}
+
                                     <div
                                         className={`${styles.rewardsRow} ${
                                             selectedPayment === "rewards"
@@ -326,13 +612,23 @@ export default function CheckoutPage() {
                                             selectPayment("rewards")
                                         }
                                     >
+
                                         <div className={styles.rewardIcon}>
                                             <FiGift />
                                         </div>
 
-                                        <div className={styles.rewardContent}>
+                                        <div
+                                            className={
+                                                styles.rewardContent
+                                            }
+                                        >
 
-                                            <div className={styles.rewardTop}>
+                                            <div
+                                                className={
+                                                    styles.rewardTop
+                                                }
+                                            >
+
                                                 <div>
 
                                                     <div
@@ -363,6 +659,7 @@ export default function CheckoutPage() {
                                                     Cashback on every spend.
                                                     Hurry!
                                                 </div>
+
                                             </div>
 
                                             <p>
@@ -374,9 +671,11 @@ export default function CheckoutPage() {
 
                                         <Radio
                                             active={
-                                                selectedPayment === "rewards"
+                                                selectedPayment ===
+                                                "rewards"
                                             }
                                         />
+
                                     </div>
 
                                 </div>
@@ -384,7 +683,11 @@ export default function CheckoutPage() {
 
                         </section>
 
-                        {/* BILLING */}
+
+                        {/* =========================
+                            BILLING DETAILS
+                        ========================== */}
+
                         <BillingDetails
                             cartTotal={2698}
                             memberSavings={200}
@@ -404,7 +707,9 @@ export default function CheckoutPage() {
 }
 
 
-/* RADIO COMPONENT */
+/* =========================================
+   RADIO COMPONENT
+========================================= */
 
 function Radio({ active }) {
     return (

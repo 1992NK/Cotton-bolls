@@ -1,603 +1,851 @@
+/* =========================================================
+   CHECKOUT PAGE
+========================================================= */
+
 .checkoutPage {
-  width: 100%;
-  min-height: 100vh;
-
-  background: #ffffff;
-
-  padding: 8px 12px 40px;
-
-  box-sizing: border-box;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  color: #3e4e5e;
+    width: 100%;
+    padding: 40px 0 60px;
+    background: #ffffff;
 }
 
-/* =====================================
-   MAIN CONTAINER
-===================================== */
-
-.checkoutrow{
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    340px;
-
-  gap: 28px;
+.checkoutrow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 40px;
+    align-items: start;
 }
-
-/* =====================================
-   LEFT
-===================================== */
 
 .leftSection {
-  min-width: 0;
+    width: 100%;
 }
 
-/* =====================================
+
+/* =========================================================
    ADDRESS
-===================================== */
+========================================================= */
 
 .addressWrapper {
-  padding-bottom: 12px;
-
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 25px;
 }
-
 .addAddressButton {
-  width: 100%;
-  height: 50px;
+    width: 100%;
+    height: 50px;
 
-  margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
 
-  padding: 0 16px;
+    padding: 0 20px;
 
-  display: flex;
-  align-items: center;
+    border: 1px solid #eee;
+    border-radius: 5px;
 
-  gap: 8px;
+    background: #ffffff;
+    color: #222222;
 
-  background: #fff;
+    font-size: 14px;
+    font-weight: 500;
 
-  border: 1px solid #ddd;
+    cursor: pointer;
 
-  border-radius: 3px;
-
-  color: #079da4;
-
-  font-size: 14px;
-
-  cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .addAddressButton svg {
-  width: 18px;
-  height: 18px;
-
-  stroke-width: 3;
+    width: 18px;
+    height: 18px;
 }
 
-/* =====================================
+.addAddressButton:hover {
+    background: #222222;
+    color: #ffffff;
+}
+
+
+/* =========================================================
    PAYMENT SECTION
-===================================== */
+========================================================= */
 
 .paymentSection {
-  margin-top: 28px;
+    width: 100%;
 }
 
 .paymentHeading {
-  margin: 0 0 18px;
+    margin: 0 0 14px;
 
-  font-size: 14px;
+    font-size: 18px;
+    font-weight: 600;
 
-  font-weight: 700;
-
-  color: #3d4c5b;
+    color: #222222;
 }
 
 .paymentBox {
-  width: 100%;
+    width: 100%;
 
-  border: 1px solid #d9d9d9;
+    background: #ffffff;
 
-  box-sizing: border-box;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+
+    overflow: hidden;
 }
 
-/* =====================================
-   PAYMENT NAME
-===================================== */
+
+/* =========================================================
+   COMMON PAYMENT NAME
+========================================================= */
 
 .paymentName {
-  display: flex;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
-  align-items: center;
+    color: #222222;
 
-  gap: 12px;
-
-  font-size: 14px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .paymentIcon {
-  width: 27px;
-  height: 27px;
+    width: 36px;
+    height: 36px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  color: #475862;
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
 
-  font-size: 21px;
+    background: #ffffff;
+
+    flex-shrink: 0;
 }
 
 .paymentIcon svg {
-  width: 20px;
-  height: 20px;
+    width: 18px;
+    height: 18px;
+
+    color: #333333;
 }
 
-/* =====================================
-   TSS
-===================================== */
 
-.tssRow {
-  min-height: 74px;
-
-  padding: 0 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background: #f1f1f1;
-
-  border-bottom: 1px solid #ddd;
-
-  box-sizing: border-box;
-}
-
-.tssRight {
-  display: flex;
-  align-items: center;
-
-  gap: 10px;
-}
-
-.usedText {
-  color: #009da5;
-
-  font-size: 12px;
-}
-
-/* =====================================
-   NORMAL PAYMENT
-===================================== */
-
-.paymentRow {
-  min-height: 74px;
-
-  padding: 0 15px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-bottom: 1px solid #ddd;
-
-  box-sizing: border-box;
-
-  cursor: pointer;
-
-  transition: 0.2s;
-}
-
-.paymentRow:hover {
-  background: #fafafa;
-}
-
-.selectedPayment {
-  background: #fafafa;
-}
-
-/* =====================================
+/* =========================================================
    RADIO
-===================================== */
+========================================================= */
 
 .radio {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 
-  border: 1px solid #ccc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  border-radius: 50%;
+    border: 1.5px solid #bdbdbd;
+    border-radius: 50%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    background: #ffffff;
 
-  flex-shrink: 0;
-
-  background: #fff;
-
-  box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .radioActive {
-  background: #078c8d;
-
-  border-color: #078c8d;
-
-  color: #fff;
+    border-color: #222222;
+    background: #222222;
 }
 
 .radioActive svg {
-  width: 13px;
-  height: 13px;
+    width: 13px;
+    height: 13px;
 
-  stroke-width: 3;
+    color: #ffffff;
+
+    stroke-width: 3;
 }
 
-/* =====================================
-   ACCORDION
-===================================== */
+
+/* =========================================================
+   TSS MONEY
+========================================================= */
+
+.tssRow {
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 20px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tssRight {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.usedText {
+    font-size: 12px;
+    color: #888888;
+}
+
+
+/* =========================================================
+   UPI
+========================================================= */
+
+.paymentRow {
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 20px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.paymentRow:hover {
+    background: #fafafa;
+}
+
+.selectedPayment {
+    background: #fafafa;
+}
+
+
+/* =========================================================
+   ACCORDION HEADER
+========================================================= */
 
 .accordionHeader {
-  min-height: 59px;
+    min-height: 68px;
 
-  padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    padding: 14px 20px;
 
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eeeeee;
 
-  box-sizing: border-box;
+    cursor: pointer;
 
-  cursor: pointer;
-
-  transition: 0.2s;
+    transition: background 0.2s ease;
 }
 
 .accordionHeader:hover {
-  background: #fafafa;
+    background: #fafafa;
 }
 
 .arrowIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #31536d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrowIcon svg {
-  width: 19px;
-  height: 19px;
+    width: 18px;
+    height: 18px;
+
+    color: #555555;
 }
 
-/* =====================================
+
+/* =========================================================
    ACCORDION BODY
-===================================== */
+========================================================= */
 
 .accordionBody {
-  padding: 15px;
+    width: 100%;
 
-  background: #fafafa;
+    padding: 8px 0;
 
-  border-bottom: 1px solid #ddd;
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
 }
 
-/* =====================================
+
+/* =========================================================
    WALLET
-===================================== */
+========================================================= */
 
 .walletOption {
-  height: 45px;
+    width: 100%;
 
-  padding: 0 10px;
+    min-height: 62px;
 
-  margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    padding: 10px 20px;
 
-  background: #fff;
+    cursor: pointer;
 
-  border: 1px solid #eee;
-
-  box-sizing: border-box;
-
-  font-size: 13px;
+    transition: background 0.2s ease;
 }
 
-.walletOption:last-child {
-  margin-bottom: 0;
+.walletOption:hover {
+    background: #fafafa;
 }
 
-.smallRadio {
-  width: 16px;
-  height: 16px;
+.walletLeft {
+    display: flex;
+    align-items: center;
 
-  border: 1px solid #ccc;
-
-  border-radius: 50%;
+    gap: 12px;
 }
 
-/* =====================================
-   CARD FORM
-===================================== */
+.walletLeft > span {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #222222;
+}
+
+.walletLogo {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.walletLogo img {
+    width: 30px;
+    height: 30px;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   CREDIT & DEBIT CARD ACCORDION
+========================================================= */
+
+.cardAccordion {
+    width: 100%;
+
+    border: none;
+}
+
+
+/*
+   IMPORTANT:
+   Card open hone par heading ke neeche
+   separate border nahi chahiye.
+*/
+
+.cardAccordionOpen {
+    border: none;
+}
+
+.cardAccordion .accordionHeader {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   CARD ACCORDION BODY
+========================================================= */
+
+.cardAccordionBody {
+    width: 100%;
+
+    padding: 16px 20px 24px;
+
+    background: #ffffff;
+
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   CARD FORM OUTER BOX
+========================================================= */
 
 .cardForm {
-  width: 100%;
+    width: 420px;
+
+    min-height: 236px;
+
+    margin: 0 auto;
+
+    padding: 24px 35px 20px;
+
+    position: relative;
+
+    background: #fafafa;
+
+    border: 1px solid #d9d9d9;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
 }
 
-.cardForm input {
-  width: 100%;
-  height: 42px;
 
-  margin-bottom: 10px;
+/* =========================================================
+   CARD INPUT GROUP
+========================================================= */
 
-  padding: 0 12px;
+.cardInputGroup {
+    width: 100%;
 
-  box-sizing: border-box;
+    position: relative;
 
-  border: 1px solid #ddd;
-
-  outline: none;
-
-  font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.cardForm input:focus {
-  border-color: #078c8d;
+.cardInputGroup label,
+.smallCardInput label,
+.cvvInput label {
+    position: absolute;
+
+    top: 7px;
+    left: 15px;
+
+    z-index: 1;
+
+    font-size: 10px;
+    line-height: 1;
+
+    color: #888888;
+
+    pointer-events: none;
 }
 
-.cardRow {
-  display: grid;
 
-  grid-template-columns: 1fr 1fr;
+/* =========================================================
+   CARD INPUTS
+========================================================= */
 
-  gap: 10px;
+.cardInputGroup input,
+.smallCardInput input,
+.cvvInput input {
+    width: 100%;
+    height: 40px;
+
+    display: block;
+
+    padding: 16px 15px 5px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    font-size: 12px;
+
+    color: #444444;
+
+    transition: border-color 0.2s ease;
 }
 
-/* =====================================
-   BANK
-===================================== */
+.cardInputGroup input::placeholder,
+.smallCardInput input::placeholder,
+.cvvInput input::placeholder {
+    color: #555555;
+}
+
+.cardInputGroup input:focus,
+.smallCardInput input:focus,
+.cvvInput input:focus {
+    border-color: #999999;
+}
+
+
+/* =========================================================
+   MONTH / YEAR / CVV ROW
+========================================================= */
+
+.cardDetailsRow {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.smallCardInput {
+    width: 78px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+.cvvInput {
+    width: 87px;
+
+    position: relative;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   CARD VISUAL ICON
+========================================================= */
+
+.cardVisualIcon {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin-top: 18px;
+}
+
+.cardVisualIcon svg {
+    width: 40px;
+    height: 40px;
+
+    color: #222222;
+
+    stroke-width: 1.5;
+}
+
+
+/* =========================================================
+   NET BANKING
+========================================================= */
 
 .bankGrid {
-  display: grid;
+    display: grid;
 
-  grid-template-columns:
-    repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-  gap: 10px;
+    gap: 10px;
+
+    padding: 12px 20px;
 }
 
 .bankGrid button {
-  height: 42px;
+    height: 42px;
 
-  background: #fff;
+    border: 1px solid #dddddd;
 
-  border: 1px solid #ddd;
+    border-radius: 6px;
 
-  font-size: 13px;
+    background: #ffffff;
 
-  cursor: pointer;
+    color: #333333;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
 }
 
 .bankGrid button:hover {
-  border-color: #078c8d;
+    border-color: #222222;
+
+    background: #fafafa;
 }
 
-/* =====================================
+
+/* =========================================================
    COD
-===================================== */
+========================================================= */
 
 .codRow {
-  min-height: 86px;
+    min-height: 86px;
 
-  padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    gap: 20px;
 
-  gap: 15px;
+    padding: 16px 20px;
 
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eeeeee;
 
-  box-sizing: border-box;
+    cursor: pointer;
 
-  cursor: pointer;
-
-  transition: 0.2s;
+    transition: background 0.2s ease;
 }
 
 .codRow:hover {
-  background: #fafafa;
+    background: #fafafa;
 }
 
 .codSelected {
-  background: #fafafa;
+    background: #fafafa;
+}
+
+.codContent {
+    flex: 1;
 }
 
 .codTitle {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 
-  font-size: 14px;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #222222;
 }
 
 .codContent p {
-  margin: 0;
+    margin: 0;
 
-  color: #536476;
+    max-width: 600px;
 
-  font-size: 13px;
+    font-size: 12px;
+    line-height: 1.5;
 
-  line-height: 19px;
+    color: #777777;
 }
 
-/* =====================================
+
+/* =========================================================
    REWARDS
-===================================== */
+========================================================= */
 
 .rewardsRow {
-  min-height: 103px;
+    min-height: 100px;
 
-  padding: 15px;
+    display: flex;
+    align-items: center;
 
-  display: flex;
-  align-items: center;
+    gap: 14px;
 
-  gap: 12px;
+    padding: 16px 20px;
 
-  box-sizing: border-box;
+    cursor: pointer;
 
-  cursor: pointer;
-
-  transition: 0.2s;
+    transition: background 0.2s ease;
 }
 
 .rewardsRow:hover {
-  background: #fafafa;
+    background: #fafafa;
 }
 
 .rewardSelected {
-  background: #fafafa;
+    background: #fafafa;
 }
 
 .rewardIcon {
-  width: 43px;
-  height: 43px;
+    width: 38px;
+    height: 38px;
 
-  flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
 
-  background: #101010;
+    flex-shrink: 0;
+}
 
-  border-radius: 7px;
+.rewardIcon svg {
+    width: 19px;
+    height: 19px;
 
-  color: #ffc400;
-
-  font-size: 24px;
+    color: #333333;
 }
 
 .rewardContent {
-  flex: 1;
-
-  min-width: 0;
+    flex: 1;
 }
 
 .rewardTop {
-  display: flex;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
-  align-items: flex-start;
-
-  justify-content: space-between;
-
-  gap: 20px;
+    gap: 20px;
 }
 
 .rewardTitle {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 
-  font-size: 14px;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #222222;
 }
 
 .balance {
-  color: #376b8b;
+    font-size: 12px;
 
-  font-size: 12px;
+    color: #777777;
 }
 
 .cashback {
-  color: #13aaa4;
+    max-width: 260px;
 
-  font-size: 11px;
+    font-size: 11px;
+    line-height: 1.4;
 
-  white-space: nowrap;
+    color: #777777;
+
+    text-align: right;
 }
 
 .rewardContent p {
-  margin: 7px 0 0;
+    margin: 8px 0 0;
 
-  color: #536476;
+    font-size: 12px;
 
-  font-size: 12px;
+    color: #777777;
 }
 
-/* =====================================
-   TABLET
-===================================== */
 
-@media (max-width: 900px) {
+/* =========================================================
+   BILLING SECTION
+========================================================= */
 
-  .checkoutContainer {
-    grid-template-columns: 1fr;
+.billingSection {
+    width: 100%;
 
-    gap: 30px;
-  }
-
+    position: sticky;
+    top: 100px;
 }
 
-/* =====================================
-   MOBILE
-===================================== */
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .checkoutrow {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .billingSection {
+        position: static;
+    }
+
+    .cardForm {
+        width: 420px;
+        max-width: 100%;
+    }
+}
+
 
 @media (max-width: 600px) {
 
-  .checkoutPage {
-    padding: 8px;
-  }
+    .checkoutPage {
+        padding: 25px 0 40px;
+    }
 
-  .usedText {
-    display: none;
-  }
+    .checkoutrow {
+        gap: 25px;
+    }
 
-  .tssRow,
-  .paymentRow,
-  .accordionHeader,
-  .codRow {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
+    .paymentHeading {
+        font-size: 17px;
+    }
 
-  .rewardsRow {
-    padding: 14px 12px;
+    .tssRow,
+    .paymentRow,
+    .accordionHeader,
+    .codRow {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 
-    align-items: flex-start;
-  }
+    .usedText {
+        display: none;
+    }
 
-  .rewardTop {
-    display: block;
-  }
+    .tssRight {
+        gap: 8px;
+    }
 
-  .cashback {
-    margin-top: 7px;
+    .walletOption {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
 
-    white-space: normal;
+    .cardAccordionBody {
+        padding: 14px 10px 20px;
+    }
 
-    line-height: 16px;
-  }
+    .cardForm {
+        width: 100%;
 
-  .cardRow {
-    grid-template-columns: 1fr;
+        min-height: auto;
 
-    gap: 0;
-  }
+        padding: 20px;
+    }
 
-  .bankGrid {
-    grid-template-columns: 1fr;
-  }
+    .cardDetailsRow {
+        gap: 8px;
+    }
 
+    .smallCardInput {
+        width: 70px;
+    }
+
+    .cvvInput {
+        width: 78px;
+    }
+
+    .bankGrid {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .rewardTop {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cashback {
+        max-width: none;
+
+        text-align: left;
+    }
+
+    .rewardsRow {
+        align-items: flex-start;
+    }
+
+    .rewardsRow > .radio {
+        margin-top: 8px;
+    }
 }
