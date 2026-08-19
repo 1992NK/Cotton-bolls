@@ -31,15 +31,15 @@
   font-size: 14px;
   font-weight: 600;
   color: #141414;
-   font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 .card p {
   margin-top: 4px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #6b7280;
-  font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 @media (max-width: 768px) {

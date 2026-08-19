@@ -4,9 +4,9 @@
 
 .heading{
     font-size:14px;
-    font-weight:400;
-    margin-bottom:18px;
-    font-family: var(--lato-message);
+    font-weight:500;
+    margin-bottom:15px;
+    font-family: var(--font-inter);
     color:#141414
 }
 
@@ -28,13 +28,15 @@
     width:48px;
     height:48px;
     border:1px solid #d6d6d6;
-    border-radius:8px;
+    border-radius:5px;
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:16px;
-    color:#333;
+    color:#141414;
     transition:.3s;
+    font-family: var(--font-inter);
+    font-weight: 400;
 }
 
 .sizeLabel input:checked + .size{

@@ -16,6 +16,7 @@ align-items:center;
 gap:8px;
 font-size:15px;
 margin-bottom:30px;
+font-family: var(--font-inter);
 }
 
 .recommend span{

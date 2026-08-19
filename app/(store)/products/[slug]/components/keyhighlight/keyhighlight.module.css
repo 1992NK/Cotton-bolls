@@ -4,11 +4,11 @@
 }
 
 .heading {
-  font-size: 14px;
-  font-weight: 600;
-  color: #141414;
-  margin-bottom: 0;
-   font-family: var(--lato-message);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-inter);
+    color: rgb(20, 20, 20);
+    margin-bottom: 15px;
 }
 
 .grid {
@@ -31,7 +31,7 @@
   font-size: 14px;
   color: #8b8b8b;
   margin-bottom: 10px;
-   font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 .value {
@@ -39,7 +39,7 @@
   font-weight: 600;
   color: #141414;
   line-height: 1.3;
-   font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 @media (max-width:768px){

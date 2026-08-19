@@ -10,7 +10,7 @@ background:#fff;
 font-size:14px;
 margin-bottom:25px;
 font-weight: 600;
- font-family: var(--lato-message);
+font-family: var(--font-inter);
 }
 
 .viewAll{
@@ -25,7 +25,7 @@ font-weight:600;
 color:#1677ff;
 cursor:pointer;
 transition:.3s;
-font-family: var(--lato-message);
+font-family: var(--font-inter);
 }
 
 .viewAll:hover{

@@ -10,6 +10,7 @@ display:grid;
 grid-template-columns:25px 1fr 45px;
 align-items:center;
 gap:14px;
+font-family: var(--font-inter);
 }
 
 .row span{

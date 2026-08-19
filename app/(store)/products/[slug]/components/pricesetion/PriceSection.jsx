@@ -1,15 +1,16 @@
 import styles from './pricesection.module.css'
+import { FaRupeeSign } from "react-icons/fa";
 const PriceSection =({ product })=>{
      return (
 
     <div className={styles.price}>
 
       <span className={styles.sale}>
-        ₹{product.price}
+        <FaRupeeSign />{product.price}
       </span>
 
       <span className={styles.old}>
-        ₹{product.oldPrice}
+        <FaRupeeSign />{product.oldPrice}
       </span>
 
       <span className={styles.off}>

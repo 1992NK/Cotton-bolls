@@ -1,12 +1,14 @@
 .section{
-    margin-top:70px;
-    margin-bottom:70px;
+    margin-top:35px;
+    margin-bottom:0;
 }
 
 .heading{
-    font-size:30px;
-    font-weight:700;
-    margin-bottom:35px;
+    font-size:21px;
+    font-weight:600;
+    margin-bottom:15px;
+    font-family: var(--font-inter);
+    color: #141414;
 }
 
 .grid{

@@ -7,21 +7,34 @@
 
 .sale{
     font-size:24px;
-    font-weight:600;
-    font-family: var(--lato-message);
+    font-weight:700;
+    font-family: var(--font-inter);
     color:#141414
 }
 
+.sale svg{
+    flex-shrink: 0;
+    width: 19px;
+    height: 19px;
+}
+
 .old{
-    font-size:18px;
+    font-size:16px;
     color:#999;
     text-decoration:line-through;
-    font-family: var(--lato-message);
+    font-weight:400;
+   font-family: var(--font-inter);
+}
+
+.old svg{
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
 }
 
 .off{
     color:green;
-    font-size:18px;
-    font-weight:600;
-    font-family: var(--lato-message);
+    font-size:15px;
+    font-weight:400;
+    font-family: var(--font-inter);
 }

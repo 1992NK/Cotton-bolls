@@ -3,12 +3,11 @@
 }
 
 .wrapper h1{
-    font-size:32px;
-    font-weight:400;
-    margin-bottom:5px;
+    font-size: 18px;
+    font-weight:700;
     color:#141414;
-     font-family: var(--heading-font);
-     line-height: 32px;
+    font-family: var(--font-inter);
+     line-height: 26px;
 }
 
 .rating{
@@ -16,9 +15,10 @@
     align-items:center;
     gap:15px;
 
- font-family: var(--lato-message);
+    font-family: var(--font-inter);
     font-size:13px;
-    color:#555;
+    color:#141414;
+    font-weight: 400;
 
     margin-bottom:25px;
 }
@@ -28,7 +28,7 @@
     width: fit-content;
 
     margin-top: 15px;
-    font-family: var(--lato-message);
+    font-family: var(--font-inter);
     background: linear-gradient(
         to right,
         #f4e7ff 0%,
@@ -59,7 +59,7 @@
     color: #0b4da2;
     border-radius: 8px;
     font-weight: 600;
-    font-family: var(--lato-message);
+    font-family: var(--font-inter);
     font-size: 14px;
 }
 

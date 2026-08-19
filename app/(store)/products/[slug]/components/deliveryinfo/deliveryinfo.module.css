@@ -5,11 +5,11 @@
 }
 
 .title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 18px;
-  color: #141414;
-   font-family: var(--lato-message);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--font-inter);
+    color: rgb(20, 20, 20);
+    margin-bottom: 15px;
 }
 
 .searchBox {
@@ -40,9 +40,10 @@
   background: transparent;
   color: #141414;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0 18px;
   cursor: pointer;
+  font-family: var(--font-inter);
 }
 
 .searchBox button:hover {
@@ -72,7 +73,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #141414;
-   font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 .item h4 span {
@@ -84,7 +85,7 @@
   margin-top: 5px;
   color: #777;
   font-size: 12px;
-  font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 .shipping {
@@ -97,7 +98,8 @@
   padding: 14px;
   font-size: 15px;
   font-weight: 500;
-  border-radius: 4px;
+  font-family: var(--font-inter);
+  border-radius: 5px;
 }
 
 .shipping strong {

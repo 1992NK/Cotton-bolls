@@ -70,7 +70,7 @@
   font-size: 14px;
   font-weight: 600;
   color: #141414;
-   font-family: var(--lato-message);
+  font-family: var(--font-inter);
   line-height: 1.2;
 }
 
@@ -78,6 +78,7 @@
   margin-top: 4px;
   font-size: 14px;
   color: #8b8b8b;
+  font-family: var(--font-inter);
 }
 
 /* ==========================

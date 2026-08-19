@@ -11,10 +11,10 @@
   background: #ffd232;
   color: #141414;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 8px;
   cursor: pointer;
-   font-family: var(--heading-font);
+  font-family: var(--font-inter);
 }
 
 .wishlist {
