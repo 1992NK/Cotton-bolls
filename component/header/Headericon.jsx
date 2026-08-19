@@ -76,14 +76,14 @@ export default function HeaderIcons() {
               className={styles.dropdownItem}
               onClick={() => setIsUserMenuOpen(false)}
             >
-              TSS Money
+              CB Money
             </div>
 
             <div
               className={styles.dropdownItem}
               onClick={() => setIsUserMenuOpen(false)}
             >
-              TSS Points
+              CB Points
             </div>
 
             <div

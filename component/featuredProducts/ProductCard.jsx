@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import { FaHeart, FaShoppingCart, FaRupeeSign } from "react-icons/fa";
 import styles from "./featuredProduct.module.css";
 
 const ProductCard = ({ product }) => {
@@ -32,13 +32,12 @@ const ProductCard = ({ product }) => {
     >
       <div className={styles.imageBox}>
         {product.discount && (
-          <span className={styles.badge}>{product.discount}</span>
+          <span className={styles.badge}>{product.discount}% off</span>
         )}
 
         <div
-          className={`${styles.actions} ${
-            hover ? styles.showActions : ""
-          }`}
+          className={`${styles.actions} ${hover ? styles.showActions : ""
+            }`}
         >
           <button className={styles.iconBtn}>
             <FaHeart />
@@ -50,9 +49,8 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div
-          className={`${styles.imageWrapper} ${
-            fade ? styles.fade : ""
-          }`}
+          className={`${styles.imageWrapper} ${fade ? styles.fade : ""
+            }`}
         >
           <Image
             src={
@@ -91,18 +89,18 @@ const ProductCard = ({ product }) => {
         <h3>{product.title}</h3>
 
         <div className={styles.price}>
+          <span className={styles.newPrice}>
+            <FaRupeeSign />{product.price}
+          </span>
+
           {product.oldPrice && (
             <span className={styles.oldPrice}>
-              ${product.oldPrice}
+              <FaRupeeSign />{product.oldPrice}
             </span>
           )}
-
-          <span className={styles.newPrice}>
-            ${product.price}
-          </span>
         </div>
 
-        <button>Select options</button>
+        <button>Add to Cart</button>
       </div>
     </div>
   );

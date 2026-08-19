@@ -1,0 +1,256 @@
+.page {
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 20px auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 262px 1fr;
+  gap: 40px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  width: 100%;
+}
+
+
+/* =========================
+   ADD NEW ADDRESS
+========================= */
+
+.addAddress {
+  width: 100%;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 0 18px;
+
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+
+  color: #087d91;
+  font-size: 14px;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.plus {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+
+/* =========================
+   ADDRESS CARD
+========================= */
+
+.addressCard {
+  margin-top: 20px;
+  padding: 18px 16px 0;
+
+  border: 1px solid #0799a6;
+  border-radius: 6px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   ADDRESS HEADER
+========================= */
+
+.addressHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.addressTitle {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #111;
+  font-size: 14px;
+}
+
+.addressTitle strong {
+  font-size: 14px;
+}
+
+.checked {
+  width: 16px;
+  height: 16px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #079b9e;
+  color: #fff;
+
+  border-radius: 3px;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.other {
+  color: #008ca0;
+  font-size: 12px;
+}
+
+
+/* =========================
+   DEFAULT BUTTON
+========================= */
+
+.defaultButton {
+  min-width: 100px;
+  height: 29px;
+
+  padding: 0 12px;
+
+  background: #fff;
+  border: 1px solid #008fa1;
+  border-radius: 18px;
+
+  color: #087f91;
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   ADDRESS DETAILS
+========================= */
+
+.addressDetails {
+  margin-top: 16px;
+
+  color: #3e3e3e;
+  font-size: 12px;
+  line-height: 21px;
+}
+
+.mobile {
+  margin-top: 1px;
+}
+
+.mobile strong {
+  color: #242424;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+  height: 1px;
+  margin-top: 14px;
+
+  background: #d9d9d9;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.actions {
+  height: 64px;
+
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+}
+
+.actionButton {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 0;
+  background: transparent;
+
+  color: #333;
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.actionDivider {
+  width: 1px;
+  height: 38px;
+
+  background: #d9d9d9;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .container {
+    grid-template-columns: 220px 1fr;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    display: block;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .content {
+    margin-top: 25px;
+  }
+
+  .addressHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .defaultButton {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 400px) {
+  .addressCard {
+    padding: 15px 12px 0;
+  }
+
+  .addressTitle {
+    flex-wrap: wrap;
+  }
+
+  .actions {
+    height: 55px;
+  }
+}

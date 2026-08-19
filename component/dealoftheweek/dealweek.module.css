@@ -30,9 +30,9 @@ flex:1;
 .tag{
 font-size:13px;
 letter-spacing:3px;
-font-weight:700;
+font-weight:500;
 margin-bottom:15px;
-font-family: var(--lato-message);
+font-family: var(--font-inter);
 }
 
 .right h2{
@@ -44,11 +44,11 @@ font-family: var(--heading-font);
 }
 
 .desc{
-font-size:16px;
-color:#777;
-line-height:30px;
+font-size:14px;
+color:#141414;
+line-height:24px;
 margin-bottom:40px;
-font-family: var(--lato-message);
+font-family: var(--font-inter);
 }
 
 .countdown{

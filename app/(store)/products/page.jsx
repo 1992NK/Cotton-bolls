@@ -23,7 +23,7 @@ const Listingpage = () => {
             <div className="container">
                 <Breadcrumbs items={breadcrumb} />
 
-                <h2>Men T-Shirts</h2>
+                
 
                 <div className={styles.listingWrapper}>
                     <div className={styles.sidebar}>
@@ -31,6 +31,7 @@ const Listingpage = () => {
                     </div>
 
                     <div className={styles.products}>
+                        <h2 className={styles.productTitle}>Men T-Shirts</h2>
                         <ProductGrid />
                     </div>
                 </div>

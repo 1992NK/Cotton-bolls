@@ -2,6 +2,7 @@
     display: flex;
     gap: 24px;
     align-items: flex-start;
+    margin-top: 15px;
 }
 
 .sidebar {
@@ -12,3 +13,5 @@
 .products {
     flex: 1;
 }
+
+.productTitle{font-family: var(--font-inter); font-size: 18px; margin-bottom: 15px; font-weight: 500;}

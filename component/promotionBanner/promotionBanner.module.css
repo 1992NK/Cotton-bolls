@@ -56,7 +56,7 @@
   font-size: 14px;
   color: #141414;
   margin-bottom: 10px;
-  font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 .content h2 {
@@ -74,11 +74,11 @@
 }
 
 .content p {
-  font-size: 20px;
-  line-height: 32px;
-  color: #6f6f6f;
+  font-size: 16px;
+  line-height: 24px;
+  color: #141414;
   margin-bottom: 40px;
-  font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 .btn {

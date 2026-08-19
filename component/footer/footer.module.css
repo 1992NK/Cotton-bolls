@@ -1,6 +1,6 @@
 .footer{
     width:100%;
-    background:#fff;
+    background:#f4f4f4;
     padding: 30px 0;
 }
 
@@ -25,10 +25,10 @@ width: 100%;
 
 .about p{
     color:#141414;
-    line-height:16px;
+    line-height:21px;
     margin-bottom:25px;
-    font-family: var(--lato-message);
-    line-height: 30px;
+    font-family: var(--font-inter);
+    font-size: 14px;
 }
 
 .about span{
@@ -55,8 +55,9 @@ width: 100%;
     margin-bottom:16px;
     cursor:pointer;
     transition:.3s;
-    font-size:16px;
-    font-family: var(--lato-message);
+    font-size:14px;
+    font-family: var(--font-inter);
+    font-weight: 400;
 }
 
 .top li:hover{

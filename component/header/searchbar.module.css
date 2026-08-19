@@ -8,7 +8,7 @@
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: #777;
+  color: #141414;
   z-index: 1;
 }
 
@@ -16,15 +16,18 @@
   width: 100%;
   height: 45px;
 
-  background-color: #f0f5ff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
 
   padding-left: 45px; /* icon ke liye jagah */
   padding-right: 15px;
 
   font-size: 15px;
+  font-family: var(--font-inter);
+  color: #141414;
   outline: none;
+  font-weight: 400;
 }
 
 .input:focus {

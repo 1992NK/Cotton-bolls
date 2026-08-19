@@ -4,10 +4,6 @@
   gap: 24px;
 }
 
-/* =========================
-   COMMON ICON
-========================= */
-
 .iconWrapper,
 .cartWrapper,
 .userIconWrapper {
@@ -25,21 +21,15 @@
   color: #fff;
 }
 
-/* =========================
-   USER BUTTON
-========================= */
-
 .iconButton {
   width: 38px;
   height: 38px;
   padding: 0;
   border: 0;
   background: transparent;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
 }
 
@@ -47,70 +37,45 @@
   color: #e51f2b;
 }
 
-/* =========================
-   USER DROPDOWN
-========================= */
-
 .userDropdown {
   position: absolute;
   top: 42px;
   left: 50%;
   transform: translateX(-50%);
-
   width: 160px;
-
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 3px;
-
   padding: 8px 0;
-
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16);
-
   z-index: 9999;
 }
 
 /* Small top arrow */
-.userDropdown::before {
-  content: "";
-
+.userDropdown::before {content: "";
   position: absolute;
-
   top: -7px;
   left: 50%;
-
   width: 12px;
   height: 12px;
-
   background: #ffffff;
-
   border-left: 1px solid #dddddd;
   border-top: 1px solid #dddddd;
-
   transform: translateX(-50%) rotate(45deg);
 }
 
-/* =========================
-   DROPDOWN ITEM
-========================= */
 
 .dropdownItem {
   height: 29px;
-
   padding: 0 24px;
-
   display: flex;
   align-items: center;
-
-  font-size: 14px;
+  font-size: 13px;
+  font-family: var(--font-inter);
   font-weight: 400;
-
-  color: #444444;
-
+  color: #141414;
   cursor: pointer;
-
   white-space: nowrap;
-
   transition: all 0.15s ease;
 }
 
@@ -119,14 +84,9 @@
   color: #e51f2b;
 }
 
-/* Logout */
 .logoutItem {
   margin-top: 2px;
 }
-
-/* =========================
-   CART
-========================= */
 
 .cartWrapper {
   position: relative;
@@ -134,23 +94,16 @@
 
 .cartCount {
   position: absolute;
-
   top: -9px;
   right: -10px;
-
   min-width: 18px;
   height: 18px;
-
   padding: 0 4px;
-
   border-radius: 50%;
-
   background: #ef2929;
   color: #ffffff;
-
   font-size: 10px;
   font-weight: 600;
-
   display: flex;
   align-items: center;
   justify-content: center;

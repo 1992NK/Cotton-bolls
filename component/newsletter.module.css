@@ -9,7 +9,7 @@
     font-size:15px;
     display:block;
     margin-bottom:10px;
-    font-family: var(--lato-message);
+    font-family: var(--font-inter);
     color: #fff;
 }
 
@@ -26,8 +26,8 @@
     color:#fff;
     line-height:21px;
     margin-bottom:35px;
-    font-size: 16px;
-    font-family: var(--lato-message);
+    font-size: 14px;
+    font-family: var(--font-inter);
 }
 
 .subscribebox{

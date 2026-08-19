@@ -9,10 +9,11 @@
   position: relative;
   cursor: pointer;
   padding: 10px 0;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
   color: #fff;
   transition: color 0.3s ease;
+  font-family: var(--font-inter);
 }
 
 /* Hover text color */
