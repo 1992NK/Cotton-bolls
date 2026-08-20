@@ -4,35 +4,41 @@
   display: flex;
   align-items: center;
   padding: 0 14px;
-  box-sizing: border-box;
   background: #fff9e8;
   border: 1px solid #eadcae;
   border-radius: 8px;
-  color: #282c3f;
+  color: #141414;
+  font-family: var(--font-inter);
 }
+
+.deliveryCard svg{margin-right: 5px;}
 
 .locationIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 7px;
-  font-size: 18px;
+  margin-right: 15px;
+  font-size: 16px;
+  font-family: var(--font-inter);
+ 
 }
 
 .deliveryText {
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 14px;
-  font-family: var(--lato-message);
+  font-size: 13px;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  color: #141414;
 }
 
 .deliveryText strong {
   text-decoration: underline;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .arrow {
   margin-left: 7px;
-  font-size: 17px;
+  font-size: 16px;
 }

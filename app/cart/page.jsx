@@ -42,24 +42,32 @@ const Cart = () => {
   const isCartEmpty = cartItems.length === 0;
 
   return (
-    <div
-      className={`container ${styles.cartPage} ${
-        isCartEmpty ? styles.emptyCartPage : ""
-      }`}
-    >
-      <div className={styles.left}>
-        <CartList cartItems={cartItems} onRemove={handleRemove} />
+
+    <>
+
+      <div className="container">
+
+        <div
+          className={`${styles.cartPage} ${isCartEmpty ? styles.emptyCartPage : ""
+            }`}
+        >
+          <div className={styles.left}>
+            <CartList cartItems={cartItems} onRemove={handleRemove} />
+          </div>
+
+          {!isCartEmpty && (
+            <div className={styles.right}>
+              <DeliveryCard />
+              <CouponCard />
+              <PriceSummary />
+              <Features />
+            </div>
+          )}
+        </div>
+
       </div>
 
-      {!isCartEmpty && (
-        <div className={styles.right}>
-          <DeliveryCard />
-          <CouponCard />
-          <PriceSummary />
-          <Features />
-        </div>
-      )}
-    </div>
+    </>
   );
 };
 

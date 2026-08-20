@@ -1,9 +1,10 @@
 .heading {
-  font-size: 21px;
-  font-weight: 500;
+  font-weight: 700;
   color: #141414;
-  margin-bottom: 30px;
-  font-family: var(--heading-font);
+  margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: var(--font-inter);
 }
 
 .heading span {
@@ -11,7 +12,7 @@
 }
 
 .savingBar {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -28,9 +29,9 @@
 
 .savingBar span {
   color: #127a16;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--lato-message);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-inter);
 }
 
 .applicable {
@@ -42,8 +43,8 @@
 .offerBox {
   background: #f4f7fb;
   border: 1px solid #e3e7ee;
-  border-radius: 10px;
-  padding: 16px 22px;
+  border-radius: 5px;
+  padding: 15px;
   margin-bottom: 20px;
 }
 
@@ -59,10 +60,10 @@
 }
 
 .offerLeft span {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-inter);
   color: #141414;
-  font-family: var(--lato-message);
 }
 
 .addItems {
@@ -73,7 +74,7 @@
   font-weight: 400;
   color: #0072ce;
   transition: 0.3s;
-  font-family: var(--lato-message);
+  font-family: var(--font-inter);
 }
 
 .addItems:hover {

@@ -1,4 +1,4 @@
-.offerouter{position: relative; margin-top: 20px;}
+.offerouter{position: relative; margin-top: 15px; background-color: #f1e8f8; padding: 5px; border-radius: 5px;}
 
 .couponCard {
   position: relative;
@@ -7,7 +7,6 @@
   border: 1px solid #dfc7ef;
   border-radius: 8px;
   padding: 12px 8px 0;
-  box-sizing: border-box;
   margin-top: 28px;
 }
 
@@ -15,13 +14,14 @@
   position: absolute;
   top: -15px;
   left: 10px;
-  padding: 3px 10px;
+  padding: 5px 10px;
   background: #fff;
   border: 1px solid #dfc7ef;
   border-radius: 12px;
   color: #7a2ba5;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: var(--font-inter);
 }
 
 .offerContent {
@@ -29,10 +29,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 6px;
+  padding: 15px 15px;
   background: #fff;
-  border: 1px solid #e1c9f0;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 .offerText {
@@ -40,17 +39,16 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 3px;
-  color: #282c3f;
-  font-size: 14px;
+  color: #141414;
+  font-size: 13px;
+  font-family: var(--font-inter);
+  font-weight: 400;
 }
 
 .offerText strong,
 .offerText b {
   color: #7a2ba5;
-}
-
-.offerText strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .addItemButton {
@@ -59,11 +57,12 @@
   padding: 0 13px;
   background: #fff;
   border: 1px solid #d9a9ef;
-  border-radius: 7px;
+  border-radius: 5px;
   color: #7a2ba5;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
+  font-family: var(--font-inter);
 }
 
 .moreCoupons {
@@ -75,9 +74,10 @@
   gap: 4px;
   border: none;
   background: transparent;
-  color: #282c3f;
+  color: #141414;
   font-size: 13px;
   cursor: pointer;
+  font-family: var(--font-inter);
 }
 
 .moreCoupons svg {
