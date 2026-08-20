@@ -3,10 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
-
 import Header from "@/component/header/Header";
 import Footer from "@/component/footer/Footer";
-
 import styles from "./login.module.css";
 
 export default function LoginPage() {
@@ -48,8 +46,7 @@ export default function LoginPage() {
       {/* Header */}
       <Header />
 
-      <main className={styles.loginPage}>
-
+      <div className="container">
         {/* Login Background */}
         <section className={styles.loginSection}>
 
@@ -157,7 +154,8 @@ export default function LoginPage() {
 
         </section>
 
-      </main>
+      </div>
+
 
       {/* Footer */}
       <Footer />

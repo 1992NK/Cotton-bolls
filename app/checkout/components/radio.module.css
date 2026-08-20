@@ -1,0 +1,29 @@
+.radio {
+    width: 20px;
+    height: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid #bdbdbd;
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.radioActive {
+    border-color: #222222;
+    background: #222222;
+}
+
+.radioActive svg {
+    width: 13px;
+    height: 13px;
+
+    color: #ffffff;
+
+    stroke-width: 3;
+}

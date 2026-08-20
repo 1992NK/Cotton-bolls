@@ -16,6 +16,7 @@ import styles from "./deliveryAddress.module.css";
 
 import Header from "@/component/header/Header";
 import Footer from "@/component/footer/Footer";
+import CheckoutStepper from "@/checkout/components/checkoutStepper/CheckoutStepper";
 
 export default function DeliveryAddressPage() {
 
@@ -209,6 +210,8 @@ export default function DeliveryAddressPage() {
       <section className={styles.deliveryPage}>
 
         <div className="container">
+
+          <CheckoutStepper />
 
           <div className={styles.deliveryRow}>
 

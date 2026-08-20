@@ -7,6 +7,7 @@ import CouponCard from "./components/couponCard/CouponCard";
 import DeliveryCard from "./components/deliveryCard/DeliveryCard";
 import Features from "./components/features/Features";
 import PriceSummary from "./components/priceSummary/PriceSummary";
+import CheckoutStepper from "@/checkout/components/checkoutStepper/CheckoutStepper";
 
 const initialCartItems = [
   {
@@ -44,8 +45,11 @@ const Cart = () => {
   return (
 
     <>
+      
 
       <div className="container">
+
+        <CheckoutStepper />
 
         <div
           className={`${styles.cartPage} ${isCartEmpty ? styles.emptyCartPage : ""

@@ -6,19 +6,18 @@
 .loginSection {
   width: 100%;
   min-height: 460px;
-  background-color: #e7e7e7;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 25px 20px;
-  box-sizing: border-box;
+  padding: 25px 0;
 }
 
 .loginCard {
-  width: 388px;
+  width: 500px;
   background-color: #ffffff;
-  padding: 24px 35px 34px;
-  box-sizing: border-box;
+  padding: 24px 100px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px 0px;
 }
 
 .loginTitle {

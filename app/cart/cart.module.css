@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 2fr 400px;
   gap: 50px;
-  padding: 30px 0;
 }
 
 .left {

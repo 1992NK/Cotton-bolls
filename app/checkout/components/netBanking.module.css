@@ -1,0 +1,46 @@
+.bankGrid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    padding: 12px 20px;
+}
+
+.bankGrid button {
+    height: 42px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #333333;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.bankGrid button:hover {
+    border-color: #222222;
+
+    background: #fafafa;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .bankGrid {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
