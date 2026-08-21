@@ -19,7 +19,7 @@
   background: #f5ffe8;
   border: 1px solid #abd68b;
   border-radius: 10px;
-  padding: 16px 22px;
+  padding: 7px 22px;
 }
 
 .savingBar svg {
@@ -41,8 +41,8 @@
 }
 
 .offerBox {
-  background: #f4f7fb;
-  border: 1px solid #e3e7ee;
+  background: #fafafa;
+  border: 1px solid #eee;
   border-radius: 5px;
   padding: 15px;
   margin-bottom: 20px;

@@ -207,11 +207,20 @@ export default function DeliveryAddressPage() {
     <>
       <Header />
 
+      <section className={styles.stepperbg}>
+                <div className="container">
+                    
+                    <CheckoutStepper />
+
+                </div>
+            </section>
+
+
       <section className={styles.deliveryPage}>
 
         <div className="container">
 
-          <CheckoutStepper />
+          
 
           <div className={styles.deliveryRow}>
 

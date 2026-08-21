@@ -5,79 +5,57 @@
 
 .billingHeading {
   margin: 5px 0 22px;
-
   color: #9a9a9a;
-
-  font-size: 13px;
-
+  font-size: 15px;
   font-weight: 400;
-
   letter-spacing: 0.3px;
+  font-family: var(--font-inter);
 }
 
 .billingBox {
   width: 100%;
-
-  border: 1px solid #e0e0e0;
-
-  box-sizing: border-box;
+  border: 1px solid #eee;
+  border-radius: 5px;
 }
 
-/* =====================================
-   BILL ROW
-===================================== */
 
 .billRow {
   min-height: 47px;
-
   padding: 0 11px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 15px;
-
-  border-bottom: 1px solid #e2e2e2;
-
-  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  color: #141414;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font-inter);
 }
 
 .billRow strong {
   white-space: nowrap;
 }
 
-/* =====================================
-   MEMBER SAVINGS
-===================================== */
-
 .savingsRow {
   min-height: 48px;
-
   padding: 0 11px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   background: linear-gradient(
     90deg,
     #ead8f5 0%,
     #d8f0ff 50%,
     #efd4ec 100%
   );
-
   font-size: 13px;
 }
 
-/* =====================================
-   SHIPPING
-===================================== */
 
 .shippingValue {
   display: flex;
   align-items: center;
-
   gap: 8px;
 }
 
@@ -89,62 +67,39 @@
   color: #a3a3a3;
 }
 
-/* =====================================
-   TOTAL
-===================================== */
-
 .totalRow {
   min-height: 48px;
-
   padding: 0 11px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   font-size: 13px;
 }
 
 .totalRow span {
   color: #777;
-
   font-weight: 400;
 }
-
-/* =====================================
-   PLACE ORDER
-===================================== */
 
 .placeOrderButton {
   width: 100%;
   height: 40px;
-
   margin-top: 20px;
-
   border: none;
-
   border-radius: 2px;
-
   background: #108584;
-
   color: #fff;
-
   font-size: 13px;
-
   font-weight: 700;
-
   cursor: pointer;
-
   transition: background 0.2s ease;
+  font-family: var(--font-inter);
 }
 
 .placeOrderButton:hover {
   background: #08706f;
 }
 
-/* =====================================
-   MOBILE
-===================================== */
 
 @media (max-width: 600px) {
 

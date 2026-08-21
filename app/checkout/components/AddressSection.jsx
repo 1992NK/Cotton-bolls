@@ -1,8 +1,7 @@
 import { FiPlus } from "react-icons/fi";
-
 import styles from "./addressSection.module.css";
 
-export default function AddressSection({ onAddAddress }) {
+const AddressSection = ({ onAddAddress }) => {
     return (
         <div className={styles.addressWrapper}>
             <button
@@ -15,4 +14,6 @@ export default function AddressSection({ onAddAddress }) {
             </button>
         </div>
     );
-}
+};
+
+export default AddressSection;

@@ -2,7 +2,7 @@ import { FiCheck } from "react-icons/fi";
 
 import styles from "./radio.module.css";
 
-export default function Radio({ active }) {
+const Radio = ({ active }) => {
     return (
         <span
             className={`${styles.radio} ${
@@ -12,4 +12,6 @@ export default function Radio({ active }) {
             {active && <FiCheck />}
         </span>
     );
-}
+};
+
+export default Radio;

@@ -3,12 +3,16 @@
     background: #ffffff;
 }
 
+.stepperbg{background-color: #fafafa; margin-bottom: 30px;}
+
 .checkoutrow {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 380px;
-    gap: 40px;
+   display: grid;
+  grid-template-columns: 2fr 400px;
+  gap: 50px;
     align-items: start;
 }
+
+
 
 .leftSection {
     width: 100%;

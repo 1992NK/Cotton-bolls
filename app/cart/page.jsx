@@ -45,11 +45,18 @@ const Cart = () => {
   return (
 
     <>
+
+    <section className={styles.stepperbg}>
+                <div className="container">
+                    
+                    <CheckoutStepper />
+
+                </div>
+            </section>
       
 
       <div className="container">
 
-        <CheckoutStepper />
 
         <div
           className={`${styles.cartPage} ${isCartEmpty ? styles.emptyCartPage : ""

@@ -4,6 +4,8 @@
   gap: 50px;
 }
 
+.stepperbg{background-color: #fafafa; margin-bottom: 30px;}
+
 .left {
   display: flex;
   flex-direction: column;

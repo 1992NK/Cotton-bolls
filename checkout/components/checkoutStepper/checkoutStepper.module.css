@@ -1,6 +1,5 @@
 .stepperWrapper {
   width: 100%;
-  background: #ffffff;
   padding: 15px 0;
 }
 
@@ -47,21 +46,24 @@
 }
 
 .stepLabel {
-  margin-top: 9px;
+  margin-top: 5px;
   font-size: 14px;
   font-weight: 500;
   color: #999999;
   text-align: center;
+  font-family: var(--font-inter);
 }
 
 .activeLabel {
-  color: #111111;
-  font-weight: 700;
+  color: #141414;
+  font-weight:500;
+  font-family: var(--font-inter);
 }
 
 .completedLabel {
-  color: #111111;
-  font-weight: 600;
+  color: #141414;
+  font-weight: 500;
+  font-family: var(--font-inter);
 }
 
 .stepLine {

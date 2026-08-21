@@ -43,10 +43,16 @@ export default function CheckoutPage() {
         <>
             <Header />
 
-            <section className={styles.checkoutPage}>
+            <section className={styles.stepperbg}>
                 <div className="container">
-
+                    
                     <CheckoutStepper />
+
+                </div>
+            </section>
+
+            <section className={`${styles.checkoutPage}`}>
+                <div className="container">
 
                     <div className={styles.checkoutrow}>
 

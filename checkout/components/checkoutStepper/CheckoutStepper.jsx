@@ -6,7 +6,7 @@ import styles from "./checkoutStepper.module.css";
 const steps = [
   {
     id: "cart",
-    label: "Cart",
+    label: "My Bag",
     path: "/cart",
   },
   {

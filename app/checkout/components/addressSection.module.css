@@ -1,6 +1,6 @@
 .addressWrapper {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .addAddressButton {
@@ -14,11 +14,12 @@
     border: 1px solid #eee;
     border-radius: 5px;
     background: #ffffff;
-    color: #222222;
-    font-size: 14px;
+    color: #141414;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
+    font-family: var(--font-inter);
 }
 
 .addAddressButton svg {

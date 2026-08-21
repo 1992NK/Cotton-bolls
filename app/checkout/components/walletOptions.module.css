@@ -1,31 +1,18 @@
 .accordionBody {
     width: 100%;
-
     padding: 8px 0;
-
     background: #ffffff;
-
     border-bottom: 1px solid #eeeeee;
 }
 
-
-/* =========================================================
-   WALLET
-========================================================= */
-
 .walletOption {
     width: 100%;
-
     min-height: 62px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 10px 20px;
-
     cursor: pointer;
-
     transition: background 0.2s ease;
 }
 
@@ -36,48 +23,36 @@
 .walletLeft {
     display: flex;
     align-items: center;
-
     gap: 12px;
 }
 
 .walletLeft > span {
     font-size: 14px;
-    font-weight: 500;
-
-    color: #222222;
+    font-weight: 400;
+    color: #141414;
+    font-family: var(--font-inter);
 }
 
 .walletLogo {
     width: 42px;
     height: 42px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: #ffffff;
-
     border: 1px solid #eeeeee;
     border-radius: 7px;
-
     overflow: hidden;
-
     flex-shrink: 0;
 }
 
 .walletLogo img {
     width: 30px;
     height: 30px;
-
     display: block;
-
     object-fit: contain;
 }
 
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
 @media (max-width: 600px) {
 

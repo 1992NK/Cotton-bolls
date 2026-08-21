@@ -1,22 +1,17 @@
 import styles from "./walletOptions.module.css";
-
 import Radio from "./Radio";
 
-export default function WalletOptions({
+const WalletOptions = ({
     selectedPayment,
     setSelectedPayment,
-}) {
+}) => {
     return (
         <div className={styles.accordionBody}>
-
-            {/* PAYTM */}
             <div
                 className={styles.walletOption}
                 onClick={() => setSelectedPayment("paytm")}
             >
-
                 <div className={styles.walletLeft}>
-
                     <div className={styles.walletLogo}>
                         <img
                             src="/images/payment/paytm.png"
@@ -24,27 +19,19 @@ export default function WalletOptions({
                         />
                     </div>
 
-                    <span>
-                        Paytm
-                    </span>
-
+                    <span>Paytm</span>
                 </div>
 
                 <Radio
                     active={selectedPayment === "paytm"}
                 />
-
             </div>
 
-
-            {/* PHONEPE */}
             <div
                 className={styles.walletOption}
                 onClick={() => setSelectedPayment("phonepe")}
             >
-
                 <div className={styles.walletLeft}>
-
                     <div className={styles.walletLogo}>
                         <img
                             src="/images/payment/phonepe.png"
@@ -52,29 +39,21 @@ export default function WalletOptions({
                         />
                     </div>
 
-                    <span>
-                        PhonePe
-                    </span>
-
+                    <span>PhonePe</span>
                 </div>
 
                 <Radio
                     active={selectedPayment === "phonepe"}
                 />
-
             </div>
 
-
-            {/* AMAZON PAY */}
             <div
                 className={styles.walletOption}
                 onClick={() =>
                     setSelectedPayment("amazonpay")
                 }
             >
-
                 <div className={styles.walletLeft}>
-
                     <div className={styles.walletLogo}>
                         <img
                             src="/images/payment/amazon-pay.png"
@@ -82,18 +61,15 @@ export default function WalletOptions({
                         />
                     </div>
 
-                    <span>
-                        Amazon Pay
-                    </span>
-
+                    <span>Amazon Pay</span>
                 </div>
 
                 <Radio
                     active={selectedPayment === "amazonpay"}
                 />
-
             </div>
-
         </div>
     );
-}
+};
+
+export default WalletOptions;
