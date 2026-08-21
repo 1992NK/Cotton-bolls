@@ -1,89 +1,53 @@
-/* =====================================================
-   OVERLAY
-===================================================== */
-
 .overlay {
   position: fixed;
   inset: 0;
-
   z-index: 9999;
-
   background: rgba(0, 0, 0, 0.55);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 10px;
-
   box-sizing: border-box;
 }
-
-
-/* =====================================================
-   STEP 1
-   MAP / LOCATION MODAL
-===================================================== */
 
 .modal {
   width: 650px;
   max-width: 100%;
-
   background: #ffffff;
-
   border-radius: 2px;
-
   overflow: hidden;
-
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
 }
 
-
-/* =====================================================
-   MAP MODAL HEADER
-===================================================== */
-
 .modalHeader {
   height: 45px;
-
   padding: 0 14px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   box-sizing: border-box;
-
   background: #ffffff;
-
   border-bottom: 1px solid #e5e5e5;
 }
 
 .modalHeader h2 {
-  margin: 0;
-
-  color: #555555;
-
-  font-size: 16px;
-  font-weight: 700;
+      color: #141414;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: var(--font-inter);
 }
 
 .closeButton {
   width: 30px;
   height: 30px;
-
   padding: 0;
-
   border: none;
-
   background: transparent;
-
   color: #555555;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
 }
 
@@ -96,208 +60,126 @@
   height: 17px;
 }
 
-
-/* =====================================================
-   SEARCH BOX
-===================================================== */
-
 .searchWrapper {
   height: 47px;
-
   margin: 10px 5px 8px;
-
-  border: 2px solid #008f91;
-
+  border: 1px solid #eee;
   display: flex;
   align-items: center;
-
   box-sizing: border-box;
-
   background: #ffffff;
 }
 
 .searchIcon {
   width: 20px;
   height: 20px;
-
   margin-left: 10px;
-
-  color: #008f91;
-
+  color: #141414;
   flex-shrink: 0;
 }
 
 .searchWrapper input {
   width: 100%;
   height: 100%;
-
   padding: 0 12px;
-
   border: none;
   outline: none;
-
   background: transparent;
-
   color: #444444;
-
-  font-family: inherit;
-
+  font-family: var(--font-inter);
   font-size: 14px;
 }
 
 .searchWrapper input::placeholder {
-  color: #008f91;
-
+  color: #141414;
   opacity: 1;
 }
 
-
-/* =====================================================
-   LOCATION WARNING
-===================================================== */
-
 .locationWarning {
   min-height: 40px;
-
   margin: 0 5px 8px;
-
   padding: 0 10px;
-
   box-sizing: border-box;
-
   border: 1px solid #f2c84b;
-
   border-radius: 8px;
-
   background: #fff4cf;
-
   display: flex;
   align-items: center;
-
   gap: 7px;
-
   color: #9b7200;
-
   font-size: 12px;
-
   line-height: 16px;
 }
 
 .locationWarning svg {
   width: 15px;
   height: 15px;
-
   flex-shrink: 0;
 }
 
-
-/* =====================================================
-   MAP CONTAINER
-===================================================== */
-
 .mapContainer {
   width: calc(100% - 10px);
-
   height: 550px;
-
   margin: 0 5px;
-
   position: relative;
-
   overflow: hidden;
-
   background: #e8edf3;
 }
 
 .map {
   width: 100%;
   height: 100%;
-
   border: none;
-
   display: block;
 }
 
-
-/* =====================================================
-   CENTER LOCATION PIN
-===================================================== */
-
 .centerPin {
   position: absolute;
-
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -100%);
-
   z-index: 5;
-
   pointer-events: none;
 }
 
 .pinOuter {
   width: 30px;
   height: 30px;
-
   border-radius: 50% 50% 50% 0;
-
   background: #ef3030;
-
   transform: rotate(-45deg);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  box-shadow:
-    0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .pinOuter svg {
   width: 18px;
   height: 18px;
-
   color: #ffffff;
-
   transform: rotate(45deg);
 }
 
-
-/* =====================================================
-   MAP ZOOM CONTROLS
-===================================================== */
-
 .zoomControls {
   position: absolute;
-
   left: 10px;
   bottom: 75px;
-
   z-index: 10;
-
   background: #ffffff;
-
-  box-shadow:
-    0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .zoomControls button {
   width: 42px;
   height: 42px;
-
   padding: 0;
-
   border: none;
-
   background: #ffffff;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: #555555;
-
   cursor: pointer;
 }
 
@@ -314,36 +196,24 @@
   height: 21px;
 }
 
-
-/* =====================================================
-   SELECTED LOCATION BELOW MAP
-===================================================== */
-
 .locationDetails {
   padding: 9px 10px 5px;
-
   background: #ffffff;
-
   box-sizing: border-box;
 }
 
 .pincodeRow {
   display: flex;
   align-items: center;
-
   gap: 5px;
-
   color: #555555;
-
   font-size: 16px;
 }
 
 .pincodeRow svg {
   width: 17px;
   height: 17px;
-
   color: #ef3030;
-
   flex-shrink: 0;
 }
 
@@ -353,47 +223,28 @@
 
 .locationDetails p {
   margin: 7px 0 0 27px;
-
   color: #777777;
-
   font-size: 12px;
-
   line-height: 18px;
 }
 
-
-/* =====================================================
-   CONFIRM LOCATION BUTTON
-===================================================== */
-
 .confirmWrapper {
   padding: 5px 10px 10px;
-
   background: #ffffff;
-
   box-sizing: border-box;
 }
 
 .confirmButton {
   width: 100%;
   height: 40px;
-
   border: none;
-
   border-radius: 3px;
-
   background: #ed3030;
-
   color: #ffffff;
-
-  font-family: inherit;
-
+  font-family: var(--font-inter);
   font-size: 14px;
-
   font-weight: 700;
-
   cursor: pointer;
-
   transition: background 0.2s ease;
 }
 
@@ -401,90 +252,56 @@
   background: #d92727;
 }
 
-
-/* =====================================================
-   STEP 2
-   ADD NEW ADDRESS MODAL
-===================================================== */
-
 .detailsModal {
   width: 650px;
-
   max-width: 100%;
-
   max-height: calc(100vh - 20px);
-
   background: #ffffff;
-
   border-radius: 2px;
-
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
-
-  box-shadow:
-    0 10px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
 }
-
-
-/* =====================================================
-   DETAILS HEADER
-===================================================== */
 
 .detailsHeader {
   height: 52px;
-
   padding: 0 10px;
-
   display: grid;
-
   grid-template-columns: 35px 1fr 35px;
-
   align-items: center;
-
   box-sizing: border-box;
-
   background: #ffffff;
-
   border-bottom: 1px solid #dddddd;
 }
 
 .detailsHeader h2 {
-  margin: 0;
-
-  color: #555555;
-
-  font-size: 17px;
-
-  font-weight: 400;
+  color: #141414;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: var(--font-inter);
 }
 
-
-/* =====================================================
-   BACK BUTTON
-===================================================== */
-
-.backButton {
+.backButton,
+.detailsCloseButton {
   width: 30px;
   height: 30px;
-
   padding: 0;
-
   border: none;
-
   background: transparent;
-
-  color: #222222;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
 }
 
-.backButton:hover {
+.backButton {
+  color: #222222;
+}
+
+.backButton:hover,
+.detailsCloseButton:hover {
   color: #000000;
 }
 
@@ -493,34 +310,9 @@
   height: 21px;
 }
 
-
-/* =====================================================
-   DETAILS CLOSE BUTTON
-===================================================== */
-
 .detailsCloseButton {
-  width: 30px;
-  height: 30px;
-
-  padding: 0;
-
-  border: none;
-
-  background: transparent;
-
   color: #555555;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   justify-self: end;
-
-  cursor: pointer;
-}
-
-.detailsCloseButton:hover {
-  color: #222222;
 }
 
 .detailsCloseButton svg {
@@ -528,421 +320,225 @@
   height: 16px;
 }
 
-
-/* =====================================================
-   DETAILS CONTENT
-===================================================== */
-
 .detailsContent {
   padding: 8px 13px 0;
-
   box-sizing: border-box;
-
   overflow-y: auto;
 }
 
-
-/* =====================================================
-   SELECTED LOCATION
-===================================================== */
-
 .selectedLocation {
   min-height: 60px;
-
   padding: 9px 10px;
-
   box-sizing: border-box;
-
-  border: 1px solid #dddddd;
-
+  border: 1px solid #eee;
   border-radius: 3px;
-
   background: #ffffff;
 }
 
 .selectedLocationTop {
   display: flex;
   align-items: center;
-
   gap: 6px;
 }
 
 .selectedLocationTop svg {
   width: 17px;
   height: 17px;
-
   color: #ef3030;
-
   flex-shrink: 0;
 }
 
 .selectedLocationTop strong {
   color: #555555;
-
   font-size: 14px;
-
   font-weight: 700;
 }
 
 .selectedLocation p {
   margin: 7px 0 0 20px;
-
   color: #777777;
-
   font-size: 12px;
-
   line-height: 17px;
 }
 
-
-/* =====================================================
-   FULL WIDTH INPUT
-===================================================== */
-
 .inputFull {
   width: 100%;
-
   margin-top: 10px;
 }
 
-.inputFull input {
+.inputFull input,
+.inputBox input {
   width: 100%;
   height: 42px;
-
   padding: 0 12px;
-
   box-sizing: border-box;
-
-  border: 1px solid #d4d4d4;
-
+  border: 1px solid #eee;
   border-radius: 3px;
-
   outline: none;
-
   background: #ffffff;
-
-  color: #555555;
-
-  font-family: inherit;
-
+  color: #141414;
+  font-family: var(--font-inter);
   font-size: 13px;
 }
 
 .inputFull input::placeholder {
-  color: #777777;
-
+  color: #141414;
   opacity: 1;
 }
 
-.inputFull input:focus {
+.inputFull input:focus,
+.inputBox input:focus,
+.pincodeInput input:focus,
+.selectBox select:focus,
+.contactBox > input:focus {
   border-color: #999999;
 }
 
-
-/* =====================================================
-   TWO COLUMN INPUTS
-===================================================== */
-
 .twoColumns {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 10px;
-
   margin-top: 10px;
 }
 
-
-/* =====================================================
-   NORMAL INPUT BOX
-===================================================== */
-
 .inputBox {
   width: 100%;
-
   height: 42px;
 }
 
 .inputBox input {
-  width: 100%;
   height: 100%;
-
-  padding: 0 12px;
-
-  box-sizing: border-box;
-
-  border: 1px solid #d4d4d4;
-
-  border-radius: 3px;
-
-  outline: none;
-
-  background: #ffffff;
-
-  color: #555555;
-
-  font-family: inherit;
-
-  font-size: 13px;
 }
-
-.inputBox input:focus {
-  border-color: #999999;
-}
-
-
-/* =====================================================
-   PINCODE INPUT
-===================================================== */
 
 .pincodeInput {
   width: 100%;
   height: 42px;
-
   position: relative;
 }
 
 .pincodeInput input {
   width: 100%;
   height: 100%;
-
   padding: 0 75px 0 12px;
-
   box-sizing: border-box;
-
-  border: 1px solid #d4d4d4;
-
+  border: 1px solid #eee;
   border-radius: 3px;
-
   outline: none;
-
   background: #ffffff;
-
-  color: #555555;
-
-  font-family: inherit;
-
+  color: #141414;
+  font-family: var(--font-inter);
   font-size: 13px;
-}
-
-.pincodeInput input:focus {
-  border-color: #999999;
 }
 
 .pincodeInput span {
   position: absolute;
-
   right: 10px;
   top: 50%;
-
   transform: translateY(-50%);
-
   color: #777777;
-
   font-size: 11px;
-
   font-weight: 600;
 }
-
-
-/* =====================================================
-   COUNTRY SELECT
-===================================================== */
 
 .selectBox {
   width: 100%;
   height: 42px;
-
   position: relative;
 }
 
 .selectBox select {
   width: 100%;
   height: 100%;
-
   padding: 0 35px 0 12px;
-
   box-sizing: border-box;
-
   appearance: none;
-
-  border: 1px solid #d4d4d4;
-
+  border: 1px solid #eee;
   border-radius: 3px;
-
   outline: none;
-
   background: #ffffff;
-
-  color: #777777;
-
-  font-family: inherit;
-
+  color: #141414;
+  font-family: var(--font-inter);
   font-size: 13px;
-
   cursor: pointer;
-}
-
-.selectBox select:focus {
-  border-color: #999999;
 }
 
 .selectBox svg {
   position: absolute;
-
   right: 10px;
   top: 50%;
-
   width: 15px;
   height: 15px;
-
   transform: translateY(-50%);
-
   color: #666666;
-
   pointer-events: none;
 }
 
-
-/* =====================================================
-   CONTACT DETAILS TITLE
-===================================================== */
-
 .contactTitle {
   margin: 14px 0 8px;
-
-  color: #555555;
-
+  color: #141414;
   font-size: 14px;
-
   font-weight: 400;
+  font-family: var(--font-inter);
 }
-
-
-/* =====================================================
-   CONTACT DETAILS BOX
-===================================================== */
 
 .contactBox {
   min-height: 52px;
-
   padding: 10px;
-
   box-sizing: border-box;
-
   background: #f5f5f5;
-
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 20px;
 }
-
-
-/* =====================================================
-   NAME INPUT
-===================================================== */
 
 .contactBox > input {
   width: 100%;
   height: 42px;
-
   padding: 0 12px;
-
   box-sizing: border-box;
-
   border: 1px solid #d4d4d4;
-
   border-radius: 3px;
-
   outline: none;
-
   background: #ffffff;
-
-  color: #444444;
-
-  font-family: inherit;
-
+  color: #141414;
+  font-family: var(--font-inter);
   font-size: 13px;
 }
-
-.contactBox > input:focus {
-  border-color: #999999;
-}
-
-
-/* =====================================================
-   MOBILE GROUP
-===================================================== */
 
 .mobileGroup {
   width: 100%;
   height: 42px;
-
   display: grid;
-
   grid-template-columns: 65px 1fr;
 }
-
-
-/* =====================================================
-   MOBILE COUNTRY CODE
-===================================================== */
 
 .mobileGroup select {
   width: 100%;
   height: 42px;
-
   padding: 0 8px;
-
   box-sizing: border-box;
-
   border: 1px solid #d4d4d4;
-
   border-radius: 3px 0 0 3px;
-
   outline: none;
-
   background: #ffffff;
-
-  color: #444444;
-
-  font-family: inherit;
-
+  color: #141414;
+  font-family: var(--font-inter);
   font-size: 13px;
-
   cursor: pointer;
 }
-
-
-/* =====================================================
-   MOBILE NUMBER
-===================================================== */
 
 .mobileGroup input {
   width: 100%;
   height: 42px;
-
   padding: 0 12px;
-
   box-sizing: border-box;
-
   border: 1px solid #d4d4d4;
-
   border-left: none;
-
   border-radius: 0 3px 3px 0;
-
   outline: none;
-
   background: #ffffff;
-
-  color: #444444;
-
-  font-family: inherit;
-
+  color: #141414;
+  font-family: var(--font-inter);
   font-size: 13px;
 }
 
@@ -950,21 +546,12 @@
   border-color: #999999;
 }
 
-
-/* =====================================================
-   SAVE ADDRESS AS
-===================================================== */
-
 .saveAsRow {
   min-height: 45px;
-
   display: flex;
   align-items: center;
-
   gap: 8px;
-
   color: #666666;
-
   font-size: 14px;
 }
 
@@ -972,170 +559,91 @@
   margin-right: 3px;
 }
 
-
-/* =====================================================
-   ADDRESS TYPE BUTTON
-===================================================== */
-
 .typeButton,
 .typeActive {
   min-width: 55px;
   height: 30px;
-
   padding: 0 10px;
-
   box-sizing: border-box;
-
   border-radius: 8px;
-
   background: #ffffff;
-
-  font-family: inherit;
-
+  font-family: var(--font-inter);
   font-size: 12px;
-
   cursor: pointer;
 }
 
-
-/* NORMAL */
-
 .typeButton {
   border: 2px solid #aaaaaa;
-
   color: #444444;
 }
 
-
-/* ACTIVE */
-
 .typeActive {
   border: 2px solid #111111;
-
   color: #111111;
-
   font-weight: 600;
 }
-
-
-/* =====================================================
-   DEFAULT ADDRESS
-===================================================== */
 
 .defaultAddress {
   display: flex;
   align-items: center;
-
   gap: 7px;
-
   padding-bottom: 10px;
-
   color: #666666;
-
   font-size: 12px;
-
   cursor: pointer;
 }
 
 .defaultAddress input {
   width: 14px;
   height: 14px;
-
   margin: 0;
-
   cursor: pointer;
 }
-
-
-/* =====================================================
-   DETAILS FOOTER
-===================================================== */
 
 .detailsFooter {
   min-height: 66px;
-
   padding: 10px 14px;
-
   box-sizing: border-box;
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   gap: 12px;
-
   border-top: 1px solid #dddddd;
-
   background: #ffffff;
 }
 
-
-/* =====================================================
-   CANCEL BUTTON
-===================================================== */
-
-.cancelButton {
+.cancelButton,
+.saveButton {
   width: 150px;
   height: 43px;
-
-  border: 1px solid #777777;
-
   border-radius: 10px;
-
-  background: #ffffff;
-
-  color: #777777;
-
-  font-family: inherit;
-
+  font-family: var(--font-inter);
   font-size: 13px;
-
   font-weight: 700;
-
   cursor: pointer;
+}
+
+.cancelButton {
+  border: 1px solid #777777;
+  background: #ffffff;
+  color: #777777;
 }
 
 .cancelButton:hover {
   background: #f7f7f7;
 }
 
-
-/* =====================================================
-   SAVE BUTTON
-===================================================== */
-
 .saveButton {
-  width: 150px;
-  height: 43px;
-
   border: none;
-
-  border-radius: 10px;
-
   background: #ed3030;
-
   color: #ffffff;
-
-  font-family: inherit;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  cursor: pointer;
 }
 
 .saveButton:hover {
   background: #d92727;
 }
 
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
 @media (max-width: 700px) {
-
   .overlay {
     padding: 0;
   }
@@ -1143,13 +651,9 @@
   .modal,
   .detailsModal {
     width: 100%;
-
     max-width: 100%;
-
     max-height: 100vh;
-
     height: 100%;
-
     border-radius: 0;
   }
 
@@ -1164,25 +668,17 @@
 
   .contactBox {
     grid-template-columns: 1fr;
-
     gap: 10px;
   }
 }
 
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
 @media (max-width: 500px) {
-
   .twoColumns {
     grid-template-columns: 1fr;
   }
 
   .saveAsRow {
     flex-wrap: wrap;
-
     padding: 5px 0;
   }
 
@@ -1196,13 +692,7 @@
   }
 }
 
-
-/* =====================================================
-   SHORT SCREEN
-===================================================== */
-
 @media (max-height: 700px) and (min-width: 701px) {
-
   .mapContainer {
     height: 420px;
   }

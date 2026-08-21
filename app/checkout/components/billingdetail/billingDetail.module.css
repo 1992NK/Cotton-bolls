@@ -4,7 +4,7 @@
 }
 
 .billingHeading {
-  margin: 5px 0 22px;
+  margin: 0 0 15px;
   color: #9a9a9a;
   font-size: 15px;
   font-weight: 400;
@@ -49,7 +49,10 @@
     #d8f0ff 50%,
     #efd4ec 100%
   );
-  font-size: 13px;
+  color: #141414;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--font-inter);
 }
 
 
@@ -73,7 +76,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 13px;
+  color: #141414;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: var(--font-inter);
 }
 
 .totalRow span {

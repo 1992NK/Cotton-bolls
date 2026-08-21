@@ -1,0 +1,141 @@
+.addressCard {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px 16px 14px;
+  box-sizing: border-box;
+  border: 1px solid #008f91;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #444444;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.addressCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.selectedAddressCard {
+  border-color: #141414;
+}
+
+.addressTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-inter);
+}
+
+.checkBox {
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+  padding: 0;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkBox.checked {
+  border-color: #141414;
+  background: #141414;
+  color: #ffffff;
+}
+
+.checkBox svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 3;
+}
+
+.nameSection {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-inter);
+}
+
+.nameSection strong {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--font-inter);
+}
+
+.nameSection span {
+  color: #141414;
+  font-size: 12px;
+}
+
+.addressDetails {
+  margin-top: 11px;
+  padding-left: 0;
+}
+
+.addressDetails p {
+  margin: 0 0 4px;
+  color: #555555;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.addressDetails p:last-child {
+  margin-bottom: 0;
+}
+
+.addressDetails strong {
+  color: #333333;
+  font-weight: 700;
+}
+
+.addressDivider {
+  width: 100%;
+  height: 1px;
+  margin: 14px 0 12px;
+  background: #dddddd;
+}
+
+.addressActions {
+  height: 38px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+}
+
+.addressActions button {
+  height: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #333333;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.addressActions button:hover {
+  color: #008f91;
+}
+
+.addressActions button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.actionDivider {
+  width: 1px;
+  height: 36px;
+  background: #dddddd;
+}
+
+@media (max-width: 600px) {
+  .addressCard {
+    padding: 16px 12px 12px;
+  }
+}

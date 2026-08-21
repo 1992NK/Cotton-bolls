@@ -1,0 +1,19 @@
+.deliverySection {
+  width: 100%;
+}
+
+.deliveryTitle {
+  margin: 0 0 15px;
+  
+      color: #141414;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    font-family: var(--font-inter);
+}
+
+@media (max-width: 600px) {
+  .deliveryTitle {
+    margin-bottom: 25px;
+  }
+}
