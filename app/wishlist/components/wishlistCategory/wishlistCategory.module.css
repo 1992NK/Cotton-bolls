@@ -1,0 +1,37 @@
+.categoryWrapper {
+  width: 100%;
+  margin-bottom: 16px;
+
+}
+
+.categoryBtn {
+  height: 37px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 9px;
+  color: #141414;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: var(--font-inter);
+
+}
+
+@media (max-width: 600px) {
+
+  .categoryWrapper {
+    margin-bottom: 13px;
+
+  }
+
+  .categoryBtn {
+    height: 35px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+}

@@ -1,0 +1,55 @@
+.heading {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-bottom: 15px;
+}
+
+.heading h1 {
+  color: #141414;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 26px;
+    font-family: var(--font-inter);
+
+}
+
+.heading span {
+  color: #141414;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+
+}
+
+@media (max-width: 800px) {
+
+  .heading {
+    margin-bottom: 28px;
+  }
+
+  .heading h1 {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .heading {
+    gap: 6px;
+    margin-bottom: 24px;
+
+  }
+
+  .heading h1 {
+    font-size: 21px;
+
+  }
+
+  .heading span {
+    font-size: 13px;
+
+  }
+
+}
