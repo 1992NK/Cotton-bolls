@@ -1,14 +1,13 @@
 .pageWrapper {
+       grid-template-columns: 275px minmax(0, 1fr);
+    align-items: start;
+    gap: 50px;
     padding: 18px 0;
-     display: grid;
-  grid-template-columns: 262px minmax(0, 1fr);
-  gap: 40px;
-
-  align-items: start;
+    display: grid;
 }
 
 .sidebar {
-    width: 262px;
+    width: 100%;
     flex-shrink: 0;
 }
 
@@ -23,9 +22,10 @@
     align-items: center;
     gap: 4px;
     font-size: 13px;
-    color: #999;
+    color: #777;
     font-weight: 600;
     margin-bottom: 8px;
+    font-family: var(--font-inter);
 }
 
 .breadcrumb svg {
@@ -34,14 +34,14 @@
 }
 
 .breadcrumb strong {
-    color: #444;
+    color: #141414;
 }
 
 /* ORDER BOX */
 
 .orderBox {
     width: 100%;
-    border: 1px solid #e3e3e3;
+    border: 1px solid #eee;
     background: #fff;
 }
 
@@ -49,8 +49,8 @@
 
 .orderHeader {
     height: 51px;
-    background: #f8f8f8;
-    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
 
     display: flex;
     justify-content: space-between;
@@ -60,10 +60,11 @@
 
     font-size: 13px;
     color: #555;
+    font-family: var(--font-inter);
 }
 
 .orderHeader strong {
-    color: #222;
+    color: #141414;
 }
 
 .orderHeader span {
@@ -96,39 +97,45 @@
     object-fit: cover;
 }
 
-.productInfo {
-    padding-top: 8px;
-}
-
 .productInfo h2 {
-    margin: 0 0 7px;
+        color: #141414;
     font-size: 15px;
-    font-weight: 400;
-    color: #334d68;
+    font-weight: 500;
+    line-height: 1.4;
+    font-family: var(--font-inter);
+    margin-bottom: 7px;
 }
 
 .category {
-    margin: 0 0 8px;
-    font-size: 12px;
-    color: #999;
+        color: #777;
+    font-size: 13px;
+    line-height: 1.4;
+    font-family: var(--font-inter);
+    margin: 0 0 10px;
 }
 
 .size {
-    margin: 0 0 7px;
-    font-size: 12px;
-    color: #aaa;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.4;
+    font-family: var(--font-inter);
+    margin-bottom: 10px;
 }
 
 .price {
     display: block;
-    font-size: 13px;
-    color: #333;
+    color: #141414;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: var(--font-inter);
+    margin-top: 2px;
 }
 
 .cancelText {
     margin: 17px 0 0;
     font-size: 11px;
     color: #64748b;
+    font-family: var(--font-inter);
 }
 
 /* TRACKING */
@@ -186,21 +193,28 @@
 }
 
 .timelineTitle {
-    font-size: 13px;
-    color: #aaa;
-    line-height: 18px;
+    color: #141414;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: var(--font-inter);
 }
 
 .timelineItem.completed .timelineTitle {
-    color: #666;
+   color: #141414;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: var(--font-inter);
 }
 
 .timelineContent p {
     margin: 4px 0 0;
-    max-width: 700px;
+    color: #141414;
     font-size: 11px;
-    line-height: 17px;
-    color: #aaa;
+    font-weight: 500;
+    line-height: 16px;
+    font-family: var(--font-inter);
 }
 
 .trackButton {

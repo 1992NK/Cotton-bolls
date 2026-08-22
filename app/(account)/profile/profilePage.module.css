@@ -1,20 +1,18 @@
 .profilePage {
   width: 100%;
-  padding: 18px 15px 40px;
+  padding: 18px 15px 0;
   background: #ffffff;
-  box-sizing: border-box;
 }
 
 .profileRow {
     display: grid;
-  grid-template-columns: 262px minmax(0, 1fr);
-  gap: 40px;
-
+  grid-template-columns: 275px minmax(0, 1fr);
+  gap: 50px;
   align-items: start;
 }
 
 .profileSidebar {
-  width: 262px;
+  width: 100%;
 }
 
 .profileContent {
@@ -22,9 +20,6 @@
   min-width: 0;
 }
 
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 900px) {
   .profileRow {

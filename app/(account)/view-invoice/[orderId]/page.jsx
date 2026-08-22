@@ -11,7 +11,7 @@ const orders = [
     paymentMethod: "Cash on Delivery",
 
     seller: {
-      name: "The Souled Store",
+      name: "Cotton Bolls",
       address: "Mumbai, Maharashtra",
       state: "Maharashtra",
       stateCode: "27",
@@ -232,7 +232,7 @@ const InvoicePage = () => {
           <div className={styles.brand}>
 
             <h1>
-              THE SOULED STORE
+              Cotton Bolls
             </h1>
 
             <p>
