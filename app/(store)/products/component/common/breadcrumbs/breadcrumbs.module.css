@@ -5,6 +5,7 @@
     gap:6px;
     font-size:13px;
     margin:15px 0;
+    font-family: var(--font-inter);
 }
 
 .item{

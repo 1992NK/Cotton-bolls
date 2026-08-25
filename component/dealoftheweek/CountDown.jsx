@@ -1,8 +1,6 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import styles from "./dealweek.module.css";
-
+import styles from "./countdown.module.css";
 const CountDown = ({ expiryDate }) => {
   const [time, setTime] = useState({
     days: 0,
@@ -13,13 +11,10 @@ const CountDown = ({ expiryDate }) => {
 
   useEffect(() => {
     const targetDate = new Date(expiryDate);
-
     const updateCountdown = () => {
       const now = new Date();
       const diff = targetDate - now;
-
       if (diff <= 0) return;
-
       setTime({
         days: Math.floor(diff / (1000 * 60 * 60 * 24)),
         hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
@@ -29,9 +24,7 @@ const CountDown = ({ expiryDate }) => {
     };
 
     updateCountdown();
-
     const interval = setInterval(updateCountdown, 1000);
-
     return () => clearInterval(interval);
   }, [expiryDate]);
 
@@ -43,17 +36,14 @@ const CountDown = ({ expiryDate }) => {
         <span>{time.days}</span>
         <small>Days</small>
       </div>
-
       <div>
         <span>{time.hours}</span>
         <small>Hours</small>
       </div>
-
       <div>
         <span>{time.minutes}</span>
         <small>Minutes</small>
       </div>
-
       <div>
         <span>{time.seconds}</span>
         <small>Seconds</small>

@@ -1,0 +1,219 @@
+.dropdown {
+    width: 245px;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    z-index: 200;
+    animation: filterDropdown 0.2s ease;
+}
+
+.dropdownArrow {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: -7px;
+    left: 27px;
+    background: #fff;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    transform: rotate(45deg);
+}
+
+.dropdownTitle {
+    margin: 0 0 16px;
+    color: #222;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.optionList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radioRow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.radioRow input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.customRadio {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    flex-shrink: 0;
+    border: 1px solid #a8a8a8;
+    border-radius: 50%;
+}
+
+.radioRow input:checked + .customRadio {
+    border-color: #111;
+}
+
+.radioRow input:checked + .customRadio::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #111;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkboxRow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.checkboxRow input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: #111;
+    cursor: pointer;
+}
+
+.buttonOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.optionButton {
+    min-width: 42px;
+    height: 38px;
+    padding: 0 11px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
+}
+
+.optionButton:hover {
+    border-color: #111;
+}
+
+.activeOptionButton {
+    border-color: #111;
+    background: #111;
+    color: #fff;
+}
+
+.dropdownActions {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.resetButton,
+.applyButton {
+    height: 39px;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.resetButton {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #333;
+}
+
+.applyButton {
+    border: 1px solid #111;
+    background: #111;
+    color: #fff;
+}
+
+.priceDropdown {
+    width: 290px;
+}
+
+@media (max-width: 992px) {
+    .dropdown {
+        width: 230px;
+        padding: 18px;
+    }
+
+    .priceDropdown {
+        width: 270px;
+    }
+}
+
+@media (max-width: 767px) {
+    .dropdown {
+        width: 220px;
+        padding: 16px;
+    }
+
+    .dropdownTitle {
+        margin-bottom: 14px;
+    }
+
+    .optionList {
+        gap: 10px;
+    }
+
+    .priceDropdown {
+        width: 260px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown {
+        width: 210px;
+        padding: 15px;
+    }
+
+    .priceDropdown {
+        width: 250px;
+    }
+
+    .dropdownActions {
+        gap: 8px;
+    }
+
+    .resetButton,
+    .applyButton {
+        height: 37px;
+    }
+}
+
+@keyframes filterDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,9 +1,6 @@
 import Image from "next/image";
-
 import visa from "@/assets/images/pay-card/visa.png";
 import mastercard from "@/assets/images/pay-card/mastercard.png";
-
-
 const icons = [visa, mastercard];
 
 const PaymentIcon = () => {

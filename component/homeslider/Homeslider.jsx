@@ -1,15 +1,11 @@
 "use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectCreative } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-creative";
-
 import styles from "./homeslider.module.css";
-
 import { slides } from "../../data/home_sliderdata";
 
 const Homeslider = () => {

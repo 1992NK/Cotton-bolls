@@ -1,40 +1,85 @@
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .searchBox {
-  position: relative;
-  width: 500px;
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width 0.35s ease, background 0.25s ease;
 }
 
 .icon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  min-width: 20px;
+  margin: 0 11px;
   color: #141414;
-  z-index: 1;
+  flex-shrink: 0;
 }
 
 .input {
-  width: 100%;
-  height: 45px;
-
-  background-color: #fff;
-  border: 1px solid #fff;
-  border-radius: 5px;
-
-  padding-left: 45px; /* icon ke liye jagah */
-  padding-right: 15px;
-
-  font-size: 15px;
-  font-family: var(--font-inter);
-  color: #141414;
+  width: 0;
+  border: none;
   outline: none;
-  font-weight: 400;
+  background: transparent;
+  font-size: 14px;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.2s ease;
+  font-family: var(--font-inter);
+  color:#141414
 }
 
-.input:focus {
-  border-color: #2874f0;
-  background-color: #fff;
+.open .searchBox {
+  width: 420px;
+  background: #ffffff;
+}
+
+.open .icon {
+  color: #111111;
+}
+
+.open .input {
+  width: 100%;
+  opacity: 1;
+  color: #111111;
 }
 
 .input::placeholder {
   color: #777;
+}
+
+@media (max-width: 1399px) {
+  .open .searchBox {
+    width: 380px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .open .searchBox {
+    width: 340px;
+  }
+}
+
+@media (max-width: 992px) {
+  .open .searchBox {
+    width: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .open .searchBox {
+    width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .open .searchBox {
+    width: 200px;
+  }
 }

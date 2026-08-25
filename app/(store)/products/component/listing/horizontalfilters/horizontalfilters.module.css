@@ -1,0 +1,302 @@
+.filterBar {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+  background: #fff;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filterContainer {
+  width: 100%;
+  min-height: 60px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+}
+
+.mainFilterButton {
+  height: 60px;
+  padding: 0 28px 0 0;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  border-right: 1px solid #eee;
+  background: transparent;
+  color: #171717;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mainFilterButton svg {
+  font-size: 19px;
+}
+
+.horizontalList {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.filterItem {
+  position: relative;
+}
+
+.filterButton {
+  height: 60px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #222;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filterButton:hover,
+.activeFilterButton {
+  background: #f7f7f7;
+}
+
+.arrow {
+  font-size: 14px;
+  transition: transform 0.25s ease;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.selectedCount {
+  min-width: 17px;
+  height: 17px;
+  margin-left: 5px;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 10px;
+}
+
+.moreFiltersButton {
+  height: 60px;
+  margin-left: auto;
+  padding: 0 0 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  background: transparent;
+  color: #222;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.moreFiltersButton svg {
+  font-size: 18px;
+}
+
+@media (max-width: 1199px) {
+  .filterContainer {
+    padding: 0 25px;
+  }
+
+  .filterButton {
+    padding: 0 20px;
+  }
+
+  .mainFilterButton {
+    padding-right: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filterContainer {
+    padding: 0 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .filterContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .horizontalList {
+    flex-shrink: 0;
+  }
+
+  .filterButton,
+  .moreFiltersButton {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .filterContainer {
+    min-height: 54px;
+    padding: 0 15px;
+    overflow: visible;
+  }
+
+  .horizontalList {
+    display: none;
+  }
+
+  .mainFilterButton {
+    height: 54px;
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .moreFiltersButton {
+    height: 54px;
+    margin-left: auto;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .filterContainer {
+    padding: 0 12px;
+  }
+
+  .mainFilterButton,
+  .moreFiltersButton {
+    font-size: 12px;
+  }
+
+  .mainFilterButton svg {
+    font-size: 18px;
+  }
+
+  .moreFiltersButton svg {
+    font-size: 17px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  z-index: 100;
+  width: 320px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.priceDropdown {
+  width: 340px;
+}
+
+.dropdownArrow {
+  position: absolute;
+  top: -6px;
+  left: 32px;
+  width: 11px;
+  height: 11px;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5;
+  transform: rotate(45deg);
+}
+
+.dropdownActions {
+  margin-top: 20px;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+
+.resetButton,
+.applyButton {
+  height: 38px;
+  padding: 0 20px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.resetButton {
+  background: #fff;
+  color: #222;
+}
+
+.applyButton {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+@media (max-width: 1199px) {
+  .dropdown {
+    width: 300px;
+    padding: 20px;
+  }
+
+  .priceDropdown {
+    width: 320px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dropdown {
+    width: 290px;
+  }
+
+  .priceDropdown {
+    width: 310px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    left: 0;
+    width: 290px;
+  }
+
+  .priceDropdown {
+    width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown {
+    width: 270px;
+    padding: 18px;
+  }
+
+  .priceDropdown {
+    width: 280px;
+  }
+
+  .dropdownActions {
+    margin-top: 16px;
+    padding-top: 12px;
+  }
+
+  .resetButton,
+  .applyButton {
+    height: 36px;
+    padding: 0 16px;
+  }
+}

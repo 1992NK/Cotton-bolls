@@ -1,187 +1,158 @@
-.dealSection{
-padding:90px 0;
-background:#fafafa;
+.dealSection {
+  width: 100%;
+  padding: 90px 0;
+  background: #fafafa;
 }
 
-.container{
-margin-right: auto;
-    margin-left: auto;
-max-width: 1320px;
-width: 100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:60px;
-}
-
-.left{
-flex:1;
-}
-
-.left img{
-width:100%;
-display:block;
-}
-
-.right{
-flex:1;
-}
-
-.tag{
-font-size:13px;
-letter-spacing:3px;
-font-weight:500;
-margin-bottom:15px;
-font-family: var(--font-inter);
-}
-
-.right h2{
-font-size:48px;
-line-height:1.3;
-margin-bottom:20px;
-font-family: var(--heading-font);
-    font-weight: 400;
-}
-
-.desc{
-font-size:14px;
-color:#141414;
-line-height:24px;
-margin-bottom:40px;
-font-family: var(--font-inter);
-}
-
-.countdown{
-display:flex;
-align-items:center;
-gap:25px;
-margin-bottom:40px;
-}
-
-.countdown div{
-width:85px;
-height:85px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-background:white;
-border:1px solid #eee;
-}
-
-.countdown span{
-display:block;
-font-size:38px;
-font-weight:500;
-line-height:1;
-font-family: var(--heading-font);
-}
-
-.countdown small{
-margin-top:8px;
-font-size:13px;
-color:#777;
-}
-
-.right button{
-padding:15px 40px;
-background:black;
-color:white;
-border:none;
-cursor:pointer;
-font-size:16px;
-transition:.3s;
-}
-
-.right button:hover{
-background:#444;
-}
-
-
-
-/* Tablet */
-@media (max-width:991px){
-
-.container{
-flex-direction:column;
-text-align:center;
+.containerRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .left,
-.right{
-width:100%;
+.right {
+  flex: 1;
 }
 
-.left img{
-max-width:600px;
-margin:auto;
+.left img {
+  display: block;
+  width: 100%;
 }
 
-.countdown{
-justify-content:center;
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+.tag {
+  margin-bottom: 15px;
+  font-family: var(--font-inter);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
 }
 
-/* Mobile */
-@media (max-width:767px){
-
-.dealSection{
-padding:50px 20px;
+.right h2 {
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.3;
 }
 
-.right h2{
-font-size:32px;
-line-height:42px;
+.desc {
+  margin-bottom: 40px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 24px;
+  color: #141414;
 }
 
-.desc{
-font-size:15px;
-line-height:28px;
+.right button {
+  padding: 15px 40px;
+  background: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-
-
-/* button{
-width:100%;
-padding:16px;
-} */
-
-.countdown{
-justify-content:center;
-gap:12px;
+.right button:hover {
+  background: #444;
 }
 
-.countdown div{
-width:65px;
-height:65px;
+@media (max-width: 1199px) {
+  .containerRow {
+    gap: 40px;
+  }
+
+  .right h2 {
+    font-size: 42px;
+  }
 }
 
-.countdown span{
-font-size:25px;
+@media (max-width: 992px) {
+  .dealSection {
+    padding: 70px 0;
+  }
+
+  .containerRow {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left img {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .right {
+    align-items: center;
+  }
 }
 
+@media (max-width: 767px) {
+  .dealSection {
+    padding: 50px 20px;
+  }
+
+  .containerRow {
+    gap: 40px;
+  }
+
+  .right h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .desc {
+    margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  .right button {
+    padding: 14px 35px;
+  }
 }
 
-/* Small Mobile */
-@media (max-width:480px){
+@media (max-width: 576px) {
+  .dealSection {
+    padding: 40px 15px;
+  }
 
-.right h2{
-font-size:26px;
-line-height:34px;
-}
+  .containerRow {
+    gap: 30px;
+  }
 
-.tag{
-font-size:12px;
-}
+  .right h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
 
-.desc{
-font-size:14px;
-}
+  .tag {
+    margin-bottom: 12px;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
 
-.countdown div{
-width:65px;
-height:65px;
-}
+  .desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
 
+  .right button {
+    width: 100%;
+    padding: 15px;
+  }
 }

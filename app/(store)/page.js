@@ -24,7 +24,7 @@ export default function Home() {
       </section>
 
      <section className={styles.deal_week}>
-        <div className={styles.container}>
+        <div className="container">
           <DealWeek />
         </div>
       </section>

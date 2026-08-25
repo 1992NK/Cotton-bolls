@@ -2,7 +2,7 @@
     display: flex;
     gap: 24px;
     align-items: flex-start;
-    margin-top: 15px;
+    margin-top: 0;
 }
 
 .sidebar {
@@ -12,6 +12,137 @@
 
 .products {
     flex: 1;
+    min-width: 0;
 }
 
-.productTitle{font-family: var(--font-inter); font-size: 18px; margin-bottom: 15px; font-weight: 500;}
+.listingHeading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.headingLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.productTitle {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    margin: 0 0 5px;
+    font-weight: 500;
+}
+
+.productCount {
+    font-family: var(--font-inter);
+    font-size: 12px;
+    margin: 0;
+    font-weight: 400;
+    color: #777;
+}
+
+.sortWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.sortLabel {
+    font-family: var(--font-inter);
+    font-size: 13px;
+    font-weight: 400;
+    color: #555;
+    white-space: nowrap;
+}
+
+.selectWrapper {
+    position: relative;
+}
+
+.sortSelect {
+    width: 200px;
+    height: 40px;
+    padding: 0 35px 0 12px;
+    font-family: var(--font-inter);
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.sortSelect:hover {
+    border-color: #999;
+}
+
+.sortSelect:focus {
+    border-color: #008b91;
+}
+
+@media (max-width: 1199px) {
+    .sidebar {
+        width: 240px;
+    }
+
+    .sortSelect {
+        width: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    .listingHeading {
+        gap: 15px;
+    }
+
+    .sortSelect {
+        width: 170px;
+    }
+}
+
+@media (max-width: 767px) {
+    .listingHeading {
+        align-items: flex-start;
+    }
+
+    .sortWrapper {
+        gap: 6px;
+    }
+
+    .sortLabel {
+        font-size: 12px;
+    }
+
+    .sortSelect {
+        width: 160px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .listingHeading {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .sortWrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sortSelect {
+        width: 180px;
+    }
+
+    .productTitle {
+        font-size: 17px;
+    }
+}

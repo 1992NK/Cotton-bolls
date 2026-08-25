@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FaHeart, FaShoppingCart, FaRupeeSign } from "react-icons/fa";
-import styles from "./featuredProduct.module.css";
+import styles from "./productcard.module.css";
 
 const ProductCard = ({ product }) => {
   const [activeImage, setActiveImage] = useState(0);
@@ -35,10 +35,7 @@ const ProductCard = ({ product }) => {
           <span className={styles.badge}>{product.discount}% off</span>
         )}
 
-        <div
-          className={`${styles.actions} ${hover ? styles.showActions : ""
-            }`}
-        >
+        <div className={`${styles.actions} ${hover ? styles.showActions : ""}`}>
           <button className={styles.iconBtn}>
             <FaHeart />
           </button>
@@ -48,39 +45,26 @@ const ProductCard = ({ product }) => {
           </button>
         </div>
 
-        <div
-          className={`${styles.imageWrapper} ${fade ? styles.fade : ""
-            }`}
-        >
+        <div className={`${styles.imageWrapper} ${fade ? styles.fade : ""}`}>
           <Image
-            src={
-              product.images
-                ? product.images[activeImage]
-                : product.image
-            }
+            src={product.images ? product.images[activeImage] : product.image}
             alt={product.title}
             fill
             className={styles.productImage}
           />
         </div>
 
-        {hover &&
-          product.images &&
-          product.images.length > 1 && (
-            <div className={styles.sliderDots}>
-              {product.images.map((img, index) => (
-                <span
-                  key={index}
-                  className={
-                    activeImage === index
-                      ? styles.activeDot
-                      : ""
-                  }
-                  onMouseEnter={() => changeImage(index)}
-                />
-              ))}
-            </div>
-          )}
+        {hover && product.images && product.images.length > 1 && (
+          <div className={styles.sliderDots}>
+            {product.images.map((img, index) => (
+              <span
+                key={index}
+                className={activeImage === index ? styles.activeDot : ""}
+                onMouseEnter={() => changeImage(index)}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       <div className={styles.content}>
@@ -90,12 +74,14 @@ const ProductCard = ({ product }) => {
 
         <div className={styles.price}>
           <span className={styles.newPrice}>
-            <FaRupeeSign />{product.price}
+            <FaRupeeSign />
+            {product.price}
           </span>
 
           {product.oldPrice && (
             <span className={styles.oldPrice}>
-              <FaRupeeSign />{product.oldPrice}
+              <FaRupeeSign />
+              {product.oldPrice}
             </span>
           )}
         </div>

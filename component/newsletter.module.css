@@ -1,139 +1,205 @@
-.row{width: 100%; display: flex;}
-
-.leftcontent{
-    flex:1;
-    color:#fff;
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-.offer{
-    font-size:15px;
-    display:block;
-    margin-bottom:10px;
-    font-family: var(--font-inter);
-    color: #fff;
+.leftcontent {
+  flex: 1;
+  color: #fff;
 }
 
-.leftcontent h2{
-    font-size:32px;
-    margin-bottom:15px;
-    line-height:28px;
-    text-transform: capitalize;
-    font-family: var(--heading-font);
-    font-weight: 400;
+.offer {
+  display: block;
+  margin-bottom: 10px;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  color: #fff;
 }
 
-.leftcontent p{
-    color:#fff;
-    line-height:21px;
-    margin-bottom:35px;
+.leftcontent h2 {
+  margin-bottom: 15px;
+  font-family: var(--heading-font);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.leftcontent p {
+  margin-bottom: 35px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 21px;
+  color: #fff;
+}
+
+.subscribebox {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.inputbox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.inputbox i {
+  margin-right: 12px;
+  color: #888;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: var(--font-inter);
+  font-size: 16px;
+}
+
+.subscribebox button {
+  width: 170px;
+  border: none;
+  background: #20368d;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.subscribebox button:hover {
+  background: #16286d;
+}
+
+.rightcontent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.rightcontent img {
+  display: block;
+  width: 100%;
+  max-width: 450px;
+}
+
+@media (max-width: 1199px) {
+  .row {
+    gap: 35px;
+  }
+
+  .leftcontent h2 {
+    font-size: 30px;
+  }
+
+  .subscribebox button {
+    width: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .leftcontent,
+  .rightcontent {
+    width: 100%;
+  }
+
+  .leftcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribebox {
+    max-width: 550px;
+  }
+
+  .rightcontent img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .row {
+    gap: 30px;
+  }
+
+  .leftcontent h2 {
+    font-size: 28px;
+  }
+
+  .leftcontent p {
+    margin-bottom: 25px;
+    line-height: 24px;
+  }
+
+  .subscribebox button {
+    width: 140px;
+  }
+
+  .inputbox {
+    padding: 0 15px;
+  }
+
+  .inputbox input {
+    height: 55px;
     font-size: 14px;
-    font-family: var(--font-inter);
+  }
+
+  .rightcontent img {
+    max-width: 350px;
+  }
 }
 
-.subscribebox{
-    display:flex;
-    background:#fff;
-    border-radius:8px;
-    overflow:hidden;
-    max-width:500px;
-}
+@media (max-width: 576px) {
+  .row {
+    gap: 25px;
+  }
 
-.inputbox{
-    flex:1;
-    display:flex;
-    align-items:center;
-    padding:0 20px;
-}
+  .leftcontent h2 {
+    font-size: 25px;
+  }
 
-.inputbox i{
-    color:#888;
-    margin-right:12px;
-}
+  .offer {
+    font-size: 13px;
+  }
 
-.inputbox input{
-    width:100%;
-    height:60px;
-    border:none;
-    outline:none;
-    font-size:16px;
-}
+  .leftcontent p {
+    font-size: 13px;
+    line-height: 22px;
+  }
 
-.subscribebox button{
-    width:170px;
-    border:none;
-    background:#20368d;
-    color:#fff;
-    font-size:16px;
-    cursor:pointer;
-    transition:.3s;
-}
+  .subscribebox {
+    flex-direction: column;
+    border-radius: 6px;
+  }
 
-.subscribebox button:hover{
-    background:#16286d;
-}
+  .inputbox {
+    width: 100%;
+  }
 
-.rightcontent{
-    flex:1;
-    display:flex;
-    justify-content:center;
-}
+  .subscribebox button {
+    width: 100%;
+    height: 50px;
+  }
 
-.rightcontent img{
-    width:100%;
-    max-width:450px;
-}
-
-/* Tablet */
-
-@media(max-width:991px){
-
-.container{
-    flex-direction:column;
-    text-align:center;
-}
-
-.left-content p{
-    margin:auto auto 30px;
-}
-
-.subscribe-box{
-    margin:auto;
-}
-
-}
-
-/* Mobile */
-
-@media(max-width:600px){
-
-.newsletter{
-    padding:50px 15px;
-}
-
-.left-content h2{
-    font-size:32px;
-}
-
-.offer{
-    font-size:16px;
-}
-
-.subscribe-box{
-    flex-direction:column;
-}
-
-.input-box{
-    border-bottom:1px solid #ddd;
-}
-
-.subscribe-box button{
-    width:100%;
-    height:55px;
-}
-
-.right-content img{
-    margin-top:40px;
-    max-width:300px;
-}
-
+  .rightcontent img {
+    max-width: 300px;
+  }
 }

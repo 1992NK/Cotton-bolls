@@ -1,0 +1,176 @@
+.card {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.large {
+  height: 640px;
+}
+
+.small {
+  height: 100%;
+}
+
+.image {
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 70%;
+  padding: 30px 45px;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-family: var(--font-inter);
+  font-size: 14px;
+  color: #141414;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+  font-size: 66px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #141414;
+  text-transform: capitalize;
+}
+
+.small .content h2 {
+  font-size: 40px;
+}
+
+.content p {
+  margin-bottom: 40px;
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 24px;
+  color: #141414;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.btn span {
+  transition: 0.3s ease;
+}
+
+.btn:hover span {
+  transform: translateX(8px);
+}
+
+@media (max-width: 1199px) {
+  .content {
+    width: 75%;
+    padding: 30px;
+  }
+
+  .content h2 {
+    font-size: 54px;
+  }
+
+  .small .content h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 992px) {
+  .large {
+    height: 500px;
+  }
+
+  .small {
+    min-height: 280px;
+  }
+
+  .content {
+    width: 70%;
+  }
+
+  .content h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .large {
+    height: 450px;
+  }
+
+  .small {
+    min-height: 280px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .content h2 {
+    font-size: 38px;
+  }
+
+  .small .content h2 {
+    font-size: 30px;
+  }
+
+  .content p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .image {
+    opacity: 0.35;
+    object-position: center bottom;
+  }
+}
+
+@media (max-width: 576px) {
+  .large {
+    height: 400px;
+  }
+
+  .small {
+    min-height: 250px;
+  }
+
+  .content {
+    padding: 25px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+
+  .small .content h2 {
+    font-size: 28px;
+  }
+
+  .content p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .btn {
+    font-size: 20px;
+  }
+}

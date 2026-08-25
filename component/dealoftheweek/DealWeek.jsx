@@ -5,7 +5,7 @@ import dealData from "../../data/dealdata";
 const DealWeek =()=>{
     return (
     <section className={styles.dealSection}>
-      <div className={styles.container}>
+      <div className={styles.containerRow}>
 
         <div className={styles.left}>
           <img
@@ -15,13 +15,10 @@ const DealWeek =()=>{
         </div>
 
         <div className={styles.right}>
-
           <p className={styles.tag}>
             DEAL OF THE WEEK
           </p>
-
           <h2>{dealData.title}</h2>
-
           <p className={styles.desc}>
             {dealData.subtitle}
           </p>
@@ -35,7 +32,6 @@ const DealWeek =()=>{
           </button>
 
         </div>
-
       </div>
     </section>
   );
