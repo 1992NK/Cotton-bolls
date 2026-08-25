@@ -9,6 +9,7 @@ import ProductGrid from "./component/listing/productgrid/ProductGrid";
 import filterData from "./component/listing/horizontalfilters/filterData";
 
 import styles from "./listingpage.module.css";
+import SortBy from "./component/listing/sortbar/SortBy";
 
 const createInitialFilters = () => {
     const initialFilters = {};
@@ -80,53 +81,8 @@ const Listingpage = () => {
                                 </p>
                             </div>
 
-                            <div className={styles.sortWrapper}>
-                                <label
-                                    htmlFor="sortBy"
-                                    className={styles.sortLabel}
-                                >
-                                    Sort By:
-                                </label>
-
-                                <div className={styles.selectWrapper}>
-                                    <select
-                                        id="sortBy"
-                                        value={sortBy}
-                                        onChange={(e) =>
-                                            setSortBy(e.target.value)
-                                        }
-                                        className={styles.sortSelect}
-                                    >
-                                        <option value="recommended">
-                                            Recommended
-                                        </option>
-
-                                        <option value="newest">
-                                            Newest
-                                        </option>
-
-                                        <option value="price-low-high">
-                                            Price: Low to High
-                                        </option>
-
-                                        <option value="price-high-low">
-                                            Price: High to Low
-                                        </option>
-
-                                        <option value="discount">
-                                            Better Discount
-                                        </option>
-
-                                        <option value="rating">
-                                            Customer Rating
-                                        </option>
-
-                                        <option value="popular">
-                                            Most Popular
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
+                            <SortBy />
+                            
                         </div>
 
                         <ProductGrid />

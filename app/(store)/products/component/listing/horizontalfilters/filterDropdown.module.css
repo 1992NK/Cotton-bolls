@@ -6,7 +6,7 @@
     padding: 20px;
     background: #fff;
     border: 1px solid #e6e6e6;
-    border-radius: 4px;
+    border-radius: 5px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
     z-index: 200;
     animation: filterDropdown 0.2s ease;
@@ -26,9 +26,10 @@
 
 .dropdownTitle {
     margin: 0 0 16px;
-    color: #222;
+    color: #141414;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: var(--font-inter);
 }
 
 .optionList {
@@ -42,9 +43,10 @@
     display: flex;
     align-items: center;
     gap: 9px;
-    color: #333;
-    font-size: 12px;
+    color: #141414;
+    font-size: 13px;
     cursor: pointer;
+    font-family: var(--font-inter);
 }
 
 .radioRow input {
@@ -63,7 +65,7 @@
 }
 
 .radioRow input:checked + .customRadio {
-    border-color: #111;
+    border-color: #141414;
 }
 
 .radioRow input:checked + .customRadio::after {
@@ -73,7 +75,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background: #111;
+    background: #141414;
     border-radius: 50%;
     transform: translate(-50%, -50%);
 }
@@ -82,16 +84,17 @@
     display: flex;
     align-items: center;
     gap: 9px;
-    color: #333;
-    font-size: 12px;
+    color: #141414;
+    font-size: 13px;
     cursor: pointer;
+    font-family: var(--font-inter);
 }
 
 .checkboxRow input {
     width: 15px;
     height: 15px;
     margin: 0;
-    accent-color: #111;
+    accent-color: #141414;
     cursor: pointer;
 }
 
@@ -105,22 +108,23 @@
     min-width: 42px;
     height: 38px;
     padding: 0 11px;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
     background: #fff;
-    color: #333;
-    font-family: inherit;
-    font-size: 12px;
+    color: #141414;
+    font-family: var(--font-inter);
+    font-size: 13px;
+    font-weight: 400;
     cursor: pointer;
     transition: background 0.2s ease, border 0.2s ease, color 0.2s ease;
 }
 
 .optionButton:hover {
-    border-color: #111;
+    border-color: #141414;
 }
 
 .activeOptionButton {
-    border-color: #111;
-    background: #111;
+    border-color: #141414;
+    background: #141414;
     color: #fff;
 }
 
@@ -134,21 +138,22 @@
 .resetButton,
 .applyButton {
     height: 39px;
-    border-radius: 3px;
-    font-family: inherit;
-    font-size: 12px;
+    border-radius: 5px;
+    font-family: var(--font-inter);
+    font-size: 13px;
     cursor: pointer;
+    font-weight: 400;
 }
 
 .resetButton {
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
     background: #fff;
-    color: #333;
+    color: #141414;
 }
 
 .applyButton {
-    border: 1px solid #111;
-    background: #111;
+    border: 1px solid #141414;
+    background: #141414;
     color: #fff;
 }
 

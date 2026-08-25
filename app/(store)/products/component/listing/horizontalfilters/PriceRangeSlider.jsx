@@ -37,7 +37,7 @@ const PriceRangeSlider = ({
 
   return (
     <div className={styles.priceRangeBox}>
-      <h4 className={styles.title}>PRICE</h4>
+      <h4 className={styles.title}>Price</h4>
 
       <div className={styles.sliderWrapper}>
         <div className={styles.track} />

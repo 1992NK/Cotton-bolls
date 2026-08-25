@@ -17,10 +17,6 @@ const FilterDropdown = ({
         <div className={styles.dropdown}>
             <span className={styles.dropdownArrow} />
 
-            <h4 className={styles.dropdownTitle}>
-                {filter.title}
-            </h4>
-
             {filter.type === "radio" && (
                 <div className={styles.optionList}>
                     {filter.options.map((option) => (

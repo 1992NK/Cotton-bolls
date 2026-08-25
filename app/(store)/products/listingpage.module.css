@@ -5,6 +5,8 @@
     margin-top: 0;
 }
 
+.filtersfull{position: relative;}
+
 .sidebar {
     width: 280px;
     flex-shrink: 0;
@@ -42,49 +44,6 @@
     margin: 0;
     font-weight: 400;
     color: #777;
-}
-
-.sortWrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-shrink: 0;
-}
-
-.sortLabel {
-    font-family: var(--font-inter);
-    font-size: 13px;
-    font-weight: 400;
-    color: #555;
-    white-space: nowrap;
-}
-
-.selectWrapper {
-    position: relative;
-}
-
-.sortSelect {
-    width: 200px;
-    height: 40px;
-    padding: 0 35px 0 12px;
-    font-family: var(--font-inter);
-    font-size: 13px;
-    font-weight: 400;
-    color: #333;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-    transition: border-color 0.2s ease;
-}
-
-.sortSelect:hover {
-    border-color: #999;
-}
-
-.sortSelect:focus {
-    border-color: #008b91;
 }
 
 @media (max-width: 1199px) {

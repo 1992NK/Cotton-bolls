@@ -5,8 +5,9 @@
 .title {
   margin: 0 0 20px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 500;
   color: #141414;
+  font-family: var(--font-inter);
 }
 
 .sliderWrapper {
@@ -116,8 +117,9 @@
 .priceText {
   margin: 8px 0 0;
   font-size: 13px;
-  font-weight: 600;
-  color: #111111;
+  font-weight: 500;
+  color: #141414;
+  font-family: var(--font-inter);
 }
 
 @media (max-width: 1399px) {
