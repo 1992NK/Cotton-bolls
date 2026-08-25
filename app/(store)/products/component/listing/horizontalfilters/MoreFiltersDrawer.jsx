@@ -4,8 +4,10 @@ import { FiChevronUp, FiSliders, FiX } from "react-icons/fi";
 
 import filterData from "./filterData";
 import PriceRangeSlider from "./PriceRangeSlider";
-
 import styles from "./morefiltersdrawer.module.css";
+
+const MIN = 200;
+const MAX = 10100;
 
 const MoreFiltersDrawer = ({
   open,
@@ -15,78 +17,95 @@ const MoreFiltersDrawer = ({
   priceRange,
   setPriceRange,
 }) => {
-  const handleRadioChange = (filterId, option) => {
-    setSelectedFilters((prev) => ({
-      ...prev,
-      [filterId]: option,
-    }));
-  };
-
-  const handleArrayChange = (filterId, option) => {
+  const updateFilter = (id, option, multiple) => {
     setSelectedFilters((prev) => {
-      const currentValues = prev[filterId] || [];
-      const alreadySelected = currentValues.includes(option);
+      if (!multiple) return { ...prev, [id]: option };
+
+      const values = prev[id] || [];
 
       return {
         ...prev,
-        [filterId]: alreadySelected
-          ? currentValues.filter((item) => item !== option)
-          : [...currentValues, option],
+        [id]: values.includes(option)
+          ? values.filter((item) => item !== option)
+          : [...values, option],
       };
     });
   };
 
-  const selectedFilterCount = Object.values(selectedFilters).reduce(
-    (total, value) => {
-      if (Array.isArray(value)) {
-        return total + value.length;
-      }
+  const clearAll = () => {
+    setSelectedFilters(
+      Object.fromEntries(
+        filterData.map(({ id, type }) => [
+          id,
+          type === "radio" ? "" : [],
+        ])
+      )
+    );
 
-      return value ? total + 1 : total;
-    },
-    0
-  );
+    setPriceRange({ min: MIN, max: MAX });
+  };
 
-  const isPriceChanged =
-    priceRange.min !== 200 || priceRange.max !== 10100;
+  const count =
+    Object.values(selectedFilters).flat().filter(Boolean).length +
+    (priceRange.min !== MIN || priceRange.max !== MAX ? 1 : 0);
 
-  const totalFilterCount =
-    selectedFilterCount + (isPriceChanged ? 1 : 0);
+  const renderOptions = ({ id, type, options }) => {
+    const selected = selectedFilters[id];
 
-  const handleClearAll = () => {
-    const clearedFilters = {};
+    if (type === "radio")
+      return options.map((option) => (
+        <label key={option} className={styles.radioRow}>
+          <input
+            type="radio"
+            name={id}
+            checked={selected === option}
+            onChange={() => updateFilter(id, option)}
+          />
+          <span className={styles.customRadio} />
+          <span>{option}</span>
+        </label>
+      ));
 
-    filterData.forEach((filter) => {
-      clearedFilters[filter.id] =
-        filter.type === "radio" ? "" : [];
-    });
+    if (type === "checkbox")
+      return options.map((option) => (
+        <label key={option} className={styles.checkboxRow}>
+          <input
+            type="checkbox"
+            checked={selected?.includes(option)}
+            onChange={() => updateFilter(id, option, true)}
+          />
+          <span>{option}</span>
+        </label>
+      ));
 
-    setSelectedFilters(clearedFilters);
-    setPriceRange({
-      min: 200,
-      max: 10100,
-    });
+    return options.map((option) => (
+      <button
+        key={option}
+        type="button"
+        className={`${styles.sizeButton} ${
+          selected?.includes(option) ? styles.activeSize : ""
+        }`}
+        onClick={() => updateFilter(id, option, true)}
+      >
+        {option}
+      </button>
+    ));
   };
 
   return (
     <>
       <div
-        className={`${styles.overlay} ${
-          open ? styles.showOverlay : ""
-        }`}
+        className={`${styles.overlay} ${open ? styles.showOverlay : ""}`}
         onClick={onClose}
       />
 
       <aside
-        className={`${styles.drawer} ${
-          open ? styles.openDrawer : ""
-        }`}
+        className={`${styles.drawer} ${open ? styles.openDrawer : ""}`}
       >
         <div className={styles.drawerHeader}>
           <h2>MORE FILTERS</h2>
 
           <button
-            type="button"
             className={styles.closeButton}
             onClick={onClose}
             aria-label="Close filters"
@@ -98,123 +117,55 @@ const MoreFiltersDrawer = ({
         <div className={styles.drawerContent}>
           <section className={styles.filterSection}>
             <PriceRangeSlider
-              min={200}
-              max={10100}
+              min={MIN}
+              max={MAX}
               minValue={priceRange.min}
               maxValue={priceRange.max}
               onChange={setPriceRange}
             />
           </section>
 
-          {filterData.map((filter) => {
-            const selectedValue = selectedFilters[filter.id];
+          {filterData.map((filter) => (
+            <section
+              key={filter.id}
+              className={styles.filterSection}
+            >
+              <div className={styles.sectionHeading}>
+                <span>{filter.title}</span>
+                <FiChevronUp />
+              </div>
 
-            return (
-              <section
-                key={filter.id}
-                className={styles.filterSection}
+              <div
+                className={
+                  filter.type === "button"
+                    ? styles.buttonList
+                    : styles.optionsList
+                }
               >
-                <div className={styles.sectionHeading}>
-                  <span>{filter.title}</span>
-                  <FiChevronUp />
-                </div>
-
-                {filter.type === "radio" && (
-                  <div className={styles.optionsList}>
-                    {filter.options.map((option) => (
-                      <label
-                        key={option}
-                        className={styles.radioRow}
-                      >
-                        <input
-                          type="radio"
-                          name={`drawer-${filter.id}`}
-                          checked={selectedValue === option}
-                          onChange={() =>
-                            handleRadioChange(filter.id, option)
-                          }
-                        />
-
-                        <span className={styles.customRadio} />
-                        <span>{option}</span>
-                      </label>
-                    ))}
-                  </div>
-                )}
-
-                {filter.type === "checkbox" && (
-                  <div className={styles.optionsList}>
-                    {filter.options.map((option) => (
-                      <label
-                        key={option}
-                        className={styles.checkboxRow}
-                      >
-                        <input
-                          type="checkbox"
-                          checked={
-                            Array.isArray(selectedValue) &&
-                            selectedValue.includes(option)
-                          }
-                          onChange={() =>
-                            handleArrayChange(filter.id, option)
-                          }
-                        />
-
-                        <span>{option}</span>
-                      </label>
-                    ))}
-                  </div>
-                )}
-
-                {filter.type === "button" && (
-                  <div className={styles.buttonList}>
-                    {filter.options.map((option) => {
-                      const active =
-                        Array.isArray(selectedValue) &&
-                        selectedValue.includes(option);
-
-                      return (
-                        <button
-                          key={option}
-                          type="button"
-                          className={`${styles.sizeButton} ${
-                            active ? styles.activeSize : ""
-                          }`}
-                          onClick={() =>
-                            handleArrayChange(filter.id, option)
-                          }
-                        >
-                          {option}
-                        </button>
-                      );
-                    })}
-                  </div>
-                )}
-              </section>
-            );
-          })}
+                {renderOptions(filter)}
+              </div>
+            </section>
+          ))}
         </div>
 
         <div className={styles.drawerFooter}>
           <button
-            type="button"
             className={styles.clearButton}
-            onClick={handleClearAll}
+            onClick={clearAll}
           >
             Clear All
           </button>
 
           <button
-            type="button"
             className={styles.applyButton}
             onClick={onClose}
           >
             <FiSliders />
-            <span>Apply Filters</span>
 
-            {totalFilterCount > 0 && (
-              <span>({totalFilterCount})</span>
-            )}
+            <span>
+              Apply Filters
+              {count > 0 && ` (${count})`}
+            </span>
           </button>
         </div>
       </aside>

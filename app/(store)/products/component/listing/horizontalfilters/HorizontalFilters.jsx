@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FiMenu, FiChevronDown, FiSliders } from "react-icons/fi";
-
 import styles from "./horizontalfilters.module.css";
 import filterData from "./filterData";
 import FilterDropdown from "./FilterDropdown";
 import PriceRangeSlider from "./PriceRangeSlider";
+
+const MIN = 200;
+const MAX = 10100;
 
 const HorizontalFilters = ({
   selectedFilters,
@@ -15,104 +17,53 @@ const HorizontalFilters = ({
   setPriceRange,
   onMoreFilters,
 }) => {
-  const [activeFilter, setActiveFilter] = useState(null);
-  const filterRef = useRef(null);
+  const [active, setActive] = useState(null);
+  const ref = useRef(null);
+  const filters = filterData.slice(0, 4);
 
-  const visibleFilters = useMemo(() => filterData.slice(0, 4), []);
-
-  const handleFilterToggle = (filterId) => {
-    setActiveFilter((prev) =>
-      prev === filterId ? null : filterId
-    );
-  };
+  const toggle = (id) => setActive((prev) => (prev === id ? null : id));
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (
-        filterRef.current &&
-        !filterRef.current.contains(event.target)
-      ) {
-        setActiveFilter(null);
-      }
+    const close = (e) => {
+      if (ref.current && !ref.current.contains(e.target)) setActive(null);
     };
 
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
   }, []);
 
-  const handleRadioChange = (filterId, option) => {
-    setSelectedFilters((prev) => ({
-      ...prev,
-      [filterId]: option,
-    }));
-  };
-
-  const handleCheckboxChange = (filterId, option) => {
+  const select = (id, option, radio = false) => {
     setSelectedFilters((prev) => {
-      const oldValues = prev[filterId] || [];
-      const alreadySelected = oldValues.includes(option);
+      if (radio) return { ...prev, [id]: option };
+
+      const values = prev[id] || [];
 
       return {
         ...prev,
-        [filterId]: alreadySelected
-          ? oldValues.filter((item) => item !== option)
-          : [...oldValues, option],
+        [id]: values.includes(option)
+          ? values.filter((item) => item !== option)
+          : [...values, option],
       };
     });
   };
 
-  const handleButtonChange = (filterId, option) => {
-    setSelectedFilters((prev) => {
-      const oldValues = prev[filterId] || [];
-      const alreadySelected = oldValues.includes(option);
-
-      return {
-        ...prev,
-        [filterId]: alreadySelected
-          ? oldValues.filter((item) => item !== option)
-          : [...oldValues, option],
-      };
-    });
-  };
-
-  const handleReset = (filterId) => {
-    const currentFilter = filterData.find(
-      (filter) => filter.id === filterId
-    );
-
-    if (!currentFilter) return;
-
+  const reset = (filter) => {
     setSelectedFilters((prev) => ({
       ...prev,
-      [filterId]: currentFilter.type === "radio" ? "" : [],
+      [filter.id]: filter.type === "radio" ? "" : [],
     }));
   };
 
-  const handlePriceReset = () => {
-    setPriceRange({
-      min: 200,
-      max: 10100,
-    });
-  };
-
-  const getSelectedCount = (filter) => {
+  const count = (filter) => {
     const value = selectedFilters[filter.id];
-
-    if (filter.type === "radio") {
-      return value ? 1 : 0;
-    }
-
-    return Array.isArray(value) ? value.length : 0;
+    return filter.type === "radio" ? (value ? 1 : 0) : value?.length || 0;
   };
 
-  const isPriceSelected =
-    priceRange.min !== 200 || priceRange.max !== 10100;
+  const priceSelected =
+    priceRange.min !== MIN || priceRange.max !== MAX;
 
   return (
-    <section className={styles.filterBar} ref={filterRef}>
+    <section className={styles.filterBar} ref={ref}>
       <div className={styles.filterContainer}>
         <button
           type="button"
@@ -128,35 +79,31 @@ const HorizontalFilters = ({
             <button
               type="button"
               className={`${styles.filterButton} ${
-                activeFilter === "price"
-                  ? styles.activeFilterButton
-                  : ""
+                active === "price" ? styles.activeFilterButton : ""
               }`}
-              onClick={() => handleFilterToggle("price")}
+              onClick={() => toggle("price")}
             >
               <span>
                 Price
-                {isPriceSelected && (
+                {priceSelected && (
                   <span className={styles.selectedCount}>1</span>
                 )}
               </span>
 
               <FiChevronDown
                 className={`${styles.arrow} ${
-                  activeFilter === "price" ? styles.arrowOpen : ""
+                  active === "price" ? styles.arrowOpen : ""
                 }`}
               />
             </button>
 
-            {activeFilter === "price" && (
-              <div
-                className={`${styles.dropdown} ${styles.priceDropdown}`}
-              >
+            {active === "price" && (
+              <div className={`${styles.dropdown} ${styles.priceDropdown}`}>
                 <span className={styles.dropdownArrow} />
 
                 <PriceRangeSlider
-                  min={200}
-                  max={10100}
+                  min={MIN}
+                  max={MAX}
                   minValue={priceRange.min}
                   maxValue={priceRange.max}
                   onChange={setPriceRange}
@@ -166,7 +113,7 @@ const HorizontalFilters = ({
                   <button
                     type="button"
                     className={styles.resetButton}
-                    onClick={handlePriceReset}
+                    onClick={() => setPriceRange({ min: MIN, max: MAX })}
                   >
                     Reset
                   </button>
@@ -174,7 +121,7 @@ const HorizontalFilters = ({
                   <button
                     type="button"
                     className={styles.applyButton}
-                    onClick={() => setActiveFilter(null)}
+                    onClick={() => setActive(null)}
                   >
                     Apply
                   </button>
@@ -183,9 +130,9 @@ const HorizontalFilters = ({
             )}
           </div>
 
-          {visibleFilters.map((filter) => {
-            const selectedCount = getSelectedCount(filter);
-            const isActive = activeFilter === filter.id;
+          {filters.map((filter) => {
+            const isActive = active === filter.id;
+            const selectedCount = count(filter);
 
             return (
               <div key={filter.id} className={styles.filterItem}>
@@ -194,11 +141,10 @@ const HorizontalFilters = ({
                   className={`${styles.filterButton} ${
                     isActive ? styles.activeFilterButton : ""
                   }`}
-                  onClick={() => handleFilterToggle(filter.id)}
+                  onClick={() => toggle(filter.id)}
                 >
                   <span>
                     {filter.title}
-
                     {selectedCount > 0 && (
                       <span className={styles.selectedCount}>
                         {selectedCount}
@@ -217,11 +163,13 @@ const HorizontalFilters = ({
                   <FilterDropdown
                     filter={filter}
                     selectedFilters={selectedFilters}
-                    onRadioChange={handleRadioChange}
-                    onCheckboxChange={handleCheckboxChange}
-                    onButtonChange={handleButtonChange}
-                    onReset={handleReset}
-                    onApply={() => setActiveFilter(null)}
+                    onRadioChange={(id, option) =>
+                      select(id, option, true)
+                    }
+                    onCheckboxChange={select}
+                    onButtonChange={select}
+                    onReset={() => reset(filter)}
+                    onApply={() => setActive(null)}
                   />
                 )}
               </div>
