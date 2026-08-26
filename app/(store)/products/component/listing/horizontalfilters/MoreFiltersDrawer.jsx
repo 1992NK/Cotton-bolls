@@ -1,13 +1,20 @@
 "use client";
 
 import { FiChevronUp, FiSliders, FiX } from "react-icons/fi";
-
 import filterData from "./filterData";
 import PriceRangeSlider from "./PriceRangeSlider";
 import styles from "./morefiltersdrawer.module.css";
 
 const MIN = 200;
 const MAX = 10100;
+
+const colors = {
+  Orange: "#ff7a00",
+  Black: "#000",
+  White: "#fff",
+  Blue: "#2563eb",
+  Green: "#16a34a",
+};
 
 const MoreFiltersDrawer = ({
   open,
@@ -41,7 +48,6 @@ const MoreFiltersDrawer = ({
         ])
       )
     );
-
     setPriceRange({ min: MIN, max: MAX });
   };
 
@@ -55,12 +61,7 @@ const MoreFiltersDrawer = ({
     if (type === "radio")
       return options.map((option) => (
         <label key={option} className={styles.radioRow}>
-          <input
-            type="radio"
-            name={id}
-            checked={selected === option}
-            onChange={() => updateFilter(id, option)}
-          />
+          <input type="radio" name={id} checked={selected === option} onChange={() => updateFilter(id, option)} />
           <span className={styles.customRadio} />
           <span>{option}</span>
         </label>
@@ -69,24 +70,14 @@ const MoreFiltersDrawer = ({
     if (type === "checkbox")
       return options.map((option) => (
         <label key={option} className={styles.checkboxRow}>
-          <input
-            type="checkbox"
-            checked={selected?.includes(option)}
-            onChange={() => updateFilter(id, option, true)}
-          />
+          <input type="checkbox" checked={selected?.includes(option)} onChange={() => updateFilter(id, option, true)} />
+          {id === "colors" && <span className={styles.colorCircle} style={{ background: colors[option] }} />}
           <span>{option}</span>
         </label>
       ));
 
     return options.map((option) => (
-      <button
-        key={option}
-        type="button"
-        className={`${styles.sizeButton} ${
-          selected?.includes(option) ? styles.activeSize : ""
-        }`}
-        onClick={() => updateFilter(id, option, true)}
-      >
+      <button key={option} type="button" className={`${styles.sizeButton} ${selected?.includes(option) ? styles.activeSize : ""}`} onClick={() => updateFilter(id, option, true)}>
         {option}
       </button>
     ));
@@ -94,54 +85,29 @@ const MoreFiltersDrawer = ({
 
   return (
     <>
-      <div
-        className={`${styles.overlay} ${open ? styles.showOverlay : ""}`}
-        onClick={onClose}
-      />
+      <div className={`${styles.overlay} ${open ? styles.showOverlay : ""}`} onClick={onClose} />
 
-      <aside
-        className={`${styles.drawer} ${open ? styles.openDrawer : ""}`}
-      >
+      <aside className={`${styles.drawer} ${open ? styles.openDrawer : ""}`}>
         <div className={styles.drawerHeader}>
           <h2>MORE FILTERS</h2>
-
-          <button
-            className={styles.closeButton}
-            onClick={onClose}
-            aria-label="Close filters"
-          >
+          <button className={styles.closeButton} onClick={onClose} aria-label="Close filters">
             <FiX />
           </button>
         </div>
 
         <div className={styles.drawerContent}>
           <section className={styles.filterSection}>
-            <PriceRangeSlider
-              min={MIN}
-              max={MAX}
-              minValue={priceRange.min}
-              maxValue={priceRange.max}
-              onChange={setPriceRange}
-            />
+            <PriceRangeSlider min={MIN} max={MAX} minValue={priceRange.min} maxValue={priceRange.max} onChange={setPriceRange} />
           </section>
 
           {filterData.map((filter) => (
-            <section
-              key={filter.id}
-              className={styles.filterSection}
-            >
+            <section key={filter.id} className={styles.filterSection}>
               <div className={styles.sectionHeading}>
                 <span>{filter.title}</span>
                 <FiChevronUp />
               </div>
 
-              <div
-                className={
-                  filter.type === "button"
-                    ? styles.buttonList
-                    : styles.optionsList
-                }
-              >
+              <div className={filter.type === "button" ? styles.buttonList : styles.optionsList}>
                 {renderOptions(filter)}
               </div>
             </section>
@@ -149,23 +115,10 @@ const MoreFiltersDrawer = ({
         </div>
 
         <div className={styles.drawerFooter}>
-          <button
-            className={styles.clearButton}
-            onClick={clearAll}
-          >
-            Clear All
-          </button>
-
-          <button
-            className={styles.applyButton}
-            onClick={onClose}
-          >
+          <button className={styles.clearButton} onClick={clearAll}>Clear All</button>
+          <button className={styles.applyButton} onClick={onClose}>
             <FiSliders />
-
-            <span>
-              Apply Filters
-              {count > 0 && ` (${count})`}
-            </span>
+            <span>Apply Filters{count > 0 && ` (${count})`}</span>
           </button>
         </div>
       </aside>

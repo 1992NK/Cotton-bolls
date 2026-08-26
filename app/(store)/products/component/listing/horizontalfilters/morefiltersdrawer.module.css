@@ -211,6 +211,14 @@
   font-size: 15px;
 }
 
+.colorCircle {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
 @media (max-width: 1399px) {
   .drawer {
     width: 390px;
