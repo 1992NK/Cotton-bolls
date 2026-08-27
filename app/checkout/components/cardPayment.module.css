@@ -113,37 +113,3 @@
     color: #222222;
     stroke-width: 1.5;
 }
-
-@media (max-width: 991px) {
-
-    .cardForm {
-        width: 420px;
-        max-width: 100%;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .cardAccordionBody {
-        padding: 14px 10px 20px;
-    }
-
-    .cardForm {
-        width: 100%;
-        min-height: auto;
-        padding: 20px;
-    }
-
-    .cardDetailsRow {
-        gap: 8px;
-    }
-
-    .smallCardInput {
-        width: 70px;
-    }
-
-    .cvvInput {
-        width: 78px;
-    }
-}

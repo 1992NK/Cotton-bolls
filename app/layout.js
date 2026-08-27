@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Inter, Oswald,Lato } from "next/font/google";
 import "./globals.css";
+import OnLoadPopup from "./onLoadPopup/OnLoadPopup";
 
 
 const geistSans = Geist({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
       <body>
       
         {children}
+        <OnLoadPopup />
        
       </body>
     </html>

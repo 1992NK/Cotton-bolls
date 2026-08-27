@@ -11,6 +11,7 @@ import TrustBadges from "../trustbadges/TrustBadges";
 import ProductReviews from "../productreview/ProductReviews";
 import CustomerReviews from "../customerReview/CustomerReviews";
 import CouponOffers from "../couponOffers/CouponOffers";
+import QuantitySelector from "../quantityselector/QuantitySelector";
 
 export default function ProductInfo({
   product,
@@ -44,6 +45,8 @@ export default function ProductInfo({
       />
 
        <SizeSelector sizes={product.sizes} /> 
+
+       <QuantitySelector />
 
       <div className={styles.cartArea}>
        

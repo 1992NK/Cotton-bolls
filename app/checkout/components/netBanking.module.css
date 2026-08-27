@@ -22,12 +22,3 @@
     border-color: #222222;
     background: #fafafa;
 }
-
-
-@media (max-width: 600px) {
-
-    .bankGrid {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-}

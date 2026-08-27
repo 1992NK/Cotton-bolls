@@ -1,0 +1,48 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+}
+
+.popup {
+  width: 900px;
+  max-width: 90%;
+  padding: 40px;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.popup p {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.shopBtn {
+  padding: 12px 30px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}

@@ -5,27 +5,28 @@ import { useParams } from "next/navigation";
 
 import featuredProducts from "@/data/featuredProductData";
 
+import Breadcrumbs from "../component/common/breadcrumbs/Breadcrumbs";
 import ProductGallery from "./components/productgallery/ProductGallery";
 import ProductInfo from "./components/productinfo/ProductInfo";
-
-import styles from "./productdetail.module.css";
-import Breadcrumbs from "../component/common/breadcrumbs/Breadcrumbs";
+import ComboProducts from "./components/productCombo/ComboProducts";
 import SimilarProducts from "./components/similarProduct/SimilarProducts";
 
-export default function ProductDetail() {
+import styles from "./productdetail.module.css";
+
+const ProductDetail = () => {
   const { slug } = useParams();
 
   const product = featuredProducts.find(
     (item) => item.slug === slug
   );
 
+  const [selectedColor, setSelectedColor] = useState(
+    product?.colors?.[0] || null
+  );
+
   if (!product) {
     return <h2>Product Not Found</h2>;
   }
-
-  const [selectedColor, setSelectedColor] = useState(
-    product.colors[0]
-  );
 
   const breadcrumb = [
     {
@@ -43,16 +44,17 @@ export default function ProductDetail() {
 
   return (
     <>
-
-      <div className={`container`}>
+      <div className="container">
         <Breadcrumbs items={breadcrumb} />
       </div>
-      <div className={`container`}>
 
+      <div className="container">
         <div className={styles.productWrapper}>
           <div className={styles.left}>
             <ProductGallery
-              images={selectedColor.images}
+              images={
+                selectedColor?.images || product.images
+              }
             />
           </div>
 
@@ -64,14 +66,15 @@ export default function ProductDetail() {
             />
           </div>
         </div>
+      </div>
 
-
-
+      <div className="container">
+        <ComboProducts product={product} />
       </div>
 
       <SimilarProducts currentProduct={product} />
-
     </>
-
   );
-}
+};
+
+export default ProductDetail;

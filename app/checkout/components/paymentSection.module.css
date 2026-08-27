@@ -187,33 +187,3 @@
     font-family: var(--font-inter);
 }
 
-
-
-@media (max-width: 600px) {
-
-    .paymentHeading {
-        font-size: 17px;
-    }
-
-    .tssRow,
-    .paymentRow,
-    .accordionHeader,
-    .accordionHeaderOpen,
-    .accordionHeaderClosed {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-    .usedText {
-        display: none;
-    }
-
-    .tssRight {
-        gap: 8px;
-    }
-
-    .codRow {
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-}

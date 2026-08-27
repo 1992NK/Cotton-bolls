@@ -12,8 +12,6 @@
     align-items: start;
 }
 
-
-
 .leftSection {
     width: 100%;
 }
@@ -24,27 +22,3 @@
     top: 100px;
 }
 
-
-@media (max-width: 991px) {
-
-    .checkoutrow {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .billingSection {
-        position: static;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .checkoutPage {
-        padding: 25px 0 40px;
-    }
-
-    .checkoutrow {
-        gap: 25px;
-    }
-}

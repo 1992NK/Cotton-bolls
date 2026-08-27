@@ -13,15 +13,3 @@
   gap: 50px;
   align-items: start;
 }
-
-@media (max-width: 900px) {
-  .deliveryRow {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .deliveryPage {
-    padding: 20px 0 40px;
-  }
-}

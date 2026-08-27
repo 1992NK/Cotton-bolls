@@ -18,6 +18,9 @@ export const green03 = "/images/product/product03.jpg";
 export const green04 = "/images/product/product04.jpg";
 export const green05 = "/images/product/product05.jpg";
 
+export const jeans = "/images/product/jeans.jpg";
+
+
 
 export {
   slider1,

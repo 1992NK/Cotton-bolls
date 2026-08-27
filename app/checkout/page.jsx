@@ -2,20 +2,16 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
 import styles from "./checkout.module.css";
-
 import Header from "@/component/header/Header";
 import Footer from "@/component/footer/Footer";
-
 import AddressSection from "./components/AddressSection";
 import PaymentSection from "./components/PaymentSection";
 import BillingDetails from "./components/billingdetail/BillingDetails";
 import CheckoutStepper from "@/checkout/components/checkoutStepper/CheckoutStepper";
 
-export default function CheckoutPage() {
+const CheckoutPage = () => {
     const router = useRouter();
-
     const [selectedPayment, setSelectedPayment] = useState("cod");
     const [openMethod, setOpenMethod] = useState(null);
 
@@ -42,37 +38,25 @@ export default function CheckoutPage() {
     return (
         <>
             <Header />
-
             <section className={styles.stepperbg}>
                 <div className="container">
-                    
                     <CheckoutStepper />
-
                 </div>
             </section>
-
-            <section className={`${styles.checkoutPage}`}>
+            <section className={styles.checkoutPage}>
                 <div className="container">
-
                     <div className={styles.checkoutrow}>
-
-                        {/* LEFT SECTION */}
                         <section className={styles.leftSection}>
-
                             <AddressSection
                                 onAddAddress={handleAddNewAddress}
                             />
-
                             <PaymentSection
                                 selectedPayment={selectedPayment}
                                 onSelectPayment={selectPayment}
                                 openMethod={openMethod}
                                 toggleMethod={toggleMethod}
                             />
-
                         </section>
-
-                        {/* BILLING DETAILS */}
                         <BillingDetails
                             cartTotal={2698}
                             memberSavings={200}
@@ -81,12 +65,12 @@ export default function CheckoutPage() {
                             isCOD={selectedPayment === "cod"}
                             onPlaceOrder={handlePlaceOrder}
                         />
-
                     </div>
                 </div>
             </section>
-
             <Footer />
         </>
     );
-}
+};
+
+export default CheckoutPage;

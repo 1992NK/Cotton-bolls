@@ -43,24 +43,18 @@ const Cart = () => {
   const isCartEmpty = cartItems.length === 0;
 
   return (
-
     <>
-
-    <section className={styles.stepperbg}>
-                <div className="container">
-                    
-                    <CheckoutStepper />
-
-                </div>
-            </section>
-      
+      <section className={styles.stepperbg}>
+        <div className="container">
+          <CheckoutStepper />
+        </div>
+      </section>
 
       <div className="container">
-
-
         <div
-          className={`${styles.cartPage} ${isCartEmpty ? styles.emptyCartPage : ""
-            }`}
+          className={`${styles.cartPage} ${
+            isCartEmpty ? styles.emptyCartPage : ""
+          }`}
         >
           <div className={styles.left}>
             <CartList cartItems={cartItems} onRemove={handleRemove} />
@@ -75,9 +69,7 @@ const Cart = () => {
             </div>
           )}
         </div>
-
       </div>
-
     </>
   );
 };
