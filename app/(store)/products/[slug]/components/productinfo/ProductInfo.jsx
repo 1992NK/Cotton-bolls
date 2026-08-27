@@ -10,6 +10,7 @@ import ProductAccordion from "../productaccordion/ProductAccordion";
 import TrustBadges from "../trustbadges/TrustBadges";
 import ProductReviews from "../productreview/ProductReviews";
 import CustomerReviews from "../customerReview/CustomerReviews";
+import CouponOffers from "../couponOffers/CouponOffers";
 
 export default function ProductInfo({
   product,
@@ -48,6 +49,8 @@ export default function ProductInfo({
        
         <ActionButtons />
       </div>
+
+      <CouponOffers />
 
       <DeliveryInfo />
 

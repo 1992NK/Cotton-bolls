@@ -219,6 +219,34 @@
   border-radius: 50%;
 }
 
+.colorInput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.colorCheckbox {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.whiteColor {
+  color: #141414;
+}
+
+.activeColor {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #141414;
+}
+
 @media (max-width: 1399px) {
   .drawer {
     width: 390px;

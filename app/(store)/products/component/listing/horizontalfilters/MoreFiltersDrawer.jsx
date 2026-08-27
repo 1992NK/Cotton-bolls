@@ -48,6 +48,7 @@ const MoreFiltersDrawer = ({
         ])
       )
     );
+
     setPriceRange({ min: MIN, max: MAX });
   };
 
@@ -70,8 +71,12 @@ const MoreFiltersDrawer = ({
     if (type === "checkbox")
       return options.map((option) => (
         <label key={option} className={styles.checkboxRow}>
-          <input type="checkbox" checked={selected?.includes(option)} onChange={() => updateFilter(id, option, true)} />
-          {id === "colors" && <span className={styles.colorCircle} style={{ background: colors[option] }} />}
+          <input className={id === "colors" ? styles.colorInput : ""} type="checkbox" checked={selected?.includes(option)} onChange={() => updateFilter(id, option, true)} />
+          {id === "colors" && (
+            <span className={`${styles.colorCheckbox} ${option === "White" ? styles.whiteColor : ""} ${selected?.includes(option) ? styles.activeColor : ""}`} style={{ background: colors[option] }}>
+              {selected?.includes(option) && "✓"}
+            </span>
+          )}
           <span>{option}</span>
         </label>
       ));
@@ -90,6 +95,7 @@ const MoreFiltersDrawer = ({
       <aside className={`${styles.drawer} ${open ? styles.openDrawer : ""}`}>
         <div className={styles.drawerHeader}>
           <h2>MORE FILTERS</h2>
+
           <button className={styles.closeButton} onClick={onClose} aria-label="Close filters">
             <FiX />
           </button>
@@ -115,7 +121,10 @@ const MoreFiltersDrawer = ({
         </div>
 
         <div className={styles.drawerFooter}>
-          <button className={styles.clearButton} onClick={clearAll}>Clear All</button>
+          <button className={styles.clearButton} onClick={clearAll}>
+            Clear All
+          </button>
+
           <button className={styles.applyButton} onClick={onClose}>
             <FiSliders />
             <span>Apply Filters{count > 0 && ` (${count})`}</span>
